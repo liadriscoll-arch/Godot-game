@@ -2,4 +2,5 @@ extends Node
 
 var volume = 50
 var brightness = 100
-#hi
+#ylly ur short haha
+#lol
