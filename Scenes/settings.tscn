@@ -204,10 +204,10 @@ text = "50%"
 horizontal_alignment = 1
 
 [node name="Settings_label" type="Label" parent="." unique_id=533996031]
-offset_left = -192.0
-offset_top = -248.0
-offset_right = 400.0
-offset_bottom = -225.0
+offset_left = -191.0
+offset_top = -232.0
+offset_right = 401.0
+offset_bottom = -201.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_aaqfp")
 theme_override_font_sizes/font_size = 30
