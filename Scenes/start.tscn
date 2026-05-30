@@ -210,5 +210,5 @@ position = Vector2(105, -97)
 zoom = Vector2(2, 2)
 
 [connection signal="pressed" from="Settings_button" to="." method="_on_settings_button_pressed"]
-[connection signal="pressed" from="Start_button" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="Start_button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Start_button" to="." method="_on_start_button_pressed"]
