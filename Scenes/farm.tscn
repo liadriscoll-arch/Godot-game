@@ -59,10 +59,22 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("1_egb2y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_egb2y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_egb2y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_egb2y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_egb2y")
 }],
 "loop": true,
 "name": &"default",
-"speed": 8.0
+"speed": 7.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_egb2y"]
@@ -71,7 +83,7 @@ size = Vector2(16.764704, 15.000004)
 [node name="farm_house" type="AnimatedSprite2D" unique_id=1861983936]
 scale = Vector2(1.7, 1.7)
 sprite_frames = SubResource("SpriteFrames_oglod")
-frame_progress = 0.5267688
+frame_progress = 0.028597178
 script = ExtResource("14_vhjd4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2020983212]

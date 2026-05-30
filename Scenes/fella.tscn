@@ -1,11 +1,63 @@
 [gd_scene format=3 uid="uid://blue7tffji4dv"]
 
 [ext_resource type="Script" uid="uid://c5miswfqa3jpx" path="res://Scripts/fella.gd" id="1_bawvk"]
+[ext_resource type="Texture2D" uid="uid://bpq4no2262ewl" path="res://Assets/Sprites/Fella Sprites/pixil-frame-0.png" id="2_5qkay"]
 [ext_resource type="Texture2D" uid="uid://dcpdpjlovo2tb" path="res://Assets/Sprites/Fella Sprites/GodotFella.png" id="2_bawvk"]
+[ext_resource type="Texture2D" uid="uid://cx3nd6cagq4m4" path="res://Assets/Sprites/Fella Sprites/pixil-frame-1.png" id="3_8ptr0"]
 [ext_resource type="Texture2D" uid="uid://updxdme4uikp" path="res://Assets/Sprites/Fella Sprites/Godot Fella Idle 2.png" id="3_w7p10"]
+[ext_resource type="Texture2D" uid="uid://c5qqjvyhmktth" path="res://Assets/Sprites/Fella Sprites/pixil-frame-2.png" id="4_2wn15"]
+[ext_resource type="Texture2D" uid="uid://cm5ck35r6fkjk" path="res://Assets/Sprites/Fella Sprites/pixil-frame-3.png" id="5_gg5b3"]
+[ext_resource type="Texture2D" uid="uid://88mqyeoemgh7" path="res://Assets/Sprites/Fella Sprites/pixil-frame-4.png" id="6_kdw1x"]
+[ext_resource type="Texture2D" uid="uid://dycvlbdjqxkqx" path="res://Assets/Sprites/Fella Sprites/pixil-frame-5.png" id="7_uaph3"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_i0017"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_5qkay")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8ptr0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_2wn15")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_gg5b3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_kdw1x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_uaph3")
+}],
+"loop": true,
+"name": &"Running",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_5qkay")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8ptr0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_2wn15")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_gg5b3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_kdw1x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_uaph3")
+}],
+"loop": true,
+"name": &"Walking",
+"speed": 6.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_bawvk")
@@ -28,8 +80,9 @@ script = ExtResource("1_bawvk")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1793823170]
 position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_i0017")
+animation = &"Walking"
 autoplay = "default"
-frame_progress = 0.63808674
+frame_progress = 0.052375827
 offset = Vector2(-0.5, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=204486722]
