@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://hugw4uerseea"]
+
+[ext_resource type="Texture2D" uid="uid://bo6rqnqecjc0" path="res://Assets/Coffee assets/Screenshot 2026-06-06 000621.png" id="1_j2wod"]
+
+[node name="Node2D" type="Node2D" unique_id=1232332138]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=789548976]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=674401462]
+position = Vector2(1.999998, 1.4999962)
+scale = Vector2(7.25283, 6.118644)
+texture = ExtResource("1_j2wod")
