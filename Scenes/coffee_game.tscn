@@ -2,13 +2,11 @@
 
 [ext_resource type="Script" uid="uid://duosjdyrnq5or" path="res://Scenes/coffee_game.gd" id="1_5oi8c"]
 [ext_resource type="Texture2D" uid="uid://c5w4tl0ye73ig" path="res://Assets/Coffee assets/coffee_bg_placeholder.png" id="1_35yfr"]
-[ext_resource type="Script" uid="uid://cpwbruyuigqjl" path="res://Scenes/camera_2d.gd" id="2_0wq36"]
 
 [node name="coffee_game" type="Node2D" unique_id=567127333]
 script = ExtResource("1_5oi8c")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1005988794]
-script = ExtResource("2_0wq36")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1899262145]
 texture = ExtResource("1_35yfr")
