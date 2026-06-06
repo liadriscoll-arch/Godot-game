@@ -1,0 +1,188 @@
+[gd_scene format=3 uid="uid://bpvd64firv2em"]
+
+[ext_resource type="Texture2D" uid="uid://c5w4tl0ye73ig" path="res://Assets/Coffee assets/coffee_bg_placeholder.png" id="1_34tek"]
+[ext_resource type="FontFile" uid="uid://dl176n4kxwrv8" path="res://Assets/04b_30/04B_30__.TTF" id="2_0e587"]
+[ext_resource type="Script" uid="uid://03knunso7fwy" path="res://Scenes/coffee_start.gd" id="3_atth2"]
+[ext_resource type="Script" uid="uid://cb3udvnfcikiy" path="res://Scenes/coffee_settings_button.gd" id="4_bk2q3"]
+
+[node name="coffee_instructions" type="Node2D" unique_id=1775656967]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1316721793]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1795042275]
+texture = ExtResource("1_34tek")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1611132014]
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+color = Color(0, 0, 0, 0.78431374)
+
+[node name="Label8" type="Label" parent="." unique_id=904482870]
+offset_left = -958.0
+offset_top = 57.0
+offset_right = 962.0
+offset_bottom = 1137.0
+theme_override_fonts/font = ExtResource("2_0e587")
+theme_override_font_sizes/font_size = 35
+text = "Turn coffee beans into coffee
+Sell coffee to customers by clicking on them
+Sell the right coffee to gain tips
+
+
+"
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="." unique_id=341791770]
+offset_left = -957.0
+offset_top = -132.0
+offset_right = 963.0
+offset_bottom = 948.0
+theme_override_fonts/font = ExtResource("2_0e587")
+theme_override_font_sizes/font_size = 35
+text = "Buy coffee beans to turn into coffee
+buy ads to increase customers
+buy upgrades to help out your business
+
+
+
+"
+horizontal_alignment = 1
+
+[node name="Label9" type="Label" parent="." unique_id=1260481655]
+offset_left = -952.0
+offset_top = 262.0
+offset_right = 968.0
+offset_bottom = 1342.0
+theme_override_fonts/font = ExtResource("2_0e587")
+theme_override_font_sizes/font_size = 35
+text = "Random events may help or hurt your business
+
+
+
+"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="." unique_id=359516245]
+offset_left = -962.0
+offset_top = -294.0
+offset_right = 958.0
+offset_bottom = 786.0
+theme_override_fonts/font = ExtResource("2_0e587")
+theme_override_font_sizes/font_size = 35
+text = "Reach 500 Credits by the end of 7 days
+2 Phases
+
+
+
+"
+horizontal_alignment = 1
+
+[node name="Label7" type="Label" parent="." unique_id=1209278958]
+offset_left = -958.0
+offset_right = 962.0
+offset_bottom = 1080.0
+theme_override_fonts/font = ExtResource("2_0e587")
+theme_override_font_sizes/font_size = 50
+text = "Day:
+
+
+
+"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="." unique_id=1498709208]
+offset_left = -956.0
+offset_top = -192.0
+offset_right = 964.0
+offset_bottom = 888.0
+theme_override_fonts/font = ExtResource("2_0e587")
+theme_override_font_sizes/font_size = 50
+text = "Night:
+
+
+
+"
+horizontal_alignment = 1
+
+[node name="Label10" type="Label" parent="." unique_id=310936041]
+offset_left = -960.0
+offset_top = 202.0
+offset_right = 960.0
+offset_bottom = 1282.0
+theme_override_fonts/font = ExtResource("2_0e587")
+theme_override_font_sizes/font_size = 50
+text = "But beware...
+
+
+
+"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="." unique_id=458919105]
+offset_left = -957.0
+offset_top = -358.0
+offset_right = 963.0
+offset_bottom = 722.0
+theme_override_fonts/font = ExtResource("2_0e587")
+theme_override_font_sizes/font_size = 50
+text = "How to play
+
+
+
+"
+horizontal_alignment = 1
+
+[node name="Label11" type="Label" parent="." unique_id=821434924]
+offset_left = -965.0
+offset_top = 325.0
+offset_right = 955.0
+offset_bottom = 1405.0
+theme_override_fonts/font = ExtResource("2_0e587")
+theme_override_font_sizes/font_size = 50
+text = "Good luck and build the best shop in town!
+
+
+
+"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="." unique_id=1686755637]
+offset_left = -959.0
+offset_top = -520.0
+offset_right = 961.0
+offset_bottom = 560.0
+theme_override_fonts/font = ExtResource("2_0e587")
+theme_override_font_sizes/font_size = 65
+text = "Welcome to your new job
+ as an entrepreneur!
+
+
+
+"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=44688641]
+offset_left = 245.0
+offset_top = 409.0
+offset_right = 734.0
+offset_bottom = 523.0
+theme_override_fonts/font = ExtResource("2_0e587")
+theme_override_font_sizes/font_size = 91
+text = "Start!"
+script = ExtResource("3_atth2")
+
+[node name="Button2" type="Button" parent="." unique_id=24505716]
+offset_left = -733.0
+offset_top = 409.0
+offset_right = -244.0
+offset_bottom = 523.0
+theme_override_fonts/font = ExtResource("2_0e587")
+theme_override_font_sizes/font_size = 75
+text = "Settings"
+script = ExtResource("4_bk2q3")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="Button2" to="Button" method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]

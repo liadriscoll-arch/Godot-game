@@ -174,7 +174,7 @@ text = "A and D to move
 
 Space to jump
 
-S to interact with elments
+S to interact with elements
 
 Shift to sprint"
 horizontal_alignment = 1
@@ -207,8 +207,8 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=936135853]
 position = Vector2(105, -97)
-zoom = Vector2(2, 2)
+zoom = Vector2(3.3, 3.3)
 
 [connection signal="pressed" from="Settings_button" to="." method="_on_settings_button_pressed"]
-[connection signal="pressed" from="Start_button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Start_button" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Start_button" to="." method="_on_button_pressed"]

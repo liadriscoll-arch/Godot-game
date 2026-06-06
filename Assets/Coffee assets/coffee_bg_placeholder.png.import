@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmpvw7d48my2r"
-path="res://.godot/imported/pixil-frame-4.png-1e1b2bb77b40632e6b09fabab127d60a.ctex"
+uid="uid://c5w4tl0ye73ig"
+path="res://.godot/imported/coffee_bg_placeholder.png-671a168bc9452e449a2598c2f690d4d2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Farm images/pixil-frame-4.png"
-dest_files=["res://.godot/imported/pixil-frame-4.png-1e1b2bb77b40632e6b09fabab127d60a.ctex"]
+source_file="res://Assets/Coffee assets/coffee_bg_placeholder.png"
+dest_files=["res://.godot/imported/coffee_bg_placeholder.png-671a168bc9452e449a2598c2f690d4d2.ctex"]
 
 [params]
 

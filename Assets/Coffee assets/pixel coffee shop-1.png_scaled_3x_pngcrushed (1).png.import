@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5soeonhd6bio"
-path="res://.godot/imported/pixil-frame-11.png-b71ecade3f9488ccd6ea880c721d197d.ctex"
+uid="uid://cl75qoas5gyi0"
+path="res://.godot/imported/pixel coffee shop-1.png_scaled_3x_pngcrushed (1).png-2325591b45b7dc991a9b2cc89abbbbdc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Farm images/pixil-frame-11.png"
-dest_files=["res://.godot/imported/pixil-frame-11.png-b71ecade3f9488ccd6ea880c721d197d.ctex"]
+source_file="res://Assets/Coffee assets/pixel coffee shop-1.png_scaled_3x_pngcrushed (1).png"
+dest_files=["res://.godot/imported/pixel coffee shop-1.png_scaled_3x_pngcrushed (1).png-2325591b45b7dc991a9b2cc89abbbbdc.ctex"]
 
 [params]
 

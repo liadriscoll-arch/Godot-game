@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://d23xa27bej62b" path="res://Scripts/main_game.gd" id="1_pu3va"]
 [ext_resource type="Texture2D" uid="uid://cr051quin6qai" path="res://Assets/Sprites/Four Seasons Platformer Tileset [16x16][FREE] - RottingPixels/Four Seasons Platformer Tileset [16x16][FREE] - RottingPixels/four-seasons-tileset.png" id="2_0e3vx"]
-[ext_resource type="PackedScene" uid="uid://d1sy7dqt2s27v" path="res://Scenes/farm.tscn" id="2_6j5ir"]
 [ext_resource type="PackedScene" uid="uid://blue7tffji4dv" path="res://Scenes/fella.tscn" id="3_0e3vx"]
+[ext_resource type="PackedScene" uid="uid://5gc8i76wdp7c" path="res://Scenes/coffee_building.tscn" id="4_6j5ir"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6j5ir"]
 texture = ExtResource("2_0e3vx")
@@ -188,8 +188,8 @@ sources/0 = SubResource("TileSetAtlasSource_6j5ir")
 [node name="Main game" type="Node2D" unique_id=1078649410]
 script = ExtResource("1_pu3va")
 
-[node name="Farm" parent="." unique_id=1861983936 instance=ExtResource("2_6j5ir")]
-position = Vector2(246.99998, -22.000015)
+[node name="coffee_building" parent="." unique_id=1259508689 instance=ExtResource("4_6j5ir")]
+position = Vector2(242, -32)
 
 [node name="TileMap" type="TileMap" parent="." unique_id=185109715]
 tile_set = SubResource("TileSet_mgc0q")
