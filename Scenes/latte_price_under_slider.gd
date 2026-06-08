@@ -2,9 +2,8 @@ extends Label
 
 
 
-
-func _ready():
+func _ready() -> void:
+	visible = Global.latte_discovered
 	text = str(Global.latte_price)
-	visible = false
 func _process(delta):
 	text = str(Global.latte_price)

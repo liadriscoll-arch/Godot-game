@@ -13,7 +13,7 @@ var quota
 var cofee = 0
 var ads = []
 var day = 0
-var latte_price = 5
-var regular_price = 5
-var decaf_price = 5
+var latte_price = 3
+var regular_price = 3
+var decaf_price = 3
 var latte_discovered = false

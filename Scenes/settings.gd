@@ -4,7 +4,16 @@ extends Node2D
 var brightness = 100
 var volume = 50
 
+@onready var volume_slider: HSlider = $volume_slider
+@onready var brightness_slider: HSlider = $brightness_slider
 
+
+
+func _ready():
+	volume_slider.value = Global.volume
+	brightness_slider.value = Global.brightness
+	
+	
 
 
 
