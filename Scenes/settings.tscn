@@ -239,7 +239,7 @@ justification_flags = 162
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=232076120]
 position = Vector2(105, -97)
-zoom = Vector2(2, 2)
+zoom = Vector2(3.3, 3.3)
 
 [connection signal="changed" from="brightness_slider" to="." method="_on_brightness_slider_changed"]
 [connection signal="value_changed" from="brightness_slider" to="." method="_on_brightness_slider_value_changed"]

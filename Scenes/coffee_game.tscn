@@ -1,12 +1,22 @@
 [gd_scene format=3 uid="uid://cr7w0d5umis4j"]
 
 [ext_resource type="Script" uid="uid://duosjdyrnq5or" path="res://Scenes/coffee_game.gd" id="1_5oi8c"]
-[ext_resource type="Texture2D" uid="uid://c5w4tl0ye73ig" path="res://Assets/Coffee assets/coffee_bg_placeholder.png" id="1_35yfr"]
+[ext_resource type="Texture2D" uid="uid://vji4tnioof4b" path="res://Assets/Coffee assets/coffee_bg.png" id="2_35yfr"]
 
-[node name="coffee_game" type="Node2D" unique_id=567127333]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0wq36"]
+
+[node name="coffee_game_day" type="Node2D" unique_id=567127333]
 script = ExtResource("1_5oi8c")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1005988794]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1899262145]
-texture = ExtResource("1_35yfr")
+texture = ExtResource("2_35yfr")
+
+[node name="Button" type="Button" parent="." unique_id=1541741946]
+offset_left = 760.0
+offset_top = -505.0
+offset_right = 922.0
+offset_bottom = -465.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_0wq36")
+text = "button"

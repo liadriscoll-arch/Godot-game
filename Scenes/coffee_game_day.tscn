@@ -1,0 +1,106 @@
+[gd_scene format=3 uid="uid://bxem73nklbggu"]
+
+[ext_resource type="Script" uid="uid://duosjdyrnq5or" path="res://Scenes/coffee_game.gd" id="1_uky3h"]
+[ext_resource type="Texture2D" uid="uid://vji4tnioof4b" path="res://Assets/Coffee assets/coffee_bg.png" id="2_n7ow1"]
+[ext_resource type="PackedScene" uid="uid://blbypndr6cggh" path="res://Scenes/fella_coffee_shop.tscn" id="3_n7ow1"]
+[ext_resource type="FontFile" uid="uid://dl176n4kxwrv8" path="res://Assets/04b_30/04B_30__.TTF" id="4_t8amc"]
+[ext_resource type="Texture2D" uid="uid://dmkfrnw6egsig" path="res://Assets/Coffee assets/coffee_button_temp.png" id="6_3ufmp"]
+[ext_resource type="Script" uid="uid://bbkyd4yeeiwuv" path="res://Scenes/latte_label.gd" id="6_wirqd"]
+
+[node name="coffee_game_day" type="Node2D" unique_id=567127333]
+script = ExtResource("1_uky3h")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1005988794]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1899262145]
+texture = ExtResource("2_n7ow1")
+
+[node name="fella_coffee_shop" parent="." unique_id=1743656796 instance=ExtResource("3_n7ow1")]
+position = Vector2(0, -370)
+
+[node name="Label2" type="Label" parent="." unique_id=1870774199]
+offset_left = 591.0
+offset_top = -467.0
+offset_right = 711.0
+offset_bottom = -441.0
+theme_override_fonts/font = ExtResource("4_t8amc")
+theme_override_font_sizes/font_size = 20
+text = "Menu"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="." unique_id=878927868]
+offset_left = -391.0
+offset_top = -194.0
+offset_right = 373.0
+offset_bottom = -71.0
+theme_override_fonts/font = ExtResource("4_t8amc")
+theme_override_font_sizes/font_size = 127
+text = "Coffee!"
+horizontal_alignment = 1
+
+[node name="Label8" type="Label" parent="." unique_id=1032143433]
+offset_left = 592.0
+offset_top = -444.0
+offset_right = 714.0
+offset_bottom = -409.0
+theme_override_fonts/font = ExtResource("4_t8amc")
+theme_override_font_sizes/font_size = 15
+text = "Regular
+"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="." unique_id=1440894261]
+offset_left = 592.0
+offset_top = -406.0
+offset_right = 712.0
+offset_bottom = -314.0
+theme_override_fonts/font = ExtResource("4_t8amc")
+theme_override_font_sizes/font_size = 15
+text = "Decaf"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="." unique_id=167642091]
+offset_left = 590.0
+offset_top = -425.0
+offset_right = 709.0
+offset_bottom = -409.0
+theme_override_fonts/font = ExtResource("4_t8amc")
+theme_override_font_sizes/font_size = 15
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="." unique_id=235484958]
+offset_left = 587.0
+offset_top = -342.0
+offset_right = 706.0
+offset_bottom = -326.0
+theme_override_fonts/font = ExtResource("4_t8amc")
+theme_override_font_sizes/font_size = 15
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="." unique_id=1251903244]
+offset_left = 592.0
+offset_top = -385.0
+offset_right = 711.0
+offset_bottom = -369.0
+theme_override_fonts/font = ExtResource("4_t8amc")
+theme_override_font_sizes/font_size = 15
+horizontal_alignment = 1
+
+[node name="latte_label" type="Label" parent="." unique_id=2137968941]
+offset_left = 588.0
+offset_top = -364.0
+offset_right = 710.0
+offset_bottom = -329.0
+theme_override_fonts/font = ExtResource("4_t8amc")
+theme_override_font_sizes/font_size = 15
+text = "Latte
+"
+horizontal_alignment = 1
+script = ExtResource("6_wirqd")
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=756546838]
+offset_left = 745.0
+offset_top = -490.0
+offset_right = 937.0
+offset_bottom = -442.0
+texture_normal = ExtResource("6_3ufmp")
