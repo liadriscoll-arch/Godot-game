@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bpvd64firv2em"]
 
-[ext_resource type="Texture2D" uid="uid://vji4tnioof4b" path="res://Assets/Coffee assets/coffee_bg.png" id="1_bk2q3"]
 [ext_resource type="Script" uid="uid://cmbr6uxb31rc2" path="res://Scenes/coffee_instructions.gd" id="1_uehaw"]
 [ext_resource type="FontFile" uid="uid://dl176n4kxwrv8" path="res://Assets/04b_30/04B_30__.TTF" id="2_0e587"]
+[ext_resource type="Texture2D" uid="uid://dujcd7d4vdavg" path="res://Assets/Coffee assets/coffee_day_bg.webp" id="2_uehaw"]
 [ext_resource type="Script" uid="uid://03knunso7fwy" path="res://Scenes/coffee_start.gd" id="3_atth2"]
 [ext_resource type="Script" uid="uid://cb3udvnfcikiy" path="res://Scenes/coffee_settings_button.gd" id="4_bk2q3"]
 
@@ -12,7 +12,8 @@ script = ExtResource("1_uehaw")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1316721793]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1795042275]
-texture = ExtResource("1_bk2q3")
+scale = Vector2(10, 10)
+texture = ExtResource("2_uehaw")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1611132014]
 offset_left = -960.0

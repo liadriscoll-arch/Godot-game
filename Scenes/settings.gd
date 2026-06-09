@@ -13,7 +13,6 @@ func _ready():
 	volume_slider.value = Global.volume
 	brightness_slider.value = Global.brightness
 	
-	
 
 
 

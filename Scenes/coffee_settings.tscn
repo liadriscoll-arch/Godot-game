@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cm1ijhf3kh2w3"]
 
-[ext_resource type="Texture2D" uid="uid://vji4tnioof4b" path="res://Assets/Coffee assets/coffee_bg.png" id="1_jslw0"]
+[ext_resource type="Texture2D" uid="uid://dujcd7d4vdavg" path="res://Assets/Coffee assets/coffee_day_bg.webp" id="1_jslw0"]
 [ext_resource type="FontFile" uid="uid://dl176n4kxwrv8" path="res://Assets/04b_30/04B_30__.TTF" id="2_o80lr"]
 [ext_resource type="Script" uid="uid://bud44guxixqgl" path="res://Scenes/save_coffee_settings.gd" id="3_xnnt3"]
 [ext_resource type="Script" uid="uid://bl0puselg8dh6" path="res://Scenes/coffee_mode_check_button.gd" id="4_6q0j1"]
@@ -11,6 +11,7 @@
 [node name="Camera2D" type="Camera2D" parent="." unique_id=149437167]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1940069326]
+scale = Vector2(10, 10)
 texture = ExtResource("1_jslw0")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1081145685]

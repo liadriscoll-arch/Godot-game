@@ -5,6 +5,7 @@
 [ext_resource type="FontFile" uid="uid://dl176n4kxwrv8" path="res://Assets/04b_30/04B_30__.TTF" id="3_aaqfp"]
 [ext_resource type="Script" uid="uid://c0o5ptf2gwhad" path="res://Scenes/brightness_slider.gd" id="3_j2dne"]
 [ext_resource type="Script" uid="uid://duddyx2wth23y" path="res://Scenes/volume_slider.gd" id="4_6kysc"]
+[ext_resource type="Script" uid="uid://degwyh4snevjw" path="res://Scenes/settings_save_button.gd" id="6_6kysc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i44u3"]
 texture = ExtResource("1_4geyq")
@@ -241,7 +242,18 @@ justification_flags = 162
 position = Vector2(105, -97)
 zoom = Vector2(3.3, 3.3)
 
+[node name="Button" type="Button" parent="." unique_id=23444708]
+offset_left = 8.0
+offset_top = 20.0
+offset_right = 197.0
+offset_bottom = 51.0
+theme_override_fonts/font = ExtResource("3_aaqfp")
+theme_override_font_sizes/font_size = 25
+text = "Save"
+script = ExtResource("6_6kysc")
+
 [connection signal="changed" from="brightness_slider" to="." method="_on_brightness_slider_changed"]
 [connection signal="value_changed" from="brightness_slider" to="." method="_on_brightness_slider_value_changed"]
 [connection signal="changed" from="volume_slider" to="." method="_on_volume_slider_changed"]
 [connection signal="value_changed" from="volume_slider" to="." method="_on_volume_slider_value_changed"]
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

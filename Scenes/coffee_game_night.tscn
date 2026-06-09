@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dgu7soq4sclw2"]
 
 [ext_resource type="Script" uid="uid://b4b1kwfn2x1t6" path="res://Scenes/coffee_game_night.gd" id="1_02olx"]
-[ext_resource type="Texture2D" uid="uid://ymffy0wh4ufg" path="res://Assets/Coffee assets/coffee_game_night.webp" id="2_02olx"]
+[ext_resource type="Texture2D" uid="uid://dvxq82vo3yjyt" path="res://Assets/Coffee assets/coffee_bg_night.webp" id="2_s6aqk"]
 [ext_resource type="PackedScene" uid="uid://blbypndr6cggh" path="res://Scenes/fella_coffee_shop.tscn" id="3_02olx"]
 [ext_resource type="FontFile" uid="uid://dl176n4kxwrv8" path="res://Assets/04b_30/04B_30__.TTF" id="4_rldrf"]
 [ext_resource type="Script" uid="uid://5hmo5sgdwfvd" path="res://Scenes/regular_price_label.gd" id="4_tvqqg"]
@@ -15,6 +15,9 @@
 [ext_resource type="Script" uid="uid://bouma76yxp2uy" path="res://Scenes/regular_price_under_slider.gd" id="11_mpvpx"]
 [ext_resource type="Script" uid="uid://dx0rrohcmqnss" path="res://Scenes/latte_price_under_slider.gd" id="12_tvqqg"]
 [ext_resource type="Script" uid="uid://caxefpt5ahkit" path="res://Scenes/decaf_price_under_slider.gd" id="13_qv12l"]
+[ext_resource type="Texture2D" uid="uid://dye22cfhsbsru" path="res://Assets/Coffee assets/coffee_button_hover.webp" id="16_s6aqk"]
+[ext_resource type="Texture2D" uid="uid://btl53kqnxqrep" path="res://Assets/Coffee assets/coffee_button.webp" id="17_ojnwy"]
+[ext_resource type="Script" uid="uid://dlif78afekd5m" path="res://Scenes/next_day_button.gd" id="18_0cqic"]
 
 [node name="coffee_game_night" type="Node2D" unique_id=1931695800]
 script = ExtResource("1_02olx")
@@ -23,7 +26,7 @@ script = ExtResource("1_02olx")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1161832042]
 scale = Vector2(10, 10)
-texture = ExtResource("2_02olx")
+texture = ExtResource("2_s6aqk")
 
 [node name="menu_label" type="Label" parent="." unique_id=1004350091]
 offset_left = 590.0
@@ -238,8 +241,51 @@ text = "Latte"
 horizontal_alignment = 1
 script = ExtResource("12_tvqqg")
 
+[node name="regular_beans_label" type="Label" parent="." unique_id=366321080]
+offset_left = 165.0
+offset_top = -263.0
+offset_right = 456.0
+offset_bottom = -158.0
+theme_override_fonts/font = ExtResource("4_rldrf")
+theme_override_font_sizes/font_size = 30
+text = "Regular
+Beans"
+horizontal_alignment = 1
+
+[node name="decaf_beans_label" type="Label" parent="." unique_id=1684481728]
+offset_left = 508.0
+offset_top = -263.0
+offset_right = 799.0
+offset_bottom = -158.0
+theme_override_fonts/font = ExtResource("4_rldrf")
+theme_override_font_sizes/font_size = 30
+text = "Decaf
+Beans"
+horizontal_alignment = 1
+
+[node name="next_day_button" type="TextureButton" parent="." unique_id=718901474]
+offset_left = -96.0
+offset_top = 399.0
+offset_bottom = 453.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("16_s6aqk")
+texture_hover = ExtResource("17_ojnwy")
+script = ExtResource("18_0cqic")
+
+[node name="Label" type="Label" parent="." unique_id=789699982]
+offset_left = -76.0
+offset_top = 415.0
+offset_right = 76.0
+offset_bottom = 491.0
+theme_override_fonts/font = ExtResource("4_rldrf")
+theme_override_font_sizes/font_size = 36
+text = "Sleep"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="value_changed" from="regular_price_slider" to="." method="_on_regular_price_slider_value_changed"]
 [connection signal="value_changed" from="regular_price_slider" to="regular_price_slider" method="_on_value_changed"]
 [connection signal="value_changed" from="regular_price_slider" to="regular_price_under_slider" method="_on_regular_price_slider_value_changed"]
 [connection signal="value_changed" from="decaf_price_slider" to="decaf_price_slider" method="_on_value_changed"]
 [connection signal="value_changed" from="latte_price_slider" to="latte_price_slider" method="_on_value_changed"]
+[connection signal="pressed" from="next_day_button" to="next_day_button" method="_on_pressed"]
