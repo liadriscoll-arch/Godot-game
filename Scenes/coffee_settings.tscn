@@ -1,10 +1,13 @@
 [gd_scene format=3 uid="uid://cm1ijhf3kh2w3"]
 
-[ext_resource type="Texture2D" uid="uid://dujcd7d4vdavg" path="res://Assets/Coffee assets/coffee_day_bg.webp" id="1_jslw0"]
+[ext_resource type="Texture2D" uid="uid://d4hax1i8gclgn" path="res://Assets/Coffee assets/coffee_day_bg.webp" id="1_jslw0"]
+[ext_resource type="Texture2D" uid="uid://dd5tnmvm3iubr" path="res://Assets/Coffee assets/coffee_people.webp" id="2_4svi4"]
 [ext_resource type="FontFile" uid="uid://dl176n4kxwrv8" path="res://Assets/04b_30/04B_30__.TTF" id="2_o80lr"]
 [ext_resource type="Script" uid="uid://bud44guxixqgl" path="res://Scenes/save_coffee_settings.gd" id="3_xnnt3"]
 [ext_resource type="Script" uid="uid://bl0puselg8dh6" path="res://Scenes/coffee_mode_check_button.gd" id="4_6q0j1"]
 [ext_resource type="Script" uid="uid://cchvke3imjikb" path="res://Scenes/coffee_dif_slider.gd" id="5_jslw0"]
+[ext_resource type="Texture2D" uid="uid://bocewnsb3lute" path="res://Assets/Coffee assets/coffee_button_long.png" id="6_t2yxv"]
+[ext_resource type="Texture2D" uid="uid://2i76x80r6xtn" path="res://Assets/Coffee assets/coffee_button_hover_long.png" id="7_fug7w"]
 
 [node name="coffee_settings" type="Node2D" unique_id=106184467]
 
@@ -13,6 +16,10 @@
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1940069326]
 scale = Vector2(10, 10)
 texture = ExtResource("1_jslw0")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=990560645]
+scale = Vector2(10, 10)
+texture = ExtResource("2_4svi4")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1081145685]
 offset_left = -981.0
@@ -128,15 +135,25 @@ theme_override_fonts/font = ExtResource("2_o80lr")
 theme_override_font_sizes/font_size = 45
 text = "Easy"
 
-[node name="save_coffee_button" type="Button" parent="." unique_id=458334977]
-offset_left = -285.0
-offset_top = 285.0
-offset_right = 285.0
-offset_bottom = 449.0
-theme_override_fonts/font = ExtResource("2_o80lr")
-theme_override_font_sizes/font_size = 100
-text = "Save"
+[node name="TextureButton" type="TextureButton" parent="." unique_id=704959529]
+offset_left = -384.0
+offset_top = 278.0
+offset_right = -192.0
+offset_bottom = 332.0
+scale = Vector2(4, 4)
+texture_normal = ExtResource("6_t2yxv")
+texture_hover = ExtResource("7_fug7w")
 script = ExtResource("3_xnnt3")
+
+[node name="Label9" type="Label" parent="." unique_id=872853236]
+offset_left = -344.0
+offset_top = 310.0
+offset_right = 344.0
+offset_bottom = 462.0
+theme_override_fonts/font = ExtResource("2_o80lr")
+theme_override_font_sizes/font_size = 150
+text = "Save"
+horizontal_alignment = 1
 
 [connection signal="pressed" from="Control/mode_check_button" to="Control/mode_check_button" method="_on_pressed"]
 [connection signal="toggled" from="Control/mode_check_button" to="Control/mode_check_button" method="_on_toggled"]
@@ -144,4 +161,4 @@ script = ExtResource("3_xnnt3")
 [connection signal="value_changed" from="dif_slider" to="Control/mode_check_button" method="_on_h_slider_value_changed"]
 [connection signal="value_changed" from="dif_slider" to="Control/mode_check_button" method="_on_changed"]
 [connection signal="value_changed" from="dif_slider" to="dif_slider" method="_on_value_changed"]
-[connection signal="pressed" from="save_coffee_button" to="save_coffee_button" method="_on_pressed"]
+[connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_pressed"]

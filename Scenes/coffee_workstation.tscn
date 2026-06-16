@@ -1,0 +1,231 @@
+[gd_scene format=3 uid="uid://caxoc3fko1ab3"]
+
+[ext_resource type="Texture2D" uid="uid://d4hax1i8gclgn" path="res://Assets/Coffee assets/coffee_day_bg.webp" id="1_lvmgt"]
+[ext_resource type="PackedScene" uid="uid://d2iin73duoebo" path="res://Scenes/espresso_machine.tscn" id="2_833k7"]
+[ext_resource type="PackedScene" path="res://Scenes/coffee_machine.tscn" id="3_4ivsm"]
+[ext_resource type="Script" uid="uid://3jn618lt5ugu" path="res://Scenes/espresso_machine.gd" id="3_g1x2x"]
+[ext_resource type="Texture2D" uid="uid://bc4ns0hla40dh" path="res://Assets/Coffee assets/decaf_bean_bag.png" id="4_ofsjy"]
+[ext_resource type="Script" uid="uid://ra5ksx7t1uer" path="res://Scenes/sprite_2d_7.gd" id="5_u8hoy"]
+[ext_resource type="Script" uid="uid://tam6uaxqltkf" path="res://Scenes/sprite_2d_5.gd" id="6_6dytk"]
+[ext_resource type="Texture2D" uid="uid://brptf2mf8dq4w" path="res://Assets/Coffee assets/regular_bean_bag.webp" id="7_sy4um"]
+[ext_resource type="Script" uid="uid://d4h4dei2bnp50" path="res://Scenes/sprite_2d_8.gd" id="8_e5ngg"]
+[ext_resource type="Script" uid="uid://dgjw6dpjrddja" path="res://Scenes/sprite_2d_6.gd" id="9_m3yu8"]
+[ext_resource type="Script" uid="uid://bh47vydhypw84" path="res://Scenes/sprite_2d_4.gd" id="10_kifl0"]
+[ext_resource type="Script" uid="uid://bh3opcr31y0pt" path="res://Scenes/sprite_2d_3.gd" id="11_ninur"]
+[ext_resource type="Texture2D" uid="uid://kmsgeoh8cfok" path="res://Assets/Coffee assets/coffee_milk.webp" id="12_g1x2x"]
+[ext_resource type="Script" uid="uid://bw5b6vi2mmqrv" path="res://Scenes/sprite_2d_9.gd" id="14_g3dln"]
+[ext_resource type="Script" uid="uid://bik3hal2nr5m1" path="res://Scenes/milk_3.gd" id="14_qoftb"]
+[ext_resource type="Texture2D" uid="uid://ckewsnpoyqfbx" path="res://Assets/Coffee assets/empty_coffee_pot.png" id="15_4ivsm"]
+[ext_resource type="Script" uid="uid://dscxit2kdpf8b" path="res://Scenes/regular_coffee_pot.gd" id="16_ofsjy"]
+[ext_resource type="Script" uid="uid://dt4gbjf8cty2a" path="res://Scenes/milk_2.gd" id="16_qoftb"]
+[ext_resource type="Script" uid="uid://dpyw8543vjf7d" path="res://Scenes/regular_espresso_pot.gd" id="17_qoftb"]
+[ext_resource type="Texture2D" uid="uid://dxyec1mnwl56t" path="res://Scenes/coffee_pot_level_1.png" id="18_g3dln"]
+[ext_resource type="Texture2D" uid="uid://l1osmjfcxhmp" path="res://Assets/Coffee assets/coffee_pot_level_2.png" id="19_6ofcb"]
+[ext_resource type="Texture2D" uid="uid://cxew6iiogcuih" path="res://Scenes/coffee_pot_level_3.png" id="20_liats"]
+[ext_resource type="Texture2D" uid="uid://d3vqriv8dx5nd" path="res://Scenes/coffee_pot_full.png" id="21_v8adl"]
+[ext_resource type="Script" uid="uid://ca5ctgyg22pfx" path="res://Scenes/decaf_espresso_pot.gd" id="22_2ornp"]
+[ext_resource type="Script" uid="uid://cqxy3vam1881o" path="res://Scenes/decaf_coffee_pot.gd" id="24_4q1ej"]
+[ext_resource type="Script" uid="uid://0ftsx2hhykwj" path="res://Scenes/coffee_machine_start.gd" id="26_g3dln"]
+[ext_resource type="Script" uid="uid://8ymbff4gi37s" path="res://Scenes/decaf_beans_2.gd" id="26_gocpr"]
+[ext_resource type="Script" uid="uid://dfex7suh6ox8y" path="res://Scenes/decaf_beans.gd" id="27_3q8rd"]
+[ext_resource type="Script" uid="uid://b7kgfouq38kcg" path="res://Scenes/regular_beans_3.gd" id="28_4gtmi"]
+[ext_resource type="Script" uid="uid://c46851fm0jy11" path="res://Scenes/regular_beans_2.gd" id="29_41dfl"]
+[ext_resource type="Script" uid="uid://b68owbigwcfg" path="res://Scenes/regular_beans.gd" id="30_8onr1"]
+[ext_resource type="Script" uid="uid://bqb6kw50g8ny4" path="res://Scenes/espresso_machine_start.gd" id="31_u0tsq"]
+[ext_resource type="Script" uid="uid://bfbclxy2duilj" path="res://Scenes/decaf_beans_3.gd" id="33_k7rbi"]
+[ext_resource type="FontFile" uid="uid://dl176n4kxwrv8" path="res://Assets/04b_30/04B_30__.TTF" id="34_18fnt"]
+
+[node name="coffee_workstation" type="Node2D" unique_id=1346480445]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=966098969]
+scale = Vector2(20, 20)
+texture = ExtResource("1_lvmgt")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=916191147]
+position = Vector2(537, -770)
+scale = Vector2(2, 2)
+zoom = Vector2(2, 2)
+
+[node name="espresso_machine" parent="." unique_id=1673637665 instance=ExtResource("2_833k7")]
+position = Vector2(146, -949)
+scale = Vector2(4, 4)
+script = ExtResource("3_g1x2x")
+
+[node name="coffee_machine" parent="." unique_id=1608387079 instance=ExtResource("3_4ivsm")]
+position = Vector2(870, -689)
+scale = Vector2(4, 4)
+
+[node name="Sprite2D7" type="Sprite2D" parent="." unique_id=861721590]
+position = Vector2(782, -905)
+scale = Vector2(2, 2)
+texture = ExtResource("4_ofsjy")
+script = ExtResource("5_u8hoy")
+
+[node name="Sprite2D5" type="Sprite2D" parent="." unique_id=1062345071]
+position = Vector2(869, -903)
+scale = Vector2(2, 2)
+texture = ExtResource("4_ofsjy")
+script = ExtResource("6_6dytk")
+
+[node name="Sprite2D8" type="Sprite2D" parent="." unique_id=1371238277]
+position = Vector2(689, -898)
+scale = Vector2(2, 2)
+texture = ExtResource("7_sy4um")
+script = ExtResource("8_e5ngg")
+
+[node name="Sprite2D6" type="Sprite2D" parent="." unique_id=300454017]
+position = Vector2(600, -898)
+scale = Vector2(2, 2)
+texture = ExtResource("7_sy4um")
+script = ExtResource("9_m3yu8")
+
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=1418179448]
+position = Vector2(956, -903)
+scale = Vector2(2, 2)
+texture = ExtResource("4_ofsjy")
+script = ExtResource("10_kifl0")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1895989223]
+position = Vector2(505, -898)
+scale = Vector2(2, 2)
+texture = ExtResource("7_sy4um")
+script = ExtResource("11_ninur")
+
+[node name="Sprite2D11" type="Sprite2D" parent="." unique_id=1255169236]
+position = Vector2(279, -901)
+scale = Vector2(2, 2)
+texture = ExtResource("12_g1x2x")
+script = ExtResource("14_qoftb")
+
+[node name="Sprite2D10" type="Sprite2D" parent="." unique_id=1915417859]
+position = Vector2(350, -901)
+scale = Vector2(2, 2)
+texture = ExtResource("12_g1x2x")
+script = ExtResource("16_qoftb")
+
+[node name="Sprite2D9" type="Sprite2D" parent="." unique_id=1408991895]
+position = Vector2(418, -900)
+scale = Vector2(2, 2)
+texture = ExtResource("12_g1x2x")
+script = ExtResource("14_g3dln")
+
+[node name="regular_espresso_pot" type="Sprite2D" parent="." unique_id=1790105460]
+position = Vector2(287, -647)
+scale = Vector2(4, 4)
+texture = ExtResource("15_4ivsm")
+script = ExtResource("17_qoftb")
+empty_texture = ExtResource("15_4ivsm")
+level_1_texture = ExtResource("18_g3dln")
+level_2_texture = ExtResource("19_6ofcb")
+level_3_texture = ExtResource("20_liats")
+level_4_texture = ExtResource("21_v8adl")
+
+[node name="decaf_espresso_pot" type="Sprite2D" parent="." unique_id=1254801100]
+position = Vector2(143, -647)
+scale = Vector2(4, 4)
+texture = ExtResource("15_4ivsm")
+script = ExtResource("22_2ornp")
+empty_texture = ExtResource("15_4ivsm")
+level_1_texture = ExtResource("18_g3dln")
+level_2_texture = ExtResource("19_6ofcb")
+level_3_texture = ExtResource("20_liats")
+level_4_texture = ExtResource("21_v8adl")
+
+[node name="regular_coffee_pot" type="Sprite2D" parent="." unique_id=809186393]
+position = Vector2(550, -647)
+scale = Vector2(4, 4)
+texture = ExtResource("15_4ivsm")
+script = ExtResource("16_ofsjy")
+empty_texture = ExtResource("15_4ivsm")
+level_1_texture = ExtResource("18_g3dln")
+level_2_texture = ExtResource("19_6ofcb")
+level_3_texture = ExtResource("20_liats")
+level_4_texture = ExtResource("21_v8adl")
+
+[node name="decaf_coffee_pot" type="Sprite2D" parent="." unique_id=674512177]
+position = Vector2(698, -646)
+scale = Vector2(4, 4)
+texture = ExtResource("15_4ivsm")
+script = ExtResource("24_4q1ej")
+empty_texture = ExtResource("15_4ivsm")
+level_1_texture = ExtResource("18_g3dln")
+level_2_texture = ExtResource("19_6ofcb")
+level_3_texture = ExtResource("20_liats")
+level_4_texture = ExtResource("21_v8adl")
+
+[node name="decaf_beans2" type="TextureButton" parent="." unique_id=475450756]
+offset_left = 827.0
+offset_top = -942.0
+offset_right = 911.0
+offset_bottom = -860.0
+script = ExtResource("26_gocpr")
+
+[node name="decaf_beans" type="TextureButton" parent="." unique_id=1652708309]
+offset_left = 914.0
+offset_top = -940.0
+offset_right = 998.0
+offset_bottom = -858.0
+script = ExtResource("27_3q8rd")
+
+[node name="regular_beans3" type="TextureButton" parent="." unique_id=1935942378]
+offset_left = 461.0
+offset_top = -940.0
+offset_right = 548.0
+offset_bottom = -858.0
+script = ExtResource("28_4gtmi")
+
+[node name="regular_beans2" type="TextureButton" parent="." unique_id=354272289]
+offset_left = 558.0
+offset_top = -941.0
+offset_right = 644.0
+offset_bottom = -859.0
+script = ExtResource("29_41dfl")
+
+[node name="regular_beans" type="TextureButton" parent="." unique_id=900547731]
+offset_left = 647.0
+offset_top = -942.0
+offset_right = 733.0
+offset_bottom = -860.0
+script = ExtResource("30_8onr1")
+
+[node name="espresso_machine_start" type="TextureButton" parent="." unique_id=1922227844]
+offset_left = 196.0
+offset_top = -971.0
+offset_right = 232.0
+offset_bottom = -935.0
+script = ExtResource("31_u0tsq")
+
+[node name="coffee_machine_start" type="TextureButton" parent="." unique_id=220977882]
+offset_left = 916.0
+offset_top = -711.0
+offset_right = 952.0
+offset_bottom = -675.0
+script = ExtResource("26_g3dln")
+
+[node name="decaf_beans3" type="TextureButton" parent="." unique_id=49715762]
+offset_left = 740.0
+offset_top = -940.0
+offset_right = 824.0
+offset_bottom = -858.0
+script = ExtResource("33_k7rbi")
+
+[node name="Label" type="Label" parent="." unique_id=375236044]
+offset_left = 239.0
+offset_top = -1032.0
+offset_right = 1016.0
+offset_bottom = -1009.0
+theme_override_fonts/font = ExtResource("34_18fnt")
+theme_override_font_sizes/font_size = 20
+text = "To make coffee or espresso, click on the bean
+type then the machine
+For lattes, use espresso and add milk"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="decaf_beans2" to="decaf_beans2" method="_on_pressed"]
+[connection signal="pressed" from="decaf_beans" to="decaf_beans" method="_on_pressed"]
+[connection signal="pressed" from="regular_beans3" to="regular_beans3" method="_on_pressed"]
+[connection signal="pressed" from="regular_beans2" to="regular_beans2" method="_on_pressed"]
+[connection signal="pressed" from="regular_beans" to="regular_beans" method="_on_pressed"]
+[connection signal="pressed" from="espresso_machine_start" to="espresso_machine_start" method="_on_pressed"]
+[connection signal="pressed" from="coffee_machine_start" to="coffee_machine_start" method="_on_pressed"]
+[connection signal="pressed" from="decaf_beans3" to="decaf_beans3" method="_on_pressed"]

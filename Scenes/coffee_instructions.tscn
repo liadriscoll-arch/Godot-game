@@ -2,8 +2,9 @@
 
 [ext_resource type="Script" uid="uid://cmbr6uxb31rc2" path="res://Scenes/coffee_instructions.gd" id="1_uehaw"]
 [ext_resource type="FontFile" uid="uid://dl176n4kxwrv8" path="res://Assets/04b_30/04B_30__.TTF" id="2_0e587"]
-[ext_resource type="Texture2D" uid="uid://dujcd7d4vdavg" path="res://Assets/Coffee assets/coffee_day_bg.webp" id="2_uehaw"]
+[ext_resource type="Texture2D" uid="uid://d4hax1i8gclgn" path="res://Assets/Coffee assets/coffee_day_bg.webp" id="2_uehaw"]
 [ext_resource type="Script" uid="uid://03knunso7fwy" path="res://Scenes/coffee_start.gd" id="3_atth2"]
+[ext_resource type="Texture2D" uid="uid://dd5tnmvm3iubr" path="res://Assets/Coffee assets/coffee_people.webp" id="3_cb61g"]
 [ext_resource type="Script" uid="uid://cb3udvnfcikiy" path="res://Scenes/coffee_settings_button.gd" id="4_bk2q3"]
 
 [node name="coffee_instructions" type="Node2D" unique_id=1775656967]
@@ -14,6 +15,10 @@ script = ExtResource("1_uehaw")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1795042275]
 scale = Vector2(10, 10)
 texture = ExtResource("2_uehaw")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=356813893]
+scale = Vector2(10, 10)
+texture = ExtResource("3_cb61g")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1611132014]
 offset_left = -960.0

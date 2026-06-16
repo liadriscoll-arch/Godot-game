@@ -1,9 +1,5 @@
-extends Button
-
-@onready var dif_slider: HSlider = $"../dif_slider"
+extends TextureButton
 
 
-
-func _on_pressed() -> void:
-	
+func _on_pressed():
 	get_tree().change_scene_to_file("res://Scenes/coffee_instructions.tscn")

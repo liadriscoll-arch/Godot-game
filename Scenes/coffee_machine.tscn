@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://bafb7jxk0subi"]
+
+[ext_resource type="Texture2D" uid="uid://cnlkgkbr0kjbp" path="res://Assets/Coffee assets/coffee_machine_frames/pixil-frame-0.png" id="1_gevka"]
+[ext_resource type="Texture2D" uid="uid://kmbh3jfcq74a" path="res://Assets/Coffee assets/coffee_machine_frames/pixil-frame-2.png" id="2_b21vj"]
+[ext_resource type="Texture2D" uid="uid://27x4chjkijrk" path="res://Assets/Coffee assets/coffee_machine_frames/pixil-frame-1.png" id="3_j2q3x"]
+[ext_resource type="Texture2D" uid="uid://2daw6va31cm7" path="res://Assets/Coffee assets/coffee_machine_frames/pixil-frame-3.png" id="4_u41mm"]
+[ext_resource type="Texture2D" uid="uid://da6q21c7cl3n1" path="res://Assets/Coffee assets/coffee_machine_frames/pixil-frame-6.png" id="5_gk2de"]
+[ext_resource type="Texture2D" uid="uid://bauqr605rciug" path="res://Assets/Coffee assets/coffee_machine_frames/pixil-frame-9.png" id="6_5yg6f"]
+[ext_resource type="Texture2D" uid="uid://dtyhjkj867nl3" path="res://Assets/Coffee assets/coffee_machine_frames/pixil-frame-12.png" id="7_w0tgl"]
+[ext_resource type="Texture2D" uid="uid://cv5mb3a2cyavv" path="res://Assets/Coffee assets/coffee_machine_frames/pixil-frame-15.png" id="8_ola23"]
+[ext_resource type="Texture2D" uid="uid://dq7al25nui2fr" path="res://Assets/Coffee assets/coffee_machine_frames/pixil-frame-18.png" id="9_y5ng3"]
+[ext_resource type="Texture2D" uid="uid://bbumgp50hwx6x" path="res://Assets/Coffee assets/coffee_machine_frames/pixil-frame-21.png" id="10_t58jr"]
+[ext_resource type="Texture2D" uid="uid://6ln35c80jbfk" path="res://Assets/Coffee assets/coffee_machine_frames/pixil-frame-24.png" id="11_4v8hb"]
+[ext_resource type="Texture2D" uid="uid://c88av8oanwrug" path="res://Assets/Coffee assets/coffee_machine_frames/pixil-frame-27.png" id="12_e34ke"]
+[ext_resource type="Texture2D" uid="uid://bscf65qg8g8vs" path="res://Assets/Coffee assets/coffee_machine_frames/pixil-frame-30.png" id="13_4kkem"]
+[ext_resource type="Texture2D" uid="uid://c7dwnssbwcroq" path="res://Assets/Coffee assets/coffee_machine_frames/pixil-frame-33.png" id="14_u56x3"]
+[ext_resource type="Texture2D" uid="uid://by4gxb1qnoj38" path="res://Assets/Coffee assets/coffee_machine_frames/pixil-frame-36.png" id="15_yadv3"]
+[ext_resource type="Texture2D" uid="uid://cmafk4j235bw6" path="res://Assets/Coffee assets/coffee_machine_frames/pixil-frame-38.png" id="16_010w4"]
+[ext_resource type="Texture2D" uid="uid://n33r3kt231jx" path="res://Assets/Coffee assets/coffee_machine_frames/pixil-frame-37.png" id="17_46uow"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ldcyq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_gevka")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_b21vj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_j2q3x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_gevka")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_u41mm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_gk2de")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_5yg6f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_w0tgl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ola23")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_y5ng3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_t58jr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_4v8hb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_e34ke")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_4kkem")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_u56x3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_yadv3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_010w4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_46uow")
+}],
+"loop": true,
+"name": &"coffee_fill",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_gevka")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lye05"]
+size = Vector2(43, 44)
+
+[node name="coffee_machine" type="Node2D" unique_id=1608387079]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=184969034]
+sprite_frames = SubResource("SpriteFrames_ldcyq")
+animation = &"coffee_fill"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1810246530]
+position = Vector2(1.5, 2)
+shape = SubResource("RectangleShape2D_lye05")

@@ -18,6 +18,29 @@
 [ext_resource type="Texture2D" uid="uid://dye22cfhsbsru" path="res://Assets/Coffee assets/coffee_button_hover.webp" id="16_s6aqk"]
 [ext_resource type="Texture2D" uid="uid://btl53kqnxqrep" path="res://Assets/Coffee assets/coffee_button.webp" id="17_ojnwy"]
 [ext_resource type="Script" uid="uid://dlif78afekd5m" path="res://Scenes/next_day_button.gd" id="18_0cqic"]
+[ext_resource type="Texture2D" uid="uid://bc4ns0hla40dh" path="res://Assets/Coffee assets/decaf_bean_bag.png" id="19_0cqic"]
+[ext_resource type="Script" uid="uid://ia2w2bkc3mjl" path="res://Scenes/decaf_beans_sprite.gd" id="20_bjiif"]
+[ext_resource type="Texture2D" uid="uid://brptf2mf8dq4w" path="res://Assets/Coffee assets/regular_bean_bag.webp" id="20_ell03"]
+[ext_resource type="Script" uid="uid://cxs6ldv2gfn65" path="res://Scenes/decaf_purchase_button.gd" id="21_ell03"]
+[ext_resource type="Script" uid="uid://rvamliynbvjk" path="res://Scenes/regular_purchase_button.gd" id="22_23vhj"]
+[ext_resource type="Script" uid="uid://c4n4e0rvy3xpj" path="res://Scenes/regular_beans_sprite.gd" id="22_kj3y3"]
+[ext_resource type="Texture2D" uid="uid://dn74w7u3c7uu1" path="res://Assets/Coffee assets/coffee_button_temp_big.png" id="23_40pdf"]
+[ext_resource type="Script" uid="uid://b3m0x0bp1fpnb" path="res://Scenes/regular_beans_label_night_2.gd" id="24_aq38u"]
+[ext_resource type="Script" uid="uid://cskwpxw34qdle" path="res://Scenes/until_latte_discovered.gd" id="24_jtomb"]
+[ext_resource type="Script" uid="uid://b7pqrumxdnwyl" path="res://Scenes/milk_label_night_2.gd" id="24_svrd5"]
+[ext_resource type="Script" uid="uid://7yjhrlteky8q" path="res://Scenes/milk_label_night.gd" id="25_4jj60"]
+[ext_resource type="Script" uid="uid://rxvq0lw6x2v6" path="res://Scenes/money_label_night_2.gd" id="25_aq38u"]
+[ext_resource type="Script" uid="uid://ckn6hs2j7tgaa" path="res://Scenes/decaf_beans_label_night_2.gd" id="25_jtomb"]
+[ext_resource type="Texture2D" uid="uid://cqjpdtecakya5" path="res://Assets/Coffee assets/esspresso_frames/pixil-frame-0.png" id="30_32ire"]
+[ext_resource type="Script" uid="uid://mbv1iria0ja7" path="res://Scenes/milk_purchase_button.gd" id="31_cpie8"]
+[ext_resource type="Script" uid="uid://cg04vf1xnv6y2" path="res://Scenes/expresso_image.gd" id="31_jhf6j"]
+[ext_resource type="Texture2D" uid="uid://kmsgeoh8cfok" path="res://Assets/Coffee assets/coffee_milk.webp" id="31_tf0kk"]
+[ext_resource type="Script" uid="uid://dp2hu64gboc82" path="res://Scenes/expresso_purchase_button.gd" id="32_recjb"]
+[ext_resource type="Script" uid="uid://c4ba57xxpy3m0" path="res://Scenes/milk_image.gd" id="33_recjb"]
+[ext_resource type="Script" uid="uid://vygh3o5t2cto" path="res://Scenes/milk_label.gd" id="34_jhf6j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bjiif"]
+size = Vector2(40.800007, 40.800003)
 
 [node name="coffee_game_night" type="Node2D" unique_id=1931695800]
 script = ExtResource("1_02olx")
@@ -119,29 +142,29 @@ position = Vector2(0, -370)
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=876744372]
 position = Vector2(-482, 2)
-scale = Vector2(9, 9)
+scale = Vector2(9, 8)
 texture = ExtResource("8_tkoby")
 
 [node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1051791553]
 position = Vector2(482, 0)
-scale = Vector2(9, 9)
+scale = Vector2(9, 8)
 texture = ExtResource("8_tkoby")
 
 [node name="pricing_label" type="Label" parent="." unique_id=281899972]
-offset_left = -797.0
-offset_top = -358.0
-offset_right = -167.0
-offset_bottom = -289.0
+offset_left = -795.0
+offset_top = -333.0
+offset_right = -165.0
+offset_bottom = -257.0
 theme_override_fonts/font = ExtResource("4_rldrf")
 theme_override_font_sizes/font_size = 75
 text = "Pricing"
 horizontal_alignment = 1
 
 [node name="upgrades_label" type="Label" parent="." unique_id=1478139809]
-offset_left = 167.0
-offset_top = -360.0
-offset_right = 797.0
-offset_bottom = -284.0
+offset_left = 165.0
+offset_top = -345.0
+offset_right = 795.0
+offset_bottom = -269.0
 theme_override_fonts/font = ExtResource("4_rldrf")
 theme_override_font_sizes/font_size = 75
 text = "Shop"
@@ -242,10 +265,10 @@ horizontal_alignment = 1
 script = ExtResource("12_tvqqg")
 
 [node name="regular_beans_label" type="Label" parent="." unique_id=366321080]
-offset_left = 165.0
-offset_top = -263.0
-offset_right = 456.0
-offset_bottom = -158.0
+offset_left = 508.0
+offset_top = -245.0
+offset_right = 799.0
+offset_bottom = -140.0
 theme_override_fonts/font = ExtResource("4_rldrf")
 theme_override_font_sizes/font_size = 30
 text = "Regular
@@ -253,10 +276,10 @@ Beans"
 horizontal_alignment = 1
 
 [node name="decaf_beans_label" type="Label" parent="." unique_id=1684481728]
-offset_left = 508.0
-offset_top = -263.0
-offset_right = 799.0
-offset_bottom = -158.0
+offset_left = 165.0
+offset_top = -245.0
+offset_right = 456.0
+offset_bottom = -140.0
 theme_override_fonts/font = ExtResource("4_rldrf")
 theme_override_font_sizes/font_size = 30
 text = "Decaf
@@ -283,9 +306,303 @@ text = "Sleep"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="shop_item_instructions_label" type="Label" parent="." unique_id=1263318241]
+offset_left = -960.0
+offset_top = -504.0
+offset_right = 960.0
+offset_bottom = -359.0
+theme_override_fonts/font = ExtResource("4_rldrf")
+theme_override_font_sizes/font_size = 20
+text = "hover over an item for help"
+horizontal_alignment = 1
+
+[node name="decaf_beans_sprite" type="Sprite2D" parent="." unique_id=70551877]
+position = Vector2(310.00003, -129)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("19_0cqic")
+script = ExtResource("20_bjiif")
+
+[node name="Area2D" type="Area2D" parent="decaf_beans_sprite" unique_id=2116714706]
+position = Vector2(-1.22070305e-05, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="decaf_beans_sprite/Area2D" unique_id=39287607]
+position = Vector2(0, 2.0000038)
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_bjiif")
+
+[node name="regular_beans_sprite" type="Sprite2D" parent="." unique_id=831355370]
+position = Vector2(656.00006, -129)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("20_ell03")
+script = ExtResource("22_kj3y3")
+
+[node name="Area2D" type="Area2D" parent="regular_beans_sprite" unique_id=1271602722]
+position = Vector2(-1.22070305e-05, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="regular_beans_sprite/Area2D" unique_id=1458861292]
+position = Vector2(0, 2.0000038)
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_bjiif")
+
+[node name="decaf_purchase_button" type="TextureButton" parent="." unique_id=1337624888]
+offset_left = 238.00002
+offset_top = -69.0
+offset_right = 334.0
+offset_bottom = -15.0
+scale = Vector2(1.5, 1.5)
+texture_normal = ExtResource("16_s6aqk")
+texture_hover = ExtResource("17_ojnwy")
+script = ExtResource("21_ell03")
+
+[node name="decaf_bag_price" type="Label" parent="." unique_id=1898935636]
+offset_left = 238.0
+offset_top = -69.0
+offset_right = 390.0
+offset_bottom = 7.0
+theme_override_fonts/font = ExtResource("4_rldrf")
+theme_override_font_sizes/font_size = 36
+text = "5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="regular_purchase_button" type="TextureButton" parent="." unique_id=453133837]
+offset_left = 588.0
+offset_top = -69.0
+offset_right = 684.0
+offset_bottom = -15.0
+scale = Vector2(1.5, 1.5)
+texture_normal = ExtResource("16_s6aqk")
+texture_hover = ExtResource("17_ojnwy")
+script = ExtResource("22_23vhj")
+
+[node name="regular_bag_price" type="Label" parent="." unique_id=318779396]
+offset_left = 588.0
+offset_top = -69.0
+offset_right = 740.0
+offset_bottom = 7.0
+theme_override_fonts/font = ExtResource("4_rldrf")
+theme_override_font_sizes/font_size = 36
+text = "5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sprite2D9" type="Sprite2D" parent="." unique_id=1569120442]
+position = Vector2(-526, -401)
+scale = Vector2(2, 2)
+texture = ExtResource("23_40pdf")
+script = ExtResource("24_jtomb")
+
+[node name="Sprite2D8" type="Sprite2D" parent="." unique_id=875006363]
+position = Vector2(-525, -482)
+scale = Vector2(2, 2)
+texture = ExtResource("23_40pdf")
+
+[node name="Sprite2D6" type="Sprite2D" parent="." unique_id=1573370810]
+position = Vector2(-810, -482)
+scale = Vector2(2, 2)
+texture = ExtResource("23_40pdf")
+
+[node name="Sprite2D7" type="Sprite2D" parent="." unique_id=628896693]
+position = Vector2(-810, -401)
+scale = Vector2(2, 2)
+texture = ExtResource("23_40pdf")
+
+[node name="regular_beans_label_night" type="Label" parent="." unique_id=677359107]
+offset_left = -647.0
+offset_top = -534.0
+offset_right = -397.0
+offset_bottom = -482.0
+theme_override_fonts/font = ExtResource("4_rldrf")
+theme_override_font_sizes/font_size = 12
+text = "Regular coffee beans:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="decaf_beans_label_night" type="Label" parent="." unique_id=1185993956]
+offset_left = -932.0
+offset_top = -435.0
+offset_right = -682.0
+offset_bottom = -381.0
+theme_override_fonts/font = ExtResource("4_rldrf")
+theme_override_font_sizes/font_size = 14
+text = "Decaf coffee beans
+
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="milk_label_night" type="Label" parent="." unique_id=539311322]
+offset_left = -648.0
+offset_top = -448.0
+offset_right = -398.0
+offset_bottom = -400.0
+theme_override_fonts/font = ExtResource("4_rldrf")
+theme_override_font_sizes/font_size = 20
+text = "Milk:"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("25_4jj60")
+
+[node name="money_label_night" type="Label" parent="." unique_id=144140929]
+offset_left = -932.0
+offset_top = -530.0
+offset_right = -682.0
+offset_bottom = -478.0
+theme_override_fonts/font = ExtResource("4_rldrf")
+theme_override_font_sizes/font_size = 20
+text = "Money:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="regular_beans_label_night2" type="Label" parent="." unique_id=1610361644]
+offset_left = -647.0
+offset_top = -504.0
+offset_right = -397.0
+offset_bottom = -452.0
+theme_override_fonts/font = ExtResource("4_rldrf")
+theme_override_font_sizes/font_size = 20
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("24_aq38u")
+
+[node name="decaf_beans_label_night2" type="Label" parent="." unique_id=662143810]
+offset_left = -932.0
+offset_top = -421.0
+offset_right = -682.0
+offset_bottom = -367.0
+theme_override_fonts/font = ExtResource("4_rldrf")
+theme_override_font_sizes/font_size = 20
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("25_jtomb")
+
+[node name="milk_label_night2" type="Label" parent="." unique_id=104479329]
+offset_left = -648.0
+offset_top = -421.0
+offset_right = -398.0
+offset_bottom = -369.0
+theme_override_fonts/font = ExtResource("4_rldrf")
+theme_override_font_sizes/font_size = 20
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("24_svrd5")
+
+[node name="money_label_night2" type="Label" parent="." unique_id=291019039]
+offset_left = -932.0
+offset_top = -500.0
+offset_right = -682.0
+offset_bottom = -448.0
+theme_override_fonts/font = ExtResource("4_rldrf")
+theme_override_font_sizes/font_size = 20
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("25_aq38u")
+
+[node name="regular_beans_label2" type="Label" parent="." unique_id=572256163]
+offset_left = 165.0
+offset_top = 44.0
+offset_right = 456.0
+offset_bottom = 149.0
+theme_override_fonts/font = ExtResource("4_rldrf")
+theme_override_font_sizes/font_size = 30
+text = "New
+machine"
+horizontal_alignment = 1
+
+[node name="expresso_image" type="Sprite2D" parent="." unique_id=546353258]
+position = Vector2(311, 162.99995)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("30_32ire")
+script = ExtResource("31_jhf6j")
+
+[node name="Area2D" type="Area2D" parent="expresso_image" unique_id=304036242]
+position = Vector2(-1.22070305e-05, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="expresso_image/Area2D" unique_id=1709466618]
+position = Vector2(0, 2.0000038)
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_bjiif")
+
+[node name="milk_purchase_button" type="TextureButton" parent="." unique_id=743928394]
+offset_left = 581.0
+offset_top = 238.0
+offset_right = 677.0
+offset_bottom = 292.0
+scale = Vector2(1.5, 1.5)
+texture_normal = ExtResource("16_s6aqk")
+texture_hover = ExtResource("17_ojnwy")
+script = ExtResource("31_cpie8")
+
+[node name="expresso_purchase_button" type="TextureButton" parent="." unique_id=1074406516]
+offset_left = 238.00002
+offset_top = 238.0
+offset_right = 334.0
+offset_bottom = 292.0
+scale = Vector2(1.5, 1.5)
+texture_normal = ExtResource("16_s6aqk")
+texture_hover = ExtResource("17_ojnwy")
+script = ExtResource("32_recjb")
+
+[node name="milk_image" type="Sprite2D" parent="." unique_id=716134392]
+position = Vector2(656, 149)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("31_tf0kk")
+script = ExtResource("33_recjb")
+
+[node name="Area2D" type="Area2D" parent="milk_image" unique_id=1490363328]
+position = Vector2(-1.22070305e-05, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="milk_image/Area2D" unique_id=1651185506]
+position = Vector2(0, 2.0000038)
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_bjiif")
+
+[node name="milk_label" type="Label" parent="." unique_id=1518084538]
+offset_left = 508.0
+offset_top = 59.0
+offset_right = 799.0
+offset_bottom = 164.0
+theme_override_fonts/font = ExtResource("4_rldrf")
+theme_override_font_sizes/font_size = 30
+text = "Milk"
+horizontal_alignment = 1
+script = ExtResource("34_jhf6j")
+
+[node name="expresso_price" type="Label" parent="." unique_id=1157241216]
+offset_left = 238.0
+offset_top = 238.0
+offset_right = 390.0
+offset_bottom = 311.0
+theme_override_fonts/font = ExtResource("4_rldrf")
+theme_override_font_sizes/font_size = 36
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="milk_price" type="Label" parent="." unique_id=375098182]
+offset_left = 581.0
+offset_top = 238.0
+offset_right = 733.0
+offset_bottom = 311.0
+theme_override_fonts/font = ExtResource("4_rldrf")
+theme_override_font_sizes/font_size = 36
+text = "5"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("34_jhf6j")
+
 [connection signal="value_changed" from="regular_price_slider" to="." method="_on_regular_price_slider_value_changed"]
 [connection signal="value_changed" from="regular_price_slider" to="regular_price_slider" method="_on_value_changed"]
 [connection signal="value_changed" from="regular_price_slider" to="regular_price_under_slider" method="_on_regular_price_slider_value_changed"]
 [connection signal="value_changed" from="decaf_price_slider" to="decaf_price_slider" method="_on_value_changed"]
 [connection signal="value_changed" from="latte_price_slider" to="latte_price_slider" method="_on_value_changed"]
 [connection signal="pressed" from="next_day_button" to="next_day_button" method="_on_pressed"]
+[connection signal="pressed" from="decaf_purchase_button" to="decaf_purchase_button" method="_on_pressed"]
+[connection signal="pressed" from="regular_purchase_button" to="regular_purchase_button" method="_on_pressed"]
+[connection signal="pressed" from="milk_purchase_button" to="milk_purchase_button" method="_on_pressed"]
+[connection signal="pressed" from="expresso_purchase_button" to="expresso_purchase_button" method="_on_pressed"]
+[connection signal="mouse_entered" from="milk_image/Area2D" to="milk_image" method="_on_area_2d_mouse_entered"]

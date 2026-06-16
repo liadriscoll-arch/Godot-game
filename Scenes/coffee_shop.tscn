@@ -1,0 +1,138 @@
+[gd_scene format=3 uid="uid://dpnn01ld7qugi"]
+
+[ext_resource type="Texture2D" uid="uid://d4hax1i8gclgn" path="res://Assets/Coffee assets/coffee_day_bg.webp" id="1_oph8b"]
+[ext_resource type="Texture2D" uid="uid://dd5tnmvm3iubr" path="res://Assets/Coffee assets/coffee_people.webp" id="2_0k3ma"]
+[ext_resource type="Texture2D" uid="uid://b0edhj4oerbak" path="res://Assets/Coffee assets/coffee_shop.webp" id="3_wemkf"]
+[ext_resource type="FontFile" uid="uid://dl176n4kxwrv8" path="res://Assets/04b_30/04B_30__.TTF" id="3_wvnb4"]
+[ext_resource type="Script" uid="uid://5hmo5sgdwfvd" path="res://Scenes/regular_price_label.gd" id="4_j1s20"]
+[ext_resource type="Script" uid="uid://3wuvoq2snne1" path="res://Scenes/latte_price_label.gd" id="5_k3to3"]
+[ext_resource type="Script" uid="uid://dq1gmadoim13b" path="res://Scenes/decaf_label.gd" id="6_ug16k"]
+[ext_resource type="Script" uid="uid://bbkyd4yeeiwuv" path="res://Scenes/latte_label.gd" id="7_4hl37"]
+[ext_resource type="Texture2D" uid="uid://bocewnsb3lute" path="res://Assets/Coffee assets/coffee_button_long.png" id="9_k3to3"]
+[ext_resource type="Texture2D" uid="uid://2i76x80r6xtn" path="res://Assets/Coffee assets/coffee_button_hover_long.png" id="10_ug16k"]
+[ext_resource type="Script" uid="uid://bvya7es7jpvis" path="res://Scenes/coffee_shop_back.gd" id="11_ug16k"]
+
+[node name="coffee_shop" type="Node2D" unique_id=1346237771]
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=717482824]
+scale = Vector2(10, 10)
+texture = ExtResource("1_oph8b")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=313271445]
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1835619622]
+scale = Vector2(10, 10)
+texture = ExtResource("2_0k3ma")
+
+[node name="menu_label" type="Label" parent="." unique_id=446877055]
+offset_left = 590.0
+offset_top = -469.0
+offset_right = 710.0
+offset_bottom = -443.0
+theme_override_fonts/font = ExtResource("3_wvnb4")
+theme_override_font_sizes/font_size = 20
+text = "Menu"
+horizontal_alignment = 1
+
+[node name="coffee_sign_label" type="Label" parent="." unique_id=601565536]
+offset_left = -394.0
+offset_top = -197.0
+offset_right = 370.0
+offset_bottom = -69.0
+theme_override_fonts/font = ExtResource("3_wvnb4")
+theme_override_font_sizes/font_size = 127
+text = "Coffee!"
+horizontal_alignment = 1
+
+[node name="regular_label" type="Label" parent="." unique_id=321908939]
+offset_left = 589.0
+offset_top = -447.0
+offset_right = 711.0
+offset_bottom = -412.0
+theme_override_fonts/font = ExtResource("3_wvnb4")
+theme_override_font_sizes/font_size = 15
+text = "Regular
+"
+horizontal_alignment = 1
+
+[node name="decaf_label" type="Label" parent="." unique_id=306319605]
+offset_left = 589.0
+offset_top = -409.0
+offset_right = 709.0
+offset_bottom = -389.0
+theme_override_fonts/font = ExtResource("3_wvnb4")
+theme_override_font_sizes/font_size = 15
+text = "Decaf"
+horizontal_alignment = 1
+
+[node name="regular_price_label" type="Label" parent="." unique_id=413860901]
+offset_left = 587.0
+offset_top = -428.0
+offset_right = 709.0
+offset_bottom = -412.0
+theme_override_fonts/font = ExtResource("3_wvnb4")
+theme_override_font_sizes/font_size = 15
+text = "3"
+horizontal_alignment = 1
+script = ExtResource("4_j1s20")
+
+[node name="latte_price_label" type="Label" parent="." unique_id=523394799]
+offset_left = 586.0
+offset_top = -345.0
+offset_right = 709.0
+offset_bottom = -329.0
+theme_override_fonts/font = ExtResource("3_wvnb4")
+theme_override_font_sizes/font_size = 15
+text = "3"
+horizontal_alignment = 1
+script = ExtResource("5_k3to3")
+
+[node name="decaf_price_label" type="Label" parent="." unique_id=309341723]
+offset_left = 587.0
+offset_top = -388.0
+offset_right = 708.0
+offset_bottom = -372.0
+theme_override_fonts/font = ExtResource("3_wvnb4")
+theme_override_font_sizes/font_size = 15
+text = "3"
+horizontal_alignment = 1
+script = ExtResource("6_ug16k")
+
+[node name="latte_label" type="Label" parent="." unique_id=1266528583]
+offset_left = 587.0
+offset_top = -368.0
+offset_right = 709.0
+offset_bottom = -333.0
+theme_override_fonts/font = ExtResource("3_wvnb4")
+theme_override_font_sizes/font_size = 15
+text = "Latte
+"
+horizontal_alignment = 1
+script = ExtResource("7_4hl37")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1192933430]
+position = Vector2(0, -97)
+scale = Vector2(12, 12)
+texture = ExtResource("3_wemkf")
+
+[node name="back" type="TextureButton" parent="." unique_id=1089788675]
+offset_left = -298.0
+offset_top = 356.0
+offset_right = -106.0
+offset_bottom = 410.0
+scale = Vector2(3, 3)
+texture_normal = ExtResource("9_k3to3")
+texture_hover = ExtResource("10_ug16k")
+script = ExtResource("11_ug16k")
+
+[node name="Label9" type="Label" parent="." unique_id=1093646361]
+offset_left = -268.0
+offset_top = 380.0
+offset_right = 248.0
+offset_bottom = 494.0
+theme_override_fonts/font = ExtResource("3_wvnb4")
+theme_override_font_sizes/font_size = 100
+text = "Back"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="back" to="back" method="_on_pressed"]
