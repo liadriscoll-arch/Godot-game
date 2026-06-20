@@ -6,6 +6,7 @@ extends Node2D
 @onready var type_sprite: Sprite2D = $type_sprite
 @onready var drink_sprite: Sprite2D = $drink_sprite
 @onready var intro_label: Label = $intro_label
+@onready var event_text: Label = $event_text
 
 
 
@@ -55,7 +56,7 @@ func get_customer_chance() -> float:
 	var chance := 30.0
 	
 	#chance increases with ads
-	chance += Global.ads.size() * 5.0
+	chance += Global.ads.size() * 3.0
 	#chance determined by regular coffee price
 	chance += (6.0 - Global.regular_price) * 5.0
 	#chance determined by latte price
@@ -220,3 +221,34 @@ func _on_speech_button_pressed() -> void:
 #if not, customer leaves
 	else:
 		customer_leaves()
+
+
+func find_tip_chance() -> float:
+	var tip_chance := 10.0
+	
+	#chance increases with ads
+	tip_chance += Global.ads.size() * 3.0
+	#chance determined by regular coffee price
+	tip_chance += (6.0 - Global.regular_price) * 5.0
+	#chance determined by latte price
+	if Global.latte_discovered:
+		tip_chance += (10.0 - Global.latte_price) * 4.0
+	#chance determined by decaf coffee price
+	tip_chance += (6.0 - Global.decaf_price) * 5.0
+	#chance is forced between 5-85%
+	return clamp(tip_chance, 5.0, 70.0)
+	
+func try_tip() -> void:
+	var tip_chance := find_tip_chance()
+	var tip = 0
+	if randi_range(1, 100) <= tip_chance:
+		tip = randi_range(1,5)
+		Global.coffee_money += tip
+		event_text.text = "The customer left a " + tip + " credit tip"
+
+func _on_events_timer_timeout() -> void:
+	Global.event_chance = randi_range(0,50)
+	if Global.event_chance == 50:
+		Global.coffee_money += 25
+		event_text.text = "25"
+	

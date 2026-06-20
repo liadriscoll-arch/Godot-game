@@ -9,7 +9,7 @@ var coffee_difficulty = 1
 var coffee_money = 100
 var regular_coffee_beans = 0
 var decaf_coffee_beans = 0
-var quota
+var quota = 500
 var cofee = 0
 var ads = []
 var coffee_day = 0
@@ -39,3 +39,5 @@ var latte_cup_type_made = "regular"
 var selected_cup := "none"
 var drink_selected
 var customer_orders: Array = []
+var coffee_win
+var event_chance

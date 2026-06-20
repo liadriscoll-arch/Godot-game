@@ -49,7 +49,10 @@
 [ext_resource type="Script" uid="uid://biibsaixngjut" path="res://Scenes/sprite_2d_16.gd" id="46_swigj"]
 [ext_resource type="Script" uid="uid://ck82b56jeig8r" path="res://Scenes/sprite_2d_15.gd" id="47_onla6"]
 [ext_resource type="Texture2D" uid="uid://dmkfrnw6egsig" path="res://Assets/Coffee assets/coffee_button_temp.png" id="49_lim1f"]
+[ext_resource type="Script" uid="uid://cb3h0ja36oq3y" path="res://Scenes/day_label_2.gd" id="50_e8qh7"]
 [ext_resource type="Script" uid="uid://bdsaooav7mr1m" path="res://Scenes/money_day_label.gd" id="50_wgysp"]
+[ext_resource type="Script" uid="uid://b1km27xtdjym5" path="res://Scenes/quota_label_2.gd" id="52_pgryu"]
+[ext_resource type="Texture2D" uid="uid://ccjhobt0jdbjt" path="res://Assets/Coffee assets/coffee_events.webp" id="53_pgryu"]
 
 [node name="coffee_game_day" type="Node2D" unique_id=567127333]
 script = ExtResource("1_uky3h")
@@ -57,6 +60,7 @@ script = ExtResource("1_uky3h")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1005988794]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1899262145]
+position = Vector2(-2.9999998, 0)
 scale = Vector2(10, 10)
 texture = ExtResource("2_3ufmp")
 
@@ -338,7 +342,7 @@ position = Vector2(-269, 48.000015)
 scale = Vector2(7.5, 7.5)
 
 [node name="Customer_timer" type="Timer" parent="." unique_id=627600059]
-wait_time = 5.0
+wait_time = 2.0
 autostart = true
 
 [node name="type_sprite" type="Sprite2D" parent="." unique_id=106380902]
@@ -382,6 +386,29 @@ position = Vector2(193, -322)
 texture = ExtResource("46_onla6")
 script = ExtResource("47_onla6")
 
+[node name="Sprite2D18" type="Sprite2D" parent="." unique_id=1415477238]
+position = Vector2(-833, -419)
+texture = ExtResource("49_lim1f")
+
+[node name="day_label" type="Label" parent="." unique_id=1879453176]
+offset_left = -923.0
+offset_top = -440.0
+offset_right = -743.0
+offset_bottom = -411.0
+theme_override_fonts/font = ExtResource("4_t8amc")
+text = "Day:"
+horizontal_alignment = 1
+
+[node name="day_label2" type="Label" parent="." unique_id=2018444718]
+offset_left = -926.0
+offset_top = -430.0
+offset_right = -740.0
+offset_bottom = -394.0
+theme_override_fonts/font = ExtResource("4_t8amc")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("50_e8qh7")
+
 [node name="Sprite2D17" type="Sprite2D" parent="." unique_id=106891712]
 position = Vector2(-833, -486)
 texture = ExtResource("49_lim1f")
@@ -405,9 +432,52 @@ horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("50_wgysp")
 
+[node name="Sprite2D19" type="Sprite2D" parent="." unique_id=848811243]
+position = Vector2(-833, -353)
+texture = ExtResource("49_lim1f")
+
+[node name="quota_label" type="Label" parent="." unique_id=1681607208]
+offset_left = -923.0
+offset_top = -374.0
+offset_right = -743.0
+offset_bottom = -345.0
+theme_override_fonts/font = ExtResource("4_t8amc")
+text = "Quota:"
+horizontal_alignment = 1
+
+[node name="quota_label2" type="Label" parent="." unique_id=255836342]
+offset_left = -926.0
+offset_top = -364.0
+offset_right = -740.0
+offset_bottom = -328.0
+theme_override_fonts/font = ExtResource("4_t8amc")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("52_pgryu")
+
+[node name="event_rect" type="Sprite2D" parent="." unique_id=646871038]
+position = Vector2(1.1920929e-07, 331)
+scale = Vector2(10, 10)
+texture = ExtResource("53_pgryu")
+
+[node name="events_timer" type="Timer" parent="." unique_id=925296094]
+wait_time = 10.0
+autostart = true
+
+[node name="event_text" type="Label" parent="." unique_id=588437710]
+offset_left = -430.0
+offset_top = 334.0
+offset_right = 430.0
+offset_bottom = 462.0
+theme_override_fonts/font = ExtResource("4_t8amc")
+theme_override_font_sizes/font_size = 35
+horizontal_alignment = 1
+
 [connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_pressed"]
 [connection signal="pressed" from="workstation_button" to="workstation_button" method="_on_pressed"]
 [connection signal="pressed" from="speech_button" to="." method="_on_speech_button_pressed"]
 [connection signal="pressed" from="speech_button" to="speech_button" method="_on_pressed"]
 [connection signal="timeout" from="Customer_timer" to="." method="_on_customer_timer_timeout"]
 [connection signal="timeout" from="Customer_timer" to="Customer_timer" method="_on_timeout"]
+[connection signal="timeout" from="events_timer" to="." method="_on_events_timer_timeout"]
+[connection signal="timeout" from="events_timer" to="events_timer" method="_on_timeout"]
