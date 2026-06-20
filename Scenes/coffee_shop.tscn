@@ -20,11 +20,12 @@
 [ext_resource type="Texture2D" uid="uid://cqjpdtecakya5" path="res://Assets/Coffee assets/esspresso_frames/pixil-frame-0.png" id="17_ibwl0"]
 [ext_resource type="Script" uid="uid://cg04vf1xnv6y2" path="res://Scenes/expresso_image.gd" id="18_qc307"]
 [ext_resource type="Script" uid="uid://dvc42trs7m0mb" path="res://Scenes/sponsor_image.gd" id="19_bgk1g"]
+[ext_resource type="Texture2D" path="res://Assets/Coffee assets/coffee_ad.webp" id="20_f8jj5"]
 [ext_resource type="Script" uid="uid://cnv3v4vcerf3k" path="res://Scenes/shop_ads_label.gd" id="21_bgk1g"]
 [ext_resource type="Script" uid="uid://c8lllj83nkwrq" path="res://Scenes/shop_sponsors_label.gd" id="22_f8jj5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f8jj5"]
-size = Vector2(40.800007, 40.800003)
+size = Vector2(44.59999, 37.600006)
 
 [node name="coffee_shop" type="Node2D" unique_id=1346237771]
 
@@ -233,14 +234,15 @@ vertical_alignment = 1
 [node name="sponsor_image" type="Sprite2D" parent="." unique_id=1702024420]
 position = Vector2(-2.0000076, -59)
 scale = Vector2(5, 5)
+texture = ExtResource("20_f8jj5")
 script = ExtResource("19_bgk1g")
 
 [node name="Area2D" type="Area2D" parent="sponsor_image" unique_id=947421811]
 position = Vector2(-1.22070305e-05, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sponsor_image/Area2D" unique_id=1754855580]
-position = Vector2(1.6, 3.199997)
-scale = Vector2(0.9999998, 0.9999998)
+position = Vector2(-0.29999253, 1.5999985)
+scale = Vector2(0.99999976, 0.99999976)
 shape = SubResource("RectangleShape2D_f8jj5")
 
 [node name="sponsor_price" type="Label" parent="." unique_id=1135017860]

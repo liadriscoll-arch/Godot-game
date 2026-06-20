@@ -9,7 +9,7 @@ extends Node2D
 
 
 
-
+var orders = ["type_wanted", "drink_wanted"]
 #preloaded images
 var possible_customers: Array[Texture2D] = [
 	preload("res://Assets/Coffee assets/customers/male_coffee_1.png"),
@@ -24,19 +24,23 @@ var possible_customers: Array[Texture2D] = [
 	#preload("res://customer10.png")
 ]
 
+var full_coffee = preload("res://Assets/Coffee assets/full_coffee.webp")
+var full_latte = preload("res://Assets/Coffee assets/full_latte.webp")
+
 var coffee_types: Array[Texture2D] = [
 	preload("res://Assets/Coffee assets/regular_bean_bag.webp"),
 	preload("res://Assets/Coffee assets/decaf_bean_bag.png")
 ]
 var drink_type: Array[Texture2D] = [
-	preload("res://Assets/Coffee assets/New Piskel-1.png (3).png"),
-	preload("res://Assets/Coffee assets/Mug (1).png")
+	preload("res://Assets/Coffee assets/full_latte.webp"),
+	preload("res://Assets/Coffee assets/full_coffee.webp")
 ]
 
 
 func _ready() -> void:
 	randomize()
 	update_line()
+	update_order()
 	
 	if Global.coffee_day == 1:
 		intro_label.text = str("welcome to your new job!" + "\r" + 
@@ -75,32 +79,49 @@ func try_add_customer() -> void:
 
 #adds a customer to the line
 func add_random_customer() -> void:
-	#if more than 3 customers in line, dont add another
 	if Global.customer_line.size() >= 3:
 		return
 
 	var random_customer = possible_customers.pick_random()
 	Global.customer_line.append(random_customer)
+
+	var order = make_random_order()
+	Global.customer_orders.append(order)
+
 	update_line()
+	update_order()
 
 #serves cutomers drinks
 func serve_customer() -> void:
-	#customers pay based on player-set prices
+	if Global.customer_line.size() == 0:
+		return
+
+	# customers pay based on player-set prices
 	if Global.drink_made == "latte":
 		Global.coffee_money += Global.latte_price
-	elif Global.drink_made == "regular":
+	elif Global.type_made == "regular":
 		Global.coffee_money += Global.regular_price
 	else:
 		Global.coffee_money += Global.decaf_price
-	
-	if Global.customer_line.size() == 0:
-		return
-	
 
-	#moves the line along
+	# moves the line along
 	Global.customer_line.remove_at(0)
+	Global.customer_orders.remove_at(0)
+
+	# clears only the cup that was served
+	if Global.selected_cup == "coffee":
+		Global.coffee_cup_made = "none"
+		Global.coffee_cup_type_made = "none"
+
+	elif Global.selected_cup == "latte":
+		Global.latte_cup_made = "none"
+		Global.latte_cup_type_made = "regular"
+
+	Global.selected_cup = "none"
+	Global.drink_made = "none"
+	Global.type_made = "none"
+
 	update_line()
-	#shows order onto screen
 	update_order()
 	
 	
@@ -110,8 +131,9 @@ func customer_leaves() -> void:
 		return
 
 	Global.customer_line.remove_at(0)
+	Global.customer_orders.remove_at(0)
+
 	update_line()
-	#shows order onto screen
 	update_order()
 
 #move customers up and/or add customers
@@ -129,49 +151,58 @@ func update_line() -> void:
 #checks if a 3rd customer is there, then adds their texture
 	if Global.customer_line.size() >= 3:
 		spot3.texture = Global.customer_line[2]
-	#gets new customers order
-	get_order()
+		
+
+		
+	
 
 #people walk in randomly after this timer
 func _on_customer_timer_timeout() -> void:
 	try_add_customer()
 
 #get a customer order
-func get_order() -> void:
-	#chooses a drink type between coffee and latte
-	var drink_number = randi_range(0,1)
+func make_random_order() -> Dictionary:
+	var drink_wanted := "coffee"
+	var type_wanted := "regular"
+
+	var drink_number = randi_range(0, 1)
 	if Global.latte_discovered and drink_number == 0:
-		Global.drink_wanted = "latte"
-	else: 
-		Global.drink_wanted = "coffee"
-	#chooses what beans are used
-	var type_number = randi_range(0,1)
-	if type_number == 0 or Global.drink_wanted == "latte":
-		Global.type_wanted = "regular"
-	else: 
-		Global.type_wanted = "decaf"
-		
-	if Global.customer_line.size() == 1:
-		update_order()
+		drink_wanted = "latte"
+
+	var type_number = randi_range(0, 1)
+	if type_number == 0 or drink_wanted == "latte":
+		type_wanted = "regular"
+	else:
+		type_wanted = "decaf"
+
+	return {
+		"drink": drink_wanted,
+		"type": type_wanted
+	}
 
 #adds order images onto screen
 func update_order() -> void:
-	if Global.customer_line.size() == 0:
+	if Global.customer_line.size() == 0 or Global.customer_orders.size() == 0:
 		type_sprite.visible = false
 		drink_sprite.visible = false
+		return
+
+	type_sprite.visible = true
+	drink_sprite.visible = true
+
+	var current_order = Global.customer_orders[0]
+	Global.type_wanted = current_order["type"]
+	Global.drink_wanted = current_order["drink"]
+
+	if Global.type_wanted == "decaf":
+		type_sprite.texture = coffee_types[1]
 	else:
-		type_sprite.visible = true
-		drink_sprite.visible = true
-		
-		if Global.type_wanted == "decaf":
-			type_sprite.texture = coffee_types[1]
-		else:
-			type_sprite.texture = coffee_types[0]
-			
-		if Global.drink_wanted == "latte":
-			drink_sprite.texture = drink_type[0]
-		else:
-			drink_sprite.texture = drink_type[1]
+		type_sprite.texture = coffee_types[0]
+
+	if Global.drink_wanted == "latte":
+		drink_sprite.texture = drink_type[0]
+	else:
+		drink_sprite.texture = drink_type[1]
 
 #day function
 func _process(delta: float) -> void:

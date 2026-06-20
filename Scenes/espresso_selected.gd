@@ -1,0 +1,7 @@
+extends TextureButton
+
+
+
+
+func _on_pressed() -> void:
+	Global.drink_selected = "espresso"

@@ -30,5 +30,12 @@ var espresso_purchase_day
 var sponsors = []
 var type_wanted
 var drink_wanted
-var type_made
-var drink_made
+var drink_made = "none"
+var type_made = "none"
+var coffee_cup_made = "none"
+var coffee_cup_type_made = "none"
+var latte_cup_made = "none"
+var latte_cup_type_made = "regular"
+var selected_cup := "none"
+var drink_selected
+var customer_orders: Array = []

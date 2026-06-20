@@ -15,5 +15,5 @@ func _process(delta: float) -> void:
 
 func _on_pressed() -> void:
 	if Global.coffee_money >= 5 and Global.latte_discovered:
-		Global.coffee_milk += 1
+		Global.coffee_milk += 4
 		Global.coffee_money -= 5

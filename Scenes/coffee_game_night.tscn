@@ -32,7 +32,7 @@
 [ext_resource type="Script" uid="uid://rxvq0lw6x2v6" path="res://Scenes/money_label_night_2.gd" id="25_aq38u"]
 [ext_resource type="Script" uid="uid://ckn6hs2j7tgaa" path="res://Scenes/decaf_beans_label_night_2.gd" id="25_jtomb"]
 [ext_resource type="Script" uid="uid://vjlfmknfam2a" path="res://Scenes/ads_label_night_2.gd" id="29_bjiif"]
-[ext_resource type="Texture2D" uid="uid://cjpcffe2hnb4l" path="res://Assets/Coffee assets/coffee_ad.webp" id="30_3yy3u"]
+[ext_resource type="Texture2D" uid="uid://cxcpq3jhajr8t" path="res://Assets/Coffee assets/ad_image.webp" id="30_3yy3u"]
 [ext_resource type="Script" uid="uid://mbv1iria0ja7" path="res://Scenes/milk_purchase_button.gd" id="31_cpie8"]
 [ext_resource type="Script" uid="uid://bmd3hlbfoe75f" path="res://Scenes/ad_image.gd" id="31_o3s7r"]
 [ext_resource type="Texture2D" uid="uid://kmsgeoh8cfok" path="res://Assets/Coffee assets/coffee_milk.webp" id="31_tf0kk"]
@@ -41,7 +41,7 @@
 [ext_resource type="Script" uid="uid://vygh3o5t2cto" path="res://Scenes/milk_label.gd" id="34_jhf6j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bjiif"]
-size = Vector2(40.800007, 40.800003)
+size = Vector2(44.900665, 43.199997)
 
 [node name="coffee_game_night" type="Node2D" unique_id=1931695800]
 script = ExtResource("1_02olx")
@@ -521,7 +521,7 @@ script = ExtResource("31_o3s7r")
 position = Vector2(-1.22070305e-05, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ad_image/Area2D" unique_id=1709466618]
-position = Vector2(0, 2.0000038)
+position = Vector2(-0.04965973, 0.8000107)
 scale = Vector2(0.9999998, 0.9999998)
 shape = SubResource("RectangleShape2D_bjiif")
 

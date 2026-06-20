@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjpcffe2hnb4l"
-path="res://.godot/imported/coffee_ad.webp-fe51355358581c89e9ab5df648935a4b.ctex"
+uid="uid://r53paoejlcea"
+path="res://.godot/imported/coffee_sponsor.webp-5b9502a7eb33bbe284feb9b85b58931a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Coffee assets/coffee_ad.webp"
-dest_files=["res://.godot/imported/coffee_ad.webp-fe51355358581c89e9ab5df648935a4b.ctex"]
+source_file="res://Assets/Coffee assets/coffee_sponsor.webp"
+dest_files=["res://.godot/imported/coffee_sponsor.webp-5b9502a7eb33bbe284feb9b85b58931a.ctex"]
 
 [params]
 

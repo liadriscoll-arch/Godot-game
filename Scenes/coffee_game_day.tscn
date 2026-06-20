@@ -10,7 +10,7 @@
 [ext_resource type="Script" uid="uid://dq1gmadoim13b" path="res://Scenes/decaf_label.gd" id="7_as63b"]
 [ext_resource type="Texture2D" uid="uid://bocewnsb3lute" path="res://Assets/Coffee assets/coffee_button_long.png" id="9_exfw8"]
 [ext_resource type="Texture2D" uid="uid://2i76x80r6xtn" path="res://Assets/Coffee assets/coffee_button_hover_long.png" id="10_iy83v"]
-[ext_resource type="PackedScene" path="res://Scenes/coffee_machine.tscn" id="11_iy83v"]
+[ext_resource type="PackedScene" uid="uid://bafb7jxk0subi" path="res://Scenes/coffee_machine.tscn" id="11_iy83v"]
 [ext_resource type="Script" uid="uid://cik1iu6hwe8yt" path="res://Scenes/coffee_shop_button.gd" id="12_2kxup"]
 [ext_resource type="Texture2D" uid="uid://dd5tnmvm3iubr" path="res://Assets/Coffee assets/coffee_people.webp" id="12_lwcsy"]
 [ext_resource type="PackedScene" uid="uid://d2iin73duoebo" path="res://Scenes/espresso_machine.tscn" id="13_8b7x2"]
@@ -34,17 +34,22 @@
 [ext_resource type="Script" uid="uid://cqxy3vam1881o" path="res://Scenes/decaf_coffee_pot.gd" id="23_vqmpm"]
 [ext_resource type="Texture2D" uid="uid://brmhg8x2umc7r" path="res://Assets/Coffee assets/coffee_pot_label.png" id="24_pg55l"]
 [ext_resource type="Script" uid="uid://bdb5b7t6ao57r" path="res://Scenes/coffee_label_2.gd" id="25_4y880"]
-[ext_resource type="Script" uid="uid://bw5b6vi2mmqrv" path="res://Scenes/sprite_2d_9.gd" id="25_kvvs4"]
 [ext_resource type="Script" uid="uid://c4gq844k1dlxo" path="res://Scenes/workstation_button.gd" id="26_kq2uj"]
 [ext_resource type="Script" uid="uid://dykcwhuvy1g6v" path="res://Scenes/pot_label.gd" id="26_mjcik"]
 [ext_resource type="Script" uid="uid://bik3hal2nr5m1" path="res://Scenes/milk_3.gd" id="34_qi74c"]
 [ext_resource type="Script" uid="uid://dt4gbjf8cty2a" path="res://Scenes/milk_2.gd" id="35_qi74c"]
 [ext_resource type="Texture2D" uid="uid://bncwo3yhy6a2p" path="res://Assets/Coffee assets/coffee_speech_bubble.webp" id="37_pg55l"]
+[ext_resource type="Script" uid="uid://oialj6v53lmn" path="res://Scenes/milk_1.gd" id="37_swigj"]
 [ext_resource type="Script" uid="uid://ceguvspg6l6su" path="res://Scenes/speech_bubble.gd" id="38_xvj3c"]
-[ext_resource type="Texture2D" uid="uid://c2gxpsuxdgc6r" path="res://Assets/Coffee assets/customers/male_coffee_1.png" id="41_dkik3"]
 [ext_resource type="Texture2D" uid="uid://csd0e3pawdjck" path="res://Assets/Coffee assets/stacked_latte.png" id="42_vqmpm"]
 [ext_resource type="Script" uid="uid://xnb8ei0sfox7" path="res://Scenes/sprite_2d_13.gd" id="43_dkik3"]
 [ext_resource type="Texture2D" uid="uid://cgph0pr1tras4" path="res://Assets/Coffee assets/stacked_coffee.webp" id="44_cbc88"]
+[ext_resource type="Texture2D" uid="uid://bdo7gnlhff2w7" path="res://Assets/Coffee assets/empty_coffee.webp" id="45_cbc88"]
+[ext_resource type="Texture2D" uid="uid://dkjl2pp46oo3a" path="res://Assets/Coffee assets/empty_latte.webp" id="46_onla6"]
+[ext_resource type="Script" uid="uid://biibsaixngjut" path="res://Scenes/sprite_2d_16.gd" id="46_swigj"]
+[ext_resource type="Script" uid="uid://ck82b56jeig8r" path="res://Scenes/sprite_2d_15.gd" id="47_onla6"]
+[ext_resource type="Texture2D" uid="uid://dmkfrnw6egsig" path="res://Assets/Coffee assets/coffee_button_temp.png" id="49_lim1f"]
+[ext_resource type="Script" uid="uid://bdsaooav7mr1m" path="res://Scenes/money_day_label.gd" id="50_wgysp"]
 
 [node name="coffee_game_day" type="Node2D" unique_id=567127333]
 script = ExtResource("1_uky3h")
@@ -151,8 +156,8 @@ texture_hover = ExtResource("10_iy83v")
 script = ExtResource("12_2kxup")
 
 [node name="workstation_button" type="TextureButton" parent="." unique_id=503621265]
-offset_left = 30.0
-offset_top = -520.0
+offset_left = 1.0
+offset_top = -527.0
 offset_right = 500.0
 offset_bottom = -280.0
 script = ExtResource("26_kq2uj")
@@ -174,7 +179,7 @@ scale = Vector2(2, 2)
 script = ExtResource("14_qi74c")
 
 [node name="coffee_machine" parent="." unique_id=1608387079 instance=ExtResource("11_iy83v")]
-position = Vector2(423, -345)
+position = Vector2(451, -344)
 scale = Vector2(2, 2)
 
 [node name="regular_espresso_pot" type="Sprite2D" parent="." unique_id=1821312662]
@@ -189,7 +194,7 @@ level_3_texture = ExtResource("19_xvj3c")
 level_4_texture = ExtResource("20_4y880")
 
 [node name="regular_coffee_pot" type="Sprite2D" parent="." unique_id=1442804606]
-position = Vector2(271, -323)
+position = Vector2(290.5, -323.5)
 scale = Vector2(2, 2)
 texture = ExtResource("15_douqg")
 script = ExtResource("22_ftlsx")
@@ -200,7 +205,7 @@ level_3_texture = ExtResource("19_xvj3c")
 level_4_texture = ExtResource("20_4y880")
 
 [node name="decaf_coffee_pot" type="Sprite2D" parent="." unique_id=1634743625]
-position = Vector2(345, -323)
+position = Vector2(361.5, -323.5)
 scale = Vector2(2, 2)
 texture = ExtResource("15_douqg")
 script = ExtResource("23_vqmpm")
@@ -211,7 +216,7 @@ level_3_texture = ExtResource("19_xvj3c")
 level_4_texture = ExtResource("20_4y880")
 
 [node name="coffee_label3" type="Sprite2D" parent="." unique_id=1481345502]
-position = Vector2(334, -321)
+position = Vector2(350.5, -321.5)
 scale = Vector2(3, 3)
 texture = ExtResource("24_pg55l")
 
@@ -222,15 +227,15 @@ texture = ExtResource("24_pg55l")
 script = ExtResource("25_4y880")
 
 [node name="coffee_label" type="Sprite2D" parent="." unique_id=1150429462]
-position = Vector2(261, -321)
+position = Vector2(280.5, -321.5)
 scale = Vector2(3, 3)
 texture = ExtResource("24_pg55l")
 
 [node name="pot_label3" type="Label" parent="." unique_id=913126311]
-offset_left = 319.0
-offset_top = -329.0
-offset_right = 359.0
-offset_bottom = -312.0
+offset_left = 335.5
+offset_top = -329.5
+offset_right = 375.5
+offset_bottom = -312.5
 theme_override_fonts/font = ExtResource("4_t8amc")
 theme_override_font_sizes/font_size = 5
 text = "decaf"
@@ -238,10 +243,10 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="pot_label2" type="Label" parent="." unique_id=1223181063]
-offset_left = 247.0
-offset_top = -333.0
-offset_right = 287.0
-offset_bottom = -310.0
+offset_left = 266.5
+offset_top = -333.5
+offset_right = 306.5
+offset_bottom = -310.5
 theme_override_fonts/font = ExtResource("4_t8amc")
 theme_override_font_sizes/font_size = 5
 text = "regular"
@@ -303,7 +308,7 @@ script = ExtResource("35_qi74c")
 [node name="Sprite2D9" type="Sprite2D" parent="." unique_id=931443550]
 position = Vector2(205, -450)
 texture = ExtResource("23_il2mf")
-script = ExtResource("25_kvvs4")
+script = ExtResource("37_swigj")
 
 [node name="fella_coffee_shop" parent="." unique_id=1743656796 instance=ExtResource("3_n7ow1")]
 position = Vector2(0, -370)
@@ -323,17 +328,14 @@ offset_bottom = -265.0
 [node name="Customer1" type="Sprite2D" parent="." unique_id=230583814]
 position = Vector2(-5, -100)
 scale = Vector2(7.5, 7.5)
-texture = ExtResource("41_dkik3")
 
 [node name="Customer2" type="Sprite2D" parent="." unique_id=813416250]
 position = Vector2(-94, 4.000004)
 scale = Vector2(7.5, 7.5)
-texture = ExtResource("41_dkik3")
 
 [node name="Customer3" type="Sprite2D" parent="." unique_id=826985898]
 position = Vector2(-269, 48.000015)
 scale = Vector2(7.5, 7.5)
-texture = ExtResource("41_dkik3")
 
 [node name="Customer_timer" type="Timer" parent="." unique_id=627600059]
 wait_time = 5.0
@@ -343,14 +345,14 @@ autostart = true
 position = Vector2(-107, -380)
 
 [node name="drink_sprite" type="Sprite2D" parent="." unique_id=374701001]
-position = Vector2(-171, -377)
-scale = Vector2(0.11328125, 0.111328125)
+position = Vector2(-173, -395)
+scale = Vector2(2, 2)
 
 [node name="intro_label" type="Label" parent="." unique_id=2048180098]
-offset_left = -940.0
-offset_top = -507.0
-offset_right = -243.0
-offset_bottom = -484.0
+offset_left = 232.0
+offset_top = 21.0
+offset_right = 929.0
+offset_bottom = 44.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_t8amc")
 horizontal_alignment = 1
@@ -369,6 +371,39 @@ texture = ExtResource("44_cbc88")
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=559601762]
 scale = Vector2(10, 10)
 texture = ExtResource("12_lwcsy")
+
+[node name="Sprite2D16" type="Sprite2D" parent="." unique_id=1316269456]
+position = Vector2(240, -322)
+texture = ExtResource("45_cbc88")
+script = ExtResource("46_swigj")
+
+[node name="Sprite2D15" type="Sprite2D" parent="." unique_id=679042994]
+position = Vector2(193, -322)
+texture = ExtResource("46_onla6")
+script = ExtResource("47_onla6")
+
+[node name="Sprite2D17" type="Sprite2D" parent="." unique_id=106891712]
+position = Vector2(-833, -486)
+texture = ExtResource("49_lim1f")
+
+[node name="money_day_label2" type="Label" parent="." unique_id=1112371920]
+offset_left = -923.0
+offset_top = -507.0
+offset_right = -743.0
+offset_bottom = -478.0
+theme_override_fonts/font = ExtResource("4_t8amc")
+text = "Money:"
+horizontal_alignment = 1
+
+[node name="money_day_label" type="Label" parent="." unique_id=665147884]
+offset_left = -926.0
+offset_top = -497.0
+offset_right = -740.0
+offset_bottom = -461.0
+theme_override_fonts/font = ExtResource("4_t8amc")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("50_wgysp")
 
 [connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_pressed"]
 [connection signal="pressed" from="workstation_button" to="workstation_button" method="_on_pressed"]
