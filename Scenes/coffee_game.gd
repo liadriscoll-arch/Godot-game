@@ -206,7 +206,7 @@ func update_order() -> void:
 
 #day function
 func _process(delta: float) -> void:
-	Global.day_time += 1
+	Global.day_time += delta
 #day ends after  2 min
 	if Global.day_time >= Global.day_length:
 		get_tree().change_scene_to_file("res://Scenes/coffee_game_night.tscn")

@@ -24,8 +24,8 @@ var regular_espresso_pot = 0
 var decaf_espresso_pot = 0
 var beans_used
 var customer_line: Array[Texture2D] = []
-var day_length = 7200 
-var day_time = 0
+var day_length := 120 
+var day_time := 0
 var espresso_purchase_day
 var sponsors = []
 var type_wanted
