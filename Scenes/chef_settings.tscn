@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://dm8q5dcp55g55" path="res://Scenes/check_button_2.gd" id="4_l5m6n"]
 [ext_resource type="Texture2D" uid="uid://b60gpfnukr0yu" path="res://Assets/Chef assets/chefsettingdonebutton.png" id="5_nfv2x"]
 [ext_resource type="Texture2D" uid="uid://dild6d0ulr0bc" path="res://Assets/Chef assets/chefsettingdonebuttonhover.png" id="6_citwk"]
-[ext_resource type="Script" uid="uid://b4mu3bc280wu3" path="res://Scenes/texture_button.gd" id="7_pynyk"]
+[ext_resource type="Script" uid="uid://dfi5d77jrrytq" path="res://Scenes/saveset.gd" id="7_pynyk"]
 
 [node name="ChefSettings" type="Node2D" unique_id=266360731]
 
@@ -114,7 +114,7 @@ offset_bottom = 36.311203
 scale = Vector2(3.81, 3.81)
 script = ExtResource("4_l5m6n")
 
-[node name="TextureButton" type="TextureButton" parent="." unique_id=1622174280]
+[node name="saveset" type="TextureButton" parent="." unique_id=1622174280]
 offset_left = -144.0
 offset_top = 261.0
 offset_right = -48.0
@@ -137,4 +137,4 @@ text = "SAVE"
 [connection signal="toggled" from="Control/CheckButton" to="Control/CheckButton" method="_on_toggled"]
 [connection signal="pressed" from="Control/CheckButton2" to="Control/CheckButton2" method="_on_pressed"]
 [connection signal="toggled" from="Control/CheckButton2" to="Control/CheckButton2" method="_on_toggled"]
-[connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_pressed"]
+[connection signal="pressed" from="saveset" to="saveset" method="_on_pressed"]

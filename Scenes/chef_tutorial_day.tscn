@@ -34,8 +34,8 @@ scale = Vector2(10, 10.000001)
 texture = ExtResource("1_37k36")
 
 [node name="Cheffella" parent="." unique_id=1389223012 instance=ExtResource("2_1qq7p")]
-position = Vector2(72, -422)
-scale = Vector2(6.755, 6.755)
+position = Vector2(-874.99994, -201.00002)
+scale = Vector2(5.735, 5.735)
 script = ExtResource("3_ugurg")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1254276869]

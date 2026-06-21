@@ -51,7 +51,8 @@ offset_bottom = 143.0
 theme_override_fonts/font = ExtResource("2_w4hly")
 theme_override_font_sizes/font_size = 50
 text = "Keep your business up until
-the end of the week!"
+the end of the week!
+"
 horizontal_alignment = 1
 
 [node name="Label4" type="Label" parent="." unique_id=427453698]
