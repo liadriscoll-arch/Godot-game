@@ -24,12 +24,12 @@ var regular_espresso_pot = 0
 var decaf_espresso_pot = 0
 var beans_used
 var customer_line: Array[Texture2D] = []
-var day_length := 120 
+var day_length := 21600 
 var day_time := 0
 var espresso_purchase_day
 var sponsors = []
-var type_wanted
-var drink_wanted
+var type_wanted = "none"
+var drink_wanted = "none"
 var drink_made = "none"
 var type_made = "none"
 var coffee_cup_made = "none"
@@ -37,7 +37,10 @@ var coffee_cup_type_made = "none"
 var latte_cup_made = "none"
 var latte_cup_type_made = "regular"
 var selected_cup := "none"
-var drink_selected
+var drink_selected = "none"
 var customer_orders: Array = []
-var coffee_win
+var coffee_win = false
 var event_chance
+var event_number
+var time_taken = 0
+var coffee_week = 1

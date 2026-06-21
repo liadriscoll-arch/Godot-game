@@ -7,6 +7,7 @@ extends Node2D
 @onready var drink_sprite: Sprite2D = $drink_sprite
 @onready var intro_label: Label = $intro_label
 @onready var event_text: Label = $event_text
+@onready var event_rect: Sprite2D = $event_rect
 
 
 
@@ -42,7 +43,8 @@ func _ready() -> void:
 	randomize()
 	update_line()
 	update_order()
-	
+	if Global.event_chance != 5:
+		event_rect.hide()
 	if Global.coffee_day == 1:
 		intro_label.text = str("welcome to your new job!" + "\r" + 
 		"when a customer shows up, take a look at their order" + "\r" + 
@@ -56,14 +58,14 @@ func get_customer_chance() -> float:
 	var chance := 30.0
 	
 	#chance increases with ads
-	chance += Global.ads.size() * 3.0
+	chance += Global.ads.size() * (5.0 / (Global.coffee_difficulty + 1))
 	#chance determined by regular coffee price
-	chance += (6.0 - Global.regular_price) * 5.0
+	chance += (5.0 + Global.coffee_difficulty - Global.regular_price) * 5.0
 	#chance determined by latte price
 	if Global.latte_discovered:
-		chance += (10.0 - Global.latte_price) * 4.0
+		chance += (8.0 + Global.coffee_difficulty - Global.latte_price) * 4.0
 	#chance determined by decaf coffee price
-	chance += (6.0 - Global.decaf_price) * 5.0
+	chance += (5.0 + Global.coffee_difficulty - Global.decaf_price) * 5.0
 	#chance is forced between 5-85%
 	return clamp(chance, 5.0, 85.0)
 	
@@ -124,6 +126,9 @@ func serve_customer() -> void:
 
 	update_line()
 	update_order()
+	find_tip_chance()
+	
+	Global.time_taken = 0
 	
 	
 #customers leave the line without paying if they get the wrong drink
@@ -207,11 +212,13 @@ func update_order() -> void:
 
 #day function
 func _process(delta: float) -> void:
-	Global.day_time += delta
+	Global.day_time += 1
 #day ends after  2 min
 	if Global.day_time >= Global.day_length:
 		get_tree().change_scene_to_file("res://Scenes/coffee_game_night.tscn")
 		Global.day_time = 0
+	if Global.customer_line.size() >= 1:
+		Global.time_taken += 1/180
 
 #player gives drink to customer
 func _on_speech_button_pressed() -> void:
@@ -227,14 +234,14 @@ func find_tip_chance() -> float:
 	var tip_chance := 10.0
 	
 	#chance increases with ads
-	tip_chance += Global.ads.size() * 3.0
+	tip_chance += (1/Global.time_taken) * (10.0 / (1 + Global.coffee_difficulty))
 	#chance determined by regular coffee price
-	tip_chance += (6.0 - Global.regular_price) * 5.0
+	tip_chance += (5.0 + Global.coffee_difficulty - Global.regular_price) * 5.0
 	#chance determined by latte price
 	if Global.latte_discovered:
-		tip_chance += (10.0 - Global.latte_price) * 4.0
+		tip_chance += (8.0 + Global.coffee_difficulty - Global.latte_price) * 4.0
 	#chance determined by decaf coffee price
-	tip_chance += (6.0 - Global.decaf_price) * 5.0
+	tip_chance += (5.0 + Global.coffee_difficulty - Global.decaf_price) * 5.0
 	#chance is forced between 5-85%
 	return clamp(tip_chance, 5.0, 70.0)
 	
@@ -247,8 +254,14 @@ func try_tip() -> void:
 		event_text.text = "The customer left a " + tip + " credit tip"
 
 func _on_events_timer_timeout() -> void:
-	Global.event_chance = randi_range(0,50)
-	if Global.event_chance == 50:
-		Global.coffee_money += 25
-		event_text.text = "25"
+	Global.event_chance = randi_range(1,5)
+	if Global.event_chance == 5:
+		Global.event_number = randi_range(1,25)
+		if Global.event_number == 25:
+			Global.coffee_money += 25
+			event_text.text = str("You won an award for best new coffee shop in town!" + "\r" + "You win 25 credits!")
+			event_rect.show()
+			await get_tree().create_timer(3).timeout
+			event_text.text = ""
+			event_rect.hide()
 	

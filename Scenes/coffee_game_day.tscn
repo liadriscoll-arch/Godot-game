@@ -53,6 +53,9 @@
 [ext_resource type="Script" uid="uid://bdsaooav7mr1m" path="res://Scenes/money_day_label.gd" id="50_wgysp"]
 [ext_resource type="Script" uid="uid://b1km27xtdjym5" path="res://Scenes/quota_label_2.gd" id="52_pgryu"]
 [ext_resource type="Texture2D" uid="uid://ccjhobt0jdbjt" path="res://Assets/Coffee assets/coffee_events.webp" id="53_pgryu"]
+[ext_resource type="Script" uid="uid://cpak1edbsqa16" path="res://Scenes/sprite_2d_20.gd" id="54_ekpf4"]
+[ext_resource type="Script" uid="uid://s64clu6g26re" path="res://Scenes/week_label.gd" id="55_xkpoh"]
+[ext_resource type="Script" uid="uid://c1opvouol1rqf" path="res://Scenes/week_label_2.gd" id="56_icqio"]
 
 [node name="coffee_game_day" type="Node2D" unique_id=567127333]
 script = ExtResource("1_uky3h")
@@ -456,6 +459,7 @@ vertical_alignment = 1
 script = ExtResource("52_pgryu")
 
 [node name="event_rect" type="Sprite2D" parent="." unique_id=646871038]
+visible = false
 position = Vector2(1.1920929e-07, 331)
 scale = Vector2(10, 10)
 texture = ExtResource("53_pgryu")
@@ -472,6 +476,31 @@ offset_bottom = 462.0
 theme_override_fonts/font = ExtResource("4_t8amc")
 theme_override_font_sizes/font_size = 35
 horizontal_alignment = 1
+
+[node name="Sprite2D20" type="Sprite2D" parent="." unique_id=714021954]
+position = Vector2(-833, -293)
+texture = ExtResource("49_lim1f")
+script = ExtResource("54_ekpf4")
+
+[node name="week_label" type="Label" parent="." unique_id=1804896266]
+offset_left = -923.0
+offset_top = -314.0
+offset_right = -743.0
+offset_bottom = -285.0
+theme_override_fonts/font = ExtResource("4_t8amc")
+text = "Quota:"
+horizontal_alignment = 1
+script = ExtResource("55_xkpoh")
+
+[node name="week_label2" type="Label" parent="." unique_id=764215111]
+offset_left = -926.0
+offset_top = -304.0
+offset_right = -740.0
+offset_bottom = -268.0
+theme_override_fonts/font = ExtResource("4_t8amc")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("56_icqio")
 
 [connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_pressed"]
 [connection signal="pressed" from="workstation_button" to="workstation_button" method="_on_pressed"]

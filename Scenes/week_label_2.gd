@@ -3,10 +3,9 @@ extends Label
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	if !Global.endless:
-		text = "You ended with " + Global.coffee_money + " Credits"
-	else:
-		text = "You survived " + Global.coffee_week + " weeks" + "\r" + "and " + Global.coffee_day % 7 + " days!"
+	visible = Global.endless
+	text = str(Global.coffee_week)
+		
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
