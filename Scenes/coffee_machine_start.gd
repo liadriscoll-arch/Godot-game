@@ -12,54 +12,60 @@ extends TextureButton
 
 
 func _on_pressed() -> void:
-	
-	if Global.beans_used == "decaf":
+	var beans_to_brew = Global.beans_used
+	Global.brewing = true
+
+	if beans_to_brew == "decaf":
 		if Global.decaf_coffee_pot > 0:
 			return
 	else:
 		if Global.regular_coffee_pot > 0:
 			return
 
+	if beans_to_brew != "regular" and beans_to_brew != "decaf":
+		return
+
 	disabled = true
-	
-	if Global.beans_used == "decaf" and Global.decaf_coffee_beans >= 1:
+
+	if beans_to_brew == "decaf" and Global.decaf_coffee_beans.size() >= 1:
 		decaf_coffee_pot.hide()
-		Global.decaf_coffee_beans -= 1
+		Global.decaf_coffee_beans.remove_at(0)
 		coffee_label_5.hide()
 		pot_label_5.hide()
-	elif Global.beans_used == "regular" and Global.regular_coffee_beans >= 1:
+	elif beans_to_brew == "regular" and Global.regular_coffee_beans.size() >= 1:
 		regular_coffee_pot.hide()
-		Global.regular_coffee_beans -= 1
+		Global.regular_coffee_beans.remove_at(0)
 		coffee_label_4.hide()
 		pot_label_4.hide()
-	
-	if Global.beans_used == "regular" or Global.beans_used == "decaf":
-	
-		machine_animation.sprite_frames.set_animation_loop("coffee_fill", false)
-		machine_animation.play("coffee_fill")
-
-		await machine_animation.animation_finished
-		
-		machine_animation.play("default")
-		
-		if Global.beans_used == "decaf":
-			Global.decaf_coffee_pot = 4
-			decaf_coffee_pot.update_coffee_pot()
-			decaf_coffee_pot.flip_h = true
-			decaf_coffee_pot.show()
-			coffee_label_5.show()
-			pot_label_5.show()
-			
-		elif Global.beans_used == "regular": 
-			Global.regular_coffee_pot = 4
-			regular_coffee_pot.update_coffee_pot()
-			regular_coffee_pot.flip_h = true
-			regular_coffee_pot.show()
-			coffee_label_4.show()
-			pot_label_4.show()
-			
-		
+	else:
 		disabled = false
+		return
+
+	machine_animation.sprite_frames.set_animation_loop("coffee_fill", false)
+	machine_animation.play("coffee_fill")
+
+	await machine_animation.animation_finished
+
+	machine_animation.play("default")
+
+	if beans_to_brew == "decaf":
+		Global.decaf_coffee_pot = 4
+		decaf_coffee_pot.update_coffee_pot()
+		decaf_coffee_pot.flip_h = true
+		decaf_coffee_pot.show()
+		coffee_label_5.show()
+		pot_label_5.show()
+
+	elif beans_to_brew == "regular":
+		Global.regular_coffee_pot = 4
+		regular_coffee_pot.update_coffee_pot()
+		regular_coffee_pot.flip_h = true
+		regular_coffee_pot.show()
+		coffee_label_4.show()
+		pot_label_4.show()
+
+	disabled = false
+	Global.brewing = false
 	
 	
 	

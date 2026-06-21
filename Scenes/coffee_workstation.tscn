@@ -362,6 +362,10 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("51_185hx")
 
+[node name="Customer_timer" type="Timer" parent="." unique_id=1329554215]
+wait_time = 2.0
+autostart = true
+
 [connection signal="pressed" from="decaf_beans2" to="decaf_beans2" method="_on_pressed"]
 [connection signal="pressed" from="decaf_beans" to="decaf_beans" method="_on_pressed"]
 [connection signal="pressed" from="regular_beans3" to="regular_beans3" method="_on_pressed"]
@@ -377,3 +381,5 @@ script = ExtResource("51_185hx")
 [connection signal="pressed" from="regular_selected" to="regular_selected" method="_on_pressed"]
 [connection signal="pressed" from="decaf_selected" to="decaf_selected" method="_on_pressed"]
 [connection signal="pressed" from="espresso_selected" to="espresso_selected" method="_on_pressed"]
+[connection signal="timeout" from="Customer_timer" to="." method="_on_customer_timer_timeout"]
+[connection signal="timeout" from="Customer_timer" to="Customer_timer" method="_on_timeout"]

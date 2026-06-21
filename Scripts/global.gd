@@ -7,8 +7,8 @@ var chef_complete = false
 var endless = false
 var coffee_difficulty = 1
 var coffee_money = 100
-var regular_coffee_beans = 0
-var decaf_coffee_beans = 0
+var regular_coffee_beans: Array = []
+var decaf_coffee_beans: Array = []
 var quota = 500
 var cofee = 0
 var ads = []
@@ -44,3 +44,5 @@ var event_chance
 var event_number
 var time_taken = 0
 var coffee_week = 1
+var brewing = false
+var espresso_brewing = false

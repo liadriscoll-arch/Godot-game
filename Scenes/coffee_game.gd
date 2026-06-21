@@ -8,6 +8,12 @@ extends Node2D
 @onready var intro_label: Label = $intro_label
 @onready var event_text: Label = $event_text
 @onready var event_rect: Sprite2D = $event_rect
+@onready var tip_label: Label = $tip_label
+@onready var coffee_cup: Sprite2D = $Sprite2D16
+@onready var latte_cup: Sprite2D = $Sprite2D15
+@onready var decaf_coffee_pot: decaf_coffee_pot = $decaf_coffee_pot
+@onready var regular_coffee_pot: regular_coffee_pot = $regular_coffee_pot
+@onready var regular_espresso_pot: regular_espresso_pot = $regular_espresso_pot
 
 
 
@@ -39,6 +45,10 @@ var drink_type: Array[Texture2D] = [
 ]
 
 
+var empty_latte = preload("res://Assets/Coffee assets/empty_latte.webp")
+var empty_coffee = preload("res://Assets/Coffee assets/empty_coffee.webp")
+
+
 func _ready() -> void:
 	randomize()
 	update_line()
@@ -50,6 +60,12 @@ func _ready() -> void:
 		"when a customer shows up, take a look at their order" + "\r" + 
 		"then click near your coffee machine and beans" + "\r" + "to make coffee. When done," + "\r" + 
 		"click on the speech bubble to give it to the customer")
+	
+	decaf_coffee_pot.update_coffee_pot()
+	
+	regular_coffee_pot.update_coffee_pot()
+	
+	regular_espresso_pot.update_coffee_pot()
 
 
 #determines chance for new customer
@@ -119,6 +135,11 @@ func serve_customer() -> void:
 	elif Global.selected_cup == "latte":
 		Global.latte_cup_made = "none"
 		Global.latte_cup_type_made = "regular"
+	
+	if Global.selected_cup == "latte":
+		latte_cup.texture = empty_latte
+	elif Global.selected_cup == "coffee":
+		coffee_cup.texture = empty_coffee
 
 	Global.selected_cup = "none"
 	Global.drink_made = "none"
@@ -126,7 +147,7 @@ func serve_customer() -> void:
 
 	update_line()
 	update_order()
-	find_tip_chance()
+	try_tip()
 	
 	Global.time_taken = 0
 	
@@ -138,6 +159,11 @@ func customer_leaves() -> void:
 
 	Global.customer_line.remove_at(0)
 	Global.customer_orders.remove_at(0)
+	
+	if Global.selected_cup == "latte":
+		latte_cup = empty_latte
+	elif Global.selected_cup == "coffee":
+		coffee_cup = empty_coffee
 
 	update_line()
 	update_order()
@@ -218,7 +244,7 @@ func _process(delta: float) -> void:
 		get_tree().change_scene_to_file("res://Scenes/coffee_game_night.tscn")
 		Global.day_time = 0
 	if Global.customer_line.size() >= 1:
-		Global.time_taken += 1/180
+		Global.time_taken += delta
 
 #player gives drink to customer
 func _on_speech_button_pressed() -> void:
@@ -234,7 +260,7 @@ func find_tip_chance() -> float:
 	var tip_chance := 10.0
 	
 	#chance increases with ads
-	tip_chance += (1/Global.time_taken) * (10.0 / (1 + Global.coffee_difficulty))
+	tip_chance += (1.0 / max(Global.time_taken, 0.1)) * (10.0 / (1 + Global.coffee_difficulty))
 	#chance determined by regular coffee price
 	tip_chance += (5.0 + Global.coffee_difficulty - Global.regular_price) * 5.0
 	#chance determined by latte price
@@ -242,8 +268,8 @@ func find_tip_chance() -> float:
 		tip_chance += (8.0 + Global.coffee_difficulty - Global.latte_price) * 4.0
 	#chance determined by decaf coffee price
 	tip_chance += (5.0 + Global.coffee_difficulty - Global.decaf_price) * 5.0
-	#chance is forced between 5-85%
-	return clamp(tip_chance, 5.0, 70.0)
+	#chance is forced between 5-50%
+	return clamp(tip_chance, 5.0, 50.0)
 	
 func try_tip() -> void:
 	var tip_chance := find_tip_chance()
@@ -251,7 +277,9 @@ func try_tip() -> void:
 	if randi_range(1, 100) <= tip_chance:
 		tip = randi_range(1,5)
 		Global.coffee_money += tip
-		event_text.text = "The customer left a " + tip + " credit tip"
+		tip_label.text = "The customer left a " + str(tip) + " credit tip"
+		await get_tree().create_timer(3).timeout
+		tip_label.text = ""
 
 func _on_events_timer_timeout() -> void:
 	Global.event_chance = randi_range(1,5)

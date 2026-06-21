@@ -3,8 +3,8 @@ extends Node2D
 
 func _ready():
 	Global.coffee_money = 100
-	Global.regular_coffee_beans = 0
-	Global.decaf_coffee_beans = 0
+	Global.regular_coffee_beans = []
+	Global.decaf_coffee_beans  = []
 	Global.quota = (500 * ((Global.coffee_difficulty + 1)/2)) 
 	Global.cofee = 0
 	Global.ads = []
@@ -27,9 +27,9 @@ func _ready():
 	Global.coffee_cup_made = "none"
 	Global.drink_selected = "none"
 	Global.coffee_cup_type_made = "none"
-	Global.latte_cup_made = "none"
+	Global.latte_cup_made = null
 	Global.latte_cup_type_made = "regular"
 	Global.selected_cup = "none"
 	Global.espresso_purchase_day = 10
-	Global.event_chance = "none"
-	Global.event_number = "none"
+	Global.event_chance = 0
+	Global.event_number = 0

@@ -1,5 +1,7 @@
 extends Node2D
 
+
+
 func _ready() -> void:
 	
 	Global.customer_line.clear()
@@ -22,6 +24,22 @@ func _ready() -> void:
 		Global.ads[i] -= 1
 
 	Global.ads = Global.ads.filter(func(days): return days > 0)
+	for i in range(Global.regular_coffee_beans.size()):
+		Global.regular_coffee_beans[i] -= 1
+
+	Global.regular_coffee_beans = Global.regular_coffee_beans.filter(func(days): return days > 0)
+	
+	for i in range(Global.decaf_coffee_beans.size()):
+		Global.decaf_coffee_beans[i] -= 1
+
+	Global.decaf_coffee_beans = Global.decaf_coffee_beans.filter(func(days): return days > 0)
+	
+	Global.decaf_coffee_pot = 0
+	
+	Global.regular_coffee_pot = 0
+	
+	Global.regular_espresso_pot = 0
+	
 	
 func update_quota() -> void:
 	var r = Global.coffee_week - 1
