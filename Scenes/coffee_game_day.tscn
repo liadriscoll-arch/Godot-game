@@ -474,7 +474,7 @@ offset_top = 334.0
 offset_right = 430.0
 offset_bottom = 462.0
 theme_override_fonts/font = ExtResource("4_t8amc")
-theme_override_font_sizes/font_size = 35
+theme_override_font_sizes/font_size = 20
 horizontal_alignment = 1
 
 [node name="Sprite2D20" type="Sprite2D" parent="." unique_id=714021954]

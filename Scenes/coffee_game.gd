@@ -275,7 +275,7 @@ func find_tip_chance() -> float:
 	#chance determined by decaf coffee price
 	tip_chance += (5.0 + Global.coffee_difficulty - Global.decaf_price) * 5.0
 	#chance is forced between 5-50%
-	return clamp(tip_chance, 5.0, 50.0)
+	return clamp(tip_chance, 0, 50.0)
 	
 func try_tip() -> void:
 	var tip_chance := find_tip_chance()
@@ -299,191 +299,168 @@ func _on_events_timer_timeout() -> void:
 			await get_tree().create_timer(3).timeout
 			event_text.text = ""
 			event_rect.hide()
-
-		if Global.event_number == 2:
+		elif Global.event_number == 2:
 			Global.coffee_money -= 10
 			event_text.text = str("You had to pay an unexpected fee." + "\r" + "You lose 10 credits.")
 			event_rect.show()
 			await get_tree().create_timer(3).timeout
 			event_text.text = ""
 			event_rect.hide()
-
-		if Global.event_number == 3:
+		elif Global.event_number == 3:
 			Global.ads.append(3)
 			event_text.text = str("A local website offered free advertising!" + "\r" + "You gain 3 ads!")
 			event_rect.show()
 			await get_tree().create_timer(3).timeout
 			event_text.text = ""
 			event_rect.hide()
-
-		if Global.event_number == 4:
+		elif Global.event_number == 4 and Global.regular_coffee_beans.size():
 			Global.regular_coffee_beans.remove_at(0)
 			event_text.text = str("A bag of regular coffee beans was spilled." + "\r" + "You lose 1 regular coffee bean.")
 			event_rect.show()
 			await get_tree().create_timer(3).timeout
 			event_text.text = ""
 			event_rect.hide()
-
-		if Global.event_number == 5:
+		elif Global.event_number == 5:
 			Global.coffee_money += 25
 			event_text.text = str("Your expenses were lower than expected!" + "\r" + "You win 25 credits!")
 			event_rect.show()
 			await get_tree().create_timer(3).timeout
 			event_text.text = ""
 			event_rect.hide()
-
-		if Global.event_number == 6:
+		elif Global.event_number == 6:
 			Global.coffee_money -= 20
 			event_text.text = str("Equipment maintenance cost more than expected." + "\r" + "You lose 20 credits.")
 			event_rect.show()
 			await get_tree().create_timer(3).timeout
 			event_text.text = ""
 			event_rect.hide()
-
-		if Global.event_number == 7:
+		elif Global.event_number == 7:
 			Global.ads.append(3)
 			event_text.text = str("A marketing company gave you free promotion!" + "\r" + "You gain 3 ads!")
 			event_rect.show()
 			await get_tree().create_timer(3).timeout
 			event_text.text = ""
 			event_rect.hide()
-
-		if Global.event_number == 8:
+		elif Global.event_number == 8 and Global.decaf_coffee_beans.size():
 			Global.decaf_coffee_beans.remove_at(0)
 			event_text.text = str("A bag of decaf coffee beans was ruined." + "\r" + "You lose 1 decaf coffee bean.")
 			event_rect.show()
 			await get_tree().create_timer(3).timeout
 			event_text.text = ""
 			event_rect.hide()
-
-		if Global.event_number == 9:
+		elif Global.event_number == 9:
 			Global.coffee_money += 30
 			event_text.text = str("You received a small business grant!" + "\r" + "You win 30 credits!")
 			event_rect.show()
 			await get_tree().create_timer(3).timeout
 			event_text.text = ""
 			event_rect.hide()
-
-		if Global.event_number == 10:
+		elif Global.event_number == 10:
 			Global.coffee_money -= 25
 			event_text.text = str("Your insurance payment is due." + "\r" + "You lose 25 credits.")
 			event_rect.show()
 			await get_tree().create_timer(3).timeout
 			event_text.text = ""
 			event_rect.hide()
-
-		if Global.event_number == 11:
+		elif Global.event_number == 11:
 			Global.coffee_money += 20
 			event_text.text = str("You won a local coffee brewing contest!" + "\r" + "You win 20 credits!")
 			event_rect.show()
 			await get_tree().create_timer(3).timeout
 			event_text.text = ""
 			event_rect.hide()
-
-		if Global.event_number == 12:
+		elif Global.event_number == 12 and Global.regular_coffee_beans.size() >= 1:
 			Global.regular_coffee_beans.remove_at(0)
 			event_text.text = str("A container of regular coffee beans tipped over." + "\r" + "You lose 1 regular coffee bean.")
 			event_rect.show()
 			await get_tree().create_timer(3).timeout
 			event_text.text = ""
 			event_rect.hide()
-
-		if Global.event_number == 13:
+		elif Global.event_number == 13:
 			Global.ads.append(3)
 			event_text.text = str("A billboard company gave you free ad space!" + "\r" + "You gain 3 ads!")
 			event_rect.show()
 			await get_tree().create_timer(3).timeout
 			event_text.text = ""
 			event_rect.hide()
-
-		if Global.event_number == 14:
+		elif Global.event_number == 14:
 			Global.coffee_money -= 15
 			event_text.text = str("You had to replace some shop supplies." + "\r" + "You lose 15 credits.")
 			event_rect.show()
 			await get_tree().create_timer(3).timeout
 			event_text.text = ""
 			event_rect.hide()
-
-		if Global.event_number == 15:
+		elif Global.event_number == 15:
 			Global.coffee_money += 40
 			event_text.text = str("Your coffee shop was featured in a local newspaper!" + "\r" + "You win 40 credits!")
 			event_rect.show()
 			await get_tree().create_timer(3).timeout
 			event_text.text = ""
 			event_rect.hide()
-
-		if Global.event_number == 16:
+		elif Global.event_number == 16:
 			Global.coffee_money -= 30
 			event_text.text = str("Your rent increased this month." + "\r" + "You lose 30 credits.")
 			event_rect.show()
 			await get_tree().create_timer(3).timeout
 			event_text.text = ""
 			event_rect.hide()
-
-		if Global.event_number == 17:
+		elif Global.event_number == 17 and Global.decaf_coffee_beans.size():
 			Global.decaf_coffee_beans.remove_at(0)
 			event_text.text = str("A decaf bean shipment was damaged." + "\r" + "You lose 1 decaf coffee bean.")
 			event_rect.show()
 			await get_tree().create_timer(3).timeout
 			event_text.text = ""
 			event_rect.hide()
-
-		if Global.event_number == 18:
+		elif Global.event_number == 18:
 			Global.coffee_money -= 10
 			event_text.text = str("You paid for routine maintenance." + "\r" + "You lose 10 credits.")
 			event_rect.show()
 			await get_tree().create_timer(3).timeout
 			event_text.text = ""
 			event_rect.hide()
-
-		if Global.event_number == 19:
+		elif Global.event_number == 19:
 			Global.coffee_money += 50
 			event_text.text = str("You received a business excellence award!" + "\r" + "You win 50 credits!")
 			event_rect.show()
 			await get_tree().create_timer(3).timeout
 			event_text.text = ""
 			event_rect.hide()
-
-		if Global.event_number == 20:
+		elif Global.event_number == 20:
 			Global.coffee_money -= 20
 			event_text.text = str("A licensing fee came due." + "\r" + "You lose 20 credits.")
 			event_rect.show()
 			await get_tree().create_timer(3).timeout
 			event_text.text = ""
 			event_rect.hide()
-
-		if Global.event_number == 21:
+		elif Global.event_number == 21:
 			Global.ads.append(3)
-			event_text.text = str("Your latest ad campaign was a success!" + "\r" + "You gain 3 ads!")
+			event_text.text = str("Your latest ad campaign was a major success!" + "\r" + "You gain 3 ads!")
 			event_rect.show()
 			await get_tree().create_timer(3).timeout
 			event_text.text = ""
 			event_rect.hide()
-
-		if Global.event_number == 22:
+		elif Global.event_number == 22 and Global.regular_coffee_beans.size():
 			Global.regular_coffee_beans.remove_at(0)
 			event_text.text = str("Some regular coffee beans were accidentally thrown away." + "\r" + "You lose 1 regular coffee bean.")
 			event_rect.show()
 			await get_tree().create_timer(3).timeout
 			event_text.text = ""
 			event_rect.hide()
-
-		if Global.event_number == 23:
+		elif Global.event_number == 23:
 			Global.coffee_money += 20
 			event_text.text = str("You received a tax refund!" + "\r" + "You win 20 credits!")
 			event_rect.show()
 			await get_tree().create_timer(3).timeout
 			event_text.text = ""
 			event_rect.hide()
-
-		if Global.event_number == 24:
-			Global.coffee_money -= 25
-			event_text.text = str("An unexpected business expense appeared." + "\r" + "You lose 25 credits.")
+		elif Global.event_number == 24 and Global.ads.size() >= 1:
+			Global.ads.remove_at(1)
+			event_text.text = str("A rival company has better ad campaigns." + "\r" + "You lose 1 ad.")
 			event_rect.show()
 			await get_tree().create_timer(3).timeout
 			event_text.text = ""
 			event_rect.hide()
-		if Global.event_number == 25:
+		elif Global.event_number == 25:
 			Global.coffee_money += 25
 			event_text.text = str("You won an award for best new coffee shop in town!" + "\r" + "You win 25 credits!")
 			event_rect.show()

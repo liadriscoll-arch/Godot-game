@@ -308,10 +308,10 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="shop_item_instructions_label" type="Label" parent="." unique_id=1263318241]
-offset_left = -960.0
-offset_top = -504.0
-offset_right = 960.0
-offset_bottom = -359.0
+offset_left = -718.0
+offset_top = -530.0
+offset_right = 1202.0
+offset_bottom = -385.0
 theme_override_fonts/font = ExtResource("4_rldrf")
 theme_override_font_sizes/font_size = 20
 text = "hover over an item for help"

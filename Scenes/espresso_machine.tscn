@@ -14,8 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://canxk2lxn731v" path="res://Assets/Coffee assets/esspresso_frames/pixil-frame-27.png" id="12_bmwas"]
 [ext_resource type="Texture2D" uid="uid://den4oqv1i207s" path="res://Assets/Coffee assets/esspresso_frames/pixil-frame-30.png" id="13_r1hqi"]
 [ext_resource type="Texture2D" uid="uid://l6nxokfjafym" path="res://Assets/Coffee assets/esspresso_frames/pixil-frame-33.png" id="14_m0aj8"]
-[ext_resource type="Texture2D" uid="uid://dcmgwrymf0lws" path="res://Assets/Coffee assets/esspresso_frames/pixil-frame-36.png" id="15_rarnb"]
-[ext_resource type="Texture2D" uid="uid://c33brnxgny666" path="res://Assets/Coffee assets/esspresso_frames/pixil-frame-38.png" id="16_wdaiv"]
+[ext_resource type="Texture2D" uid="uid://cvhqpvvvmp5sa" path="res://Assets/Coffee assets/esspresso_frames/pixil-frame-35.png" id="15_28alj"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tto4q"]
 animations = [{
@@ -71,14 +70,11 @@ animations = [{
 "texture": ExtResource("14_m0aj8")
 }, {
 "duration": 1.0,
-"texture": ExtResource("15_rarnb")
-}, {
-"duration": 1.0,
-"texture": ExtResource("16_wdaiv")
+"texture": ExtResource("15_28alj")
 }],
 "loop": true,
 "name": &"espresso_fill",
-"speed": 5.0
+"speed": 3.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1y1sl"]
@@ -89,7 +85,7 @@ size = Vector2(42, 42)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1134170906]
 sprite_frames = SubResource("SpriteFrames_tto4q")
 animation = &"espresso_fill"
-frame_progress = 0.23645371
+frame_progress = 0.25956494
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=458715323]
 position = Vector2(2, 1)
