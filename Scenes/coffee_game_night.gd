@@ -1,8 +1,9 @@
 extends Node2D
 
-
+@onready var purchase_fx = preload("res://Assets/sfx music/cha-ching.mp3")
 
 func _ready() -> void:
+	CoffeeShopMusic.play_coffee_music()
 	
 	Global.customer_line.clear()
 	if Global.coffee_money >= Global.quota and Global.coffee_day == 7 and !Global.endless:

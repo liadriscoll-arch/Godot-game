@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://miot438ffawt"]
+
+[ext_resource type="AudioStream" uid="uid://c5tjxm6vfv5b0" path="res://Assets/sfx music/coffee_shop_music.mp3" id="1_vrcrg"]
+[ext_resource type="Script" uid="uid://xegyn6cwyl77" path="res://Scenes/coffee_shop_music.gd" id="2_pb8h0"]
+
+[node name="CoffeeShopMusic" type="AudioStreamPlayer" unique_id=1122661017]
+stream = ExtResource("1_vrcrg")
+autoplay = true
+script = ExtResource("2_pb8h0")

@@ -2,6 +2,7 @@ extends Node2D
 
 
 func _ready():
+	CoffeeShopMusic.play_coffee_music()
 	Global.coffee_money = 100
 	Global.regular_coffee_beans = []
 	Global.decaf_coffee_beans  = []

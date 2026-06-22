@@ -10,6 +10,7 @@ var volume = 50
 
 
 func _ready():
+	CoffeeShopMusic.stop()
 	volume_slider.value = Global.volume
 	brightness_slider.value = Global.brightness
 	
@@ -24,3 +25,6 @@ func _on_brightness_slider_value_changed(new_value: float) -> void:
 func _on_volume_slider_value_changed(new_value: float) -> void:
 	Global.volume = new_value
 	$volume_slider/Volume_slider_label.text = str(int(new_value)) + "%"
+	CoffeeShopMusic.volume_db = (new_value - 50) / 2.0
+	if new_value == 0:
+		CoffeeShopMusic.volume_db = 0

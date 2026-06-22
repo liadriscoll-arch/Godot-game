@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://x748jr3cch8l"]
 
+[ext_resource type="Script" uid="uid://ebiu8fnrgtit" path="res://Scenes/coffee_end_screen.gd" id="1_rwkyo"]
 [ext_resource type="Texture2D" uid="uid://d4hax1i8gclgn" path="res://Assets/Coffee assets/coffee_day_bg.webp" id="1_whft4"]
 [ext_resource type="Texture2D" uid="uid://dd5tnmvm3iubr" path="res://Assets/Coffee assets/coffee_people.webp" id="2_rwkyo"]
 [ext_resource type="Texture2D" uid="uid://xij3mrkf608o" path="res://Assets/Coffee assets/temp_night_box.png" id="3_gllfs"]
@@ -12,6 +13,7 @@
 [ext_resource type="Script" uid="uid://byo4tbetjnw3t" path="res://play_again_button.gd" id="10_77b22"]
 
 [node name="coffee_end_screen" type="Node2D" unique_id=2144521820]
+script = ExtResource("1_rwkyo")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=476746255]
 scale = Vector2(10, 10)

@@ -10,7 +10,7 @@ func _ready() -> void:
 	$Area2D.mouse_exited.connect(_on_mouse_exited)
 
 func _on_mouse_entered() -> void:
-	info_label.text = str("New machine to make lattes, not usable until tomorrow" + "\r" + "*requires milk")
+	info_label.text = str("New machine to make lattes" + "\r" + "not usable until tomorrow" + "\r" + "*requires milk")
 	
 
 func _on_mouse_exited() -> void:

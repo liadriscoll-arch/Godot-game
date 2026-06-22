@@ -20,12 +20,13 @@
 [ext_resource type="Texture2D" uid="uid://cqjpdtecakya5" path="res://Assets/Coffee assets/esspresso_frames/pixil-frame-0.png" id="17_ibwl0"]
 [ext_resource type="Script" uid="uid://cg04vf1xnv6y2" path="res://Scenes/expresso_image.gd" id="18_qc307"]
 [ext_resource type="Script" uid="uid://dvc42trs7m0mb" path="res://Scenes/sponsor_image.gd" id="19_bgk1g"]
-[ext_resource type="Texture2D" path="res://Assets/Coffee assets/coffee_ad.webp" id="20_f8jj5"]
+[ext_resource type="Texture2D" uid="uid://r53paoejlcea" path="res://Assets/Coffee assets/coffee_sponsor.webp" id="20_f8jj5"]
 [ext_resource type="Script" uid="uid://cnv3v4vcerf3k" path="res://Scenes/shop_ads_label.gd" id="21_bgk1g"]
 [ext_resource type="Script" uid="uid://c8lllj83nkwrq" path="res://Scenes/shop_sponsors_label.gd" id="22_f8jj5"]
+[ext_resource type="Script" uid="uid://cjk7njvaaekci" path="res://Scenes/sponsor_price.gd" id="22_im157"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f8jj5"]
-size = Vector2(44.59999, 37.600006)
+size = Vector2(45.600006, 37.600006)
 
 [node name="coffee_shop" type="Node2D" unique_id=1346237771]
 
@@ -166,10 +167,10 @@ texture_hover = ExtResource("14_vffnu")
 script = ExtResource("15_eatfk")
 
 [node name="sponsor_purchase_button" type="TextureButton" parent="." unique_id=2131836346]
-offset_left = -72.00003
-offset_top = 94.0
-offset_right = 23.99997
-offset_bottom = 148.0
+offset_left = 296.0
+offset_top = 82.0
+offset_right = 392.0
+offset_bottom = 136.0
 scale = Vector2(1.5, 1.5)
 texture_normal = ExtResource("13_2i3s5")
 texture_hover = ExtResource("14_vffnu")
@@ -196,10 +197,10 @@ text = "Money"
 horizontal_alignment = 1
 
 [node name="info_label" type="Label" parent="." unique_id=1358416985]
-offset_left = -142.0
-offset_top = -509.0
-offset_right = 856.0
-offset_bottom = -486.0
+offset_left = -260.0
+offset_top = -171.0
+offset_right = 253.0
+offset_bottom = -126.0
 theme_override_fonts/font = ExtResource("3_wvnb4")
 theme_override_font_sizes/font_size = 20
 text = "Hover over an item for help
@@ -232,7 +233,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="sponsor_image" type="Sprite2D" parent="." unique_id=1702024420]
-position = Vector2(-2.0000076, -59)
+position = Vector2(366.49997, -58.5)
 scale = Vector2(5, 5)
 texture = ExtResource("20_f8jj5")
 script = ExtResource("19_bgk1g")
@@ -241,20 +242,21 @@ script = ExtResource("19_bgk1g")
 position = Vector2(-1.22070305e-05, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sponsor_image/Area2D" unique_id=1754855580]
-position = Vector2(-0.29999253, 1.5999985)
+position = Vector2(0.1000061, 0.99999905)
 scale = Vector2(0.99999976, 0.99999976)
 shape = SubResource("RectangleShape2D_f8jj5")
 
 [node name="sponsor_price" type="Label" parent="." unique_id=1135017860]
-offset_left = -57.0
-offset_top = 106.0
-offset_right = 57.0
-offset_bottom = 163.0
+offset_left = 311.00003
+offset_top = 94.0
+offset_right = 425.00003
+offset_bottom = 151.0
 theme_override_fonts/font = ExtResource("3_wvnb4")
 theme_override_font_sizes/font_size = 40
 text = "100"
 horizontal_alignment = 1
 vertical_alignment = 1
+script = ExtResource("22_im157")
 
 [node name="Sprite2D7" type="Sprite2D" parent="." unique_id=745730628]
 position = Vector2(-803, -396)
@@ -304,6 +306,27 @@ offset_right = -675.0
 offset_bottom = -328.0
 theme_override_fonts/font = ExtResource("3_wvnb4")
 text = "Sponsors"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="." unique_id=2048171852]
+offset_left = 253.0
+offset_top = -211.0
+offset_right = 479.0
+offset_bottom = -188.0
+theme_override_fonts/font = ExtResource("3_wvnb4")
+theme_override_font_sizes/font_size = 20
+text = "Sponsorship"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="." unique_id=1803397292]
+offset_left = -490.0
+offset_top = -216.0
+offset_right = -264.0
+offset_bottom = -171.0
+theme_override_fonts/font = ExtResource("3_wvnb4")
+theme_override_font_sizes/font_size = 20
+text = "Espresso
+Machine"
 horizontal_alignment = 1
 
 [connection signal="pressed" from="back" to="back" method="_on_pressed"]

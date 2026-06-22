@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dtogcgc0qwqxv"
+path="res://.godot/imported/coffee_win_sfx.mp3-e5cc48cb5120f1b02f18c25c6767b7b3.mp3str"
+
+[deps]
+
+source_file="res://Assets/sfx music/coffee_win_sfx.mp3"
+dest_files=["res://.godot/imported/coffee_win_sfx.mp3-e5cc48cb5120f1b02f18c25c6767b7b3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

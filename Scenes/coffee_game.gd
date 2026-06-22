@@ -14,7 +14,7 @@ extends Node2D
 @onready var decaf_coffee_pot: decaf_coffee_pot = $decaf_coffee_pot
 @onready var regular_coffee_pot: regular_coffee_pot = $regular_coffee_pot
 @onready var regular_espresso_pot: regular_espresso_pot = $regular_espresso_pot
-
+@onready var event_fx = preload("res://Assets/sfx music/event_sfx.mp3")
 
 
 var orders = ["type_wanted", "drink_wanted"]
@@ -49,7 +49,10 @@ var empty_latte = preload("res://Assets/Coffee assets/empty_latte.webp")
 var empty_coffee = preload("res://Assets/Coffee assets/empty_coffee.webp")
 
 
+
+
 func _ready() -> void:
+	CoffeeShopMusic.play_coffee_music()
 	randomize()
 	update_line()
 	update_order()
@@ -123,6 +126,7 @@ func serve_customer() -> void:
 	else:
 		Global.coffee_money += Global.decaf_price
 
+	try_tip()
 	# moves the line along
 	Global.customer_line.remove_at(0)
 	Global.customer_orders.remove_at(0)
@@ -141,13 +145,15 @@ func serve_customer() -> void:
 	elif Global.selected_cup == "coffee":
 		coffee_cup.texture = empty_coffee
 
+	
+	
 	Global.selected_cup = "none"
 	Global.drink_made = "none"
 	Global.type_made = "none"
 
 	update_line()
 	update_order()
-	try_tip()
+	
 	
 	Global.time_taken = 0
 	
@@ -161,9 +167,9 @@ func customer_leaves() -> void:
 	Global.customer_orders.remove_at(0)
 	
 	if Global.selected_cup == "latte":
-		latte_cup = empty_latte
+		latte_cup.texture = empty_latte
 	elif Global.selected_cup == "coffee":
-		coffee_cup = empty_coffee
+		coffee_cup.texture = empty_coffee
 
 	update_line()
 	update_order()
@@ -285,6 +291,7 @@ func _on_events_timer_timeout() -> void:
 	Global.event_chance = randi_range(1,5)
 	if Global.event_chance == 5:
 		Global.event_number = randi_range(1,25)
+		CoffeeShopMusic.play_sfx(event_fx)
 		if Global.event_number == 25:
 			Global.coffee_money += 25
 			event_text.text = str("You won an award for best new coffee shop in town!" + "\r" + "You win 25 credits!")
