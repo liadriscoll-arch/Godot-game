@@ -20,6 +20,7 @@ offset_top = -541.0
 offset_right = 961.0
 offset_bottom = 539.0
 color = Color(0, 0, 0, 0.3882353)
+metadata/_edit_use_anchors_ = true
 
 [node name="Label4" type="Label" parent="." unique_id=1900796915]
 offset_left = -925.0

@@ -4,6 +4,10 @@ extends CharacterBody2D
 const SPEED = 300.0
 
 @onready var fella_sprite: AnimatedSprite2D = $AnimatedSprite2D
+
+func _ready() -> void:
+	global_position = Vector2(Chefglobal.playerx, Chefglobal.playery)
+
 func _physics_process(delta: float) -> void:
 
 	# Get the input direction and handle the movement/deceleration.
@@ -32,3 +36,8 @@ func _physics_process(delta: float) -> void:
 
 
 	move_and_slide()
+
+
+func _on_chef_game_openedmenu() -> void:
+	Chefglobal.playerx = position.x
+	Chefglobal.playery = position.y

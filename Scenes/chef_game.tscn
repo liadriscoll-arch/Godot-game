@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://ds81pnrvk1d4j"]
 
-[ext_resource type="Texture2D" uid="uid://b4vvh6qo3lf6w" path="res://Assets/Chef assets/chef_background.png" id="1_37k36"]
-[ext_resource type="PackedScene" uid="uid://rnmdc64dl5bb" path="res://Scenes/cheffella.tscn" id="2_1qq7p"]
-[ext_resource type="Script" uid="uid://di7yiickluxi6" path="res://Scenes/cheffella.gd" id="3_ugurg"]
+[ext_resource type="Script" uid="uid://dpxnh3ylht0r5" path="res://Scenes/chef_game.gd" id="1_sgqx4"]
+[ext_resource type="Texture2D" uid="uid://b4vvh6qo3lf6w" path="res://Assets/Chef assets/chef_background.png" id="2_ns07t"]
+[ext_resource type="PackedScene" uid="uid://rnmdc64dl5bb" path="res://Scenes/cheffella.tscn" id="3_lhr4j"]
+[ext_resource type="Script" uid="uid://di7yiickluxi6" path="res://Scenes/cheffella.gd" id="4_d5sjy"]
+[ext_resource type="Script" uid="uid://ovbj7hdr6i7e" path="res://Scenes/pansarea.gd" id="5_rjejb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1qq7p"]
 size = Vector2(1904, 20)
@@ -25,18 +27,22 @@ size = Vector2(275.5, 61)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6qpsl"]
 size = Vector2(1410, 43)
 
-[node name="ChefTutorialDay" type="Node2D" unique_id=511923564]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8rk4b"]
+size = Vector2(295.625, 37.5)
+
+[node name="ChefGame" type="Node2D" unique_id=511923564]
+script = ExtResource("1_sgqx4")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=503240910]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=695404142]
 scale = Vector2(10, 10.000001)
-texture = ExtResource("1_37k36")
+texture = ExtResource("2_ns07t")
 
-[node name="Cheffella" parent="." unique_id=1389223012 instance=ExtResource("2_1qq7p")]
-position = Vector2(-874.99994, -201.00002)
+[node name="Cheffella" parent="." unique_id=1389223012 instance=ExtResource("3_lhr4j")]
+position = Vector2(-748, -253.00005)
 scale = Vector2(5.735, 5.735)
-script = ExtResource("3_ugurg")
+script = ExtResource("4_d5sjy")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1254276869]
 
@@ -91,3 +97,22 @@ shape = SubResource("RectangleShape2D_8hv8a")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D7" unique_id=1117518969]
 position = Vector2(232, -490.5)
 shape = SubResource("RectangleShape2D_6qpsl")
+
+[node name="pansarea" type="Area2D" parent="." unique_id=1375791554]
+script = ExtResource("5_rjejb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pansarea" unique_id=396526863]
+position = Vector2(-326.8125, -449.75)
+shape = SubResource("RectangleShape2D_8rk4b")
+
+[node name="ColorRect" type="ColorRect" parent="pansarea/CollisionShape2D" unique_id=548336555]
+offset_left = -148.1875
+offset_top = -62.25
+offset_right = 145.8125
+offset_bottom = 20.75
+color = Color(1, 0, 0, 0.3529412)
+
+[connection signal="openedmenu" from="." to="Cheffella" method="_on_chef_game_openedmenu"]
+[connection signal="body_entered" from="pansarea" to="pansarea" method="_on_body_entered"]
+[connection signal="body_exited" from="pansarea" to="pansarea" method="_on_body_exited"]
+[connection signal="pansarea" from="pansarea" to="." method="_on_pansarea_pansarea"]
