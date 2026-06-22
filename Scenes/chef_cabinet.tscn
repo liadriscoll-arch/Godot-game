@@ -6,16 +6,20 @@
 [ext_resource type="Texture2D" uid="uid://dild6d0ulr0bc" path="res://Assets/Chef assets/chefsettingdonebuttonhover.png" id="4_r6yrb"]
 [ext_resource type="Script" uid="uid://0qoa0ihp0duo" path="res://Scenes/exit.gd" id="5_b3p4d"]
 [ext_resource type="FontFile" uid="uid://dl176n4kxwrv8" path="res://Assets/04b_30/04B_30__.TTF" id="6_ngaff"]
+[ext_resource type="Script" uid="uid://cejelr36xipyr" path="res://Scenes/cabinfo.gd" id="7_b3p4d"]
+[ext_resource type="Script" uid="uid://djqe0xpd6gc4r" path="res://Scenes/cabtut.gd" id="8_ngaff"]
 
 [node name="ChefCabinet" type="Node2D" unique_id=1557161920]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=354636915]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=257424421]
+z_index = -1
 scale = Vector2(10, 10.000001)
 texture = ExtResource("1_wugwf")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1495935995]
+z_index = -1
 offset_left = -959.0
 offset_top = -541.0
 offset_right = 961.0
@@ -46,4 +50,83 @@ theme_override_fonts/font = ExtResource("6_ngaff")
 theme_override_font_sizes/font_size = 57
 text = "exit"
 
+[node name="cabinfo" type="Label" parent="." unique_id=2062573255]
+offset_left = -957.0
+offset_top = -499.0
+offset_right = 955.0
+offset_bottom = -319.0
+theme_override_fonts/font = ExtResource("6_ngaff")
+theme_override_font_sizes/font_size = 57
+text = "placeholder"
+horizontal_alignment = 1
+script = ExtResource("7_b3p4d")
+
+[node name="cabtut" type="Label" parent="." unique_id=1134634612]
+visible = false
+offset_left = -898.0
+offset_top = -26.0
+offset_right = 897.0
+offset_bottom = 154.0
+theme_override_fonts/font = ExtResource("6_ngaff")
+theme_override_font_sizes/font_size = 57
+text = "click on the foods in order to take
+them into your inventory and then go to
+the correct station to cook them!"
+horizontal_alignment = 1
+script = ExtResource("8_ngaff")
+
+[node name="gnood" type="Button" parent="." unique_id=1700587268]
+modulate = Color(0, 0, 0, 0)
+offset_left = -852.0
+offset_top = -350.0
+offset_right = -379.0
+offset_bottom = -3.0
+
+[node name="rnood" type="Button" parent="." unique_id=1856932972]
+modulate = Color(1, 1, 1, 0)
+offset_left = -299.0
+offset_top = -347.0
+offset_right = 147.0
+offset_bottom = 8.0
+
+[node name="ketch" type="Button" parent="." unique_id=840933498]
+modulate = Color(1, 1, 1, 0)
+offset_left = 162.0
+offset_top = -397.0
+offset_right = 504.0
+offset_bottom = 9.0
+
+[node name="musta" type="Button" parent="." unique_id=1472162970]
+modulate = Color(1, 1, 1, 0)
+offset_left = 524.0
+offset_top = -408.0
+offset_right = 859.0
+offset_bottom = 5.0
+
+[node name="pbuns" type="Button" parent="." unique_id=1798162795]
+modulate = Color(1, 1, 1, 0)
+offset_left = -831.0
+offset_top = 144.0
+offset_right = -103.0
+offset_bottom = 492.0
+
+[node name="sbuns" type="Button" parent="." unique_id=319087619]
+modulate = Color(1, 1, 1, 0)
+offset_left = 96.0
+offset_top = 132.0
+offset_right = 712.0
+offset_bottom = 492.0
+
 [connection signal="pressed" from="exit" to="exit" method="_on_pressed"]
+[connection signal="mouse_entered" from="gnood" to="cabinfo" method="_on_gnood_mouse_entered"]
+[connection signal="mouse_exited" from="gnood" to="cabinfo" method="_on_gnood_mouse_exited"]
+[connection signal="mouse_entered" from="rnood" to="cabinfo" method="_on_rnood_mouse_entered"]
+[connection signal="mouse_exited" from="rnood" to="cabinfo" method="_on_rnood_mouse_exited"]
+[connection signal="mouse_entered" from="ketch" to="cabinfo" method="_on_ketch_mouse_entered"]
+[connection signal="mouse_exited" from="ketch" to="cabinfo" method="_on_ketch_mouse_exited"]
+[connection signal="mouse_entered" from="musta" to="cabinfo" method="_on_musta_mouse_entered"]
+[connection signal="mouse_exited" from="musta" to="cabinfo" method="_on_musta_mouse_exited"]
+[connection signal="mouse_entered" from="pbuns" to="cabinfo" method="_on_pbuns_mouse_entered"]
+[connection signal="mouse_exited" from="pbuns" to="cabinfo" method="_on_pbuns_mouse_exited"]
+[connection signal="mouse_entered" from="sbuns" to="cabinfo" method="_on_sbuns_mouse_entered"]
+[connection signal="mouse_exited" from="sbuns" to="cabinfo" method="_on_sbuns_mouse_exited"]

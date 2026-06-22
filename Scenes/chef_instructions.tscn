@@ -5,6 +5,7 @@
 [ext_resource type="FontFile" uid="uid://dl176n4kxwrv8" path="res://Assets/04b_30/04B_30__.TTF" id="2_w4hly"]
 [ext_resource type="Script" uid="uid://c5mqhwhobjkjk" path="res://Scenes/button.gd" id="4_i7chl"]
 [ext_resource type="Script" uid="uid://2e1exnp2766y" path="res://Scenes/button_2.gd" id="5_b2ggq"]
+[ext_resource type="Script" uid="uid://uxasvuhqdnuc" path="res://Scenes/button_3.gd" id="6_yseqc"]
 
 [node name="ChefInstructions" type="Node2D" unique_id=559427166]
 script = ExtResource("1_hmatf")
@@ -117,6 +118,8 @@ offset_bottom = 529.0
 theme_override_fonts/font = ExtResource("2_w4hly")
 theme_override_font_sizes/font_size = 75
 text = "Play"
+script = ExtResource("6_yseqc")
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
 [connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
+[connection signal="pressed" from="Button3" to="Button3" method="_on_pressed"]
