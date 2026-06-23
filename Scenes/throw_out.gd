@@ -7,9 +7,17 @@ var empty_latte = preload("res://Assets/Coffee assets/empty_latte.webp")
 
 
 func _on_pressed() -> void:
+	print("throw out pressed, drink is: ", Global.drink_selected)
+
 	if Global.drink_selected == "coffee":
+		print("resetting coffee cup")
 		fella_coffee_empty.texture = empty_coffee
-	else:
+	elif Global.drink_selected != "none":
+		print("resetting other cup")
 		fella_latte_empty.texture = empty_latte
+	else:
+		print("nothing selected")
+		return
+
 	Global.drink_selected = "none"
-		
+	print("drink reset to: ", Global.drink_selected)

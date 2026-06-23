@@ -97,6 +97,7 @@ func try_add_customer() -> void:
 		return
 	#gets chance based on user inputs
 	var chance := get_customer_chance()
+	print(chance)
 
 	if randi_range(1, 100) <= chance:
 		add_random_customer()
