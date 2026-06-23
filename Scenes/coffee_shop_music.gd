@@ -1,35 +1,33 @@
 extends AudioStreamPlayer
 
 const coffee_music = preload("res://Assets/sfx music/coffee_shop_music.mp3")
-# Called when the node enters the scene tree for the first time.
+
 func _play_music(music):
 	if stream == music and playing:
 		return
-
-	stream = music
-	if Global.volume == 0:
-		volume_db = 0
-	else:
-		volume_db = (Global.volume - 50)/2
-	play()
 	
+	stream = music
+	# Divide by 50.0 so that a slider value of 50 becomes 1.0 (0 dB / original volume)
+	volume_db = linear_to_db(Global.volume / 50.0) 
+	play()
+
+func _process(_delta):
+	# Continuously update the music volume smoothly
+	volume_db = linear_to_db(Global.volume / 50.0)
 
 func play_coffee_music():
 	_play_music(coffee_music)
-func play_sfx(stream: AudioStream, volume = 0.0):
+
+func play_sfx(stream: AudioStream, volume = 1.0):
 	var fx_player = AudioStreamPlayer.new()
 	fx_player.stream = stream
 	fx_player.name = "FX_PLAYER"
-	if Global.volume == 0:
-		fx_player.volume_db = 0
-	else:
-		fx_player.volume_db = (Global.volume - 50)/2
+	
+	# Scale the global volume against 50, apply the local modifier, then turn to dB
+	fx_player.volume_db = linear_to_db((Global.volume / 50.0) * volume)
+	
 	add_child(fx_player)
 	fx_player.play()
 	
 	await fx_player.finished
-	
 	fx_player.queue_free()
-
-func _process(_delta):
-	volume_db = (Global.volume - 50) / 2.0

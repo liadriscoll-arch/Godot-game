@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dpnn01ld7qugi"]
 
+[ext_resource type="Script" uid="uid://cu2n2vwnlxyxa" path="res://Scenes/coffee_shop.gd" id="1_lfshl"]
 [ext_resource type="Texture2D" uid="uid://d4hax1i8gclgn" path="res://Assets/Coffee assets/coffee_day_bg.webp" id="1_oph8b"]
 [ext_resource type="Texture2D" uid="uid://dd5tnmvm3iubr" path="res://Assets/Coffee assets/coffee_people.webp" id="2_0k3ma"]
 [ext_resource type="Texture2D" uid="uid://b0edhj4oerbak" path="res://Assets/Coffee assets/coffee_shop.webp" id="3_wemkf"]
@@ -29,6 +30,7 @@
 size = Vector2(45.600006, 37.600006)
 
 [node name="coffee_shop" type="Node2D" unique_id=1346237771]
+script = ExtResource("1_lfshl")
 
 [node name="Sprite2D3" type="Sprite2D" parent="." unique_id=717482824]
 scale = Vector2(10, 10)
@@ -197,9 +199,9 @@ text = "Money"
 horizontal_alignment = 1
 
 [node name="info_label" type="Label" parent="." unique_id=1358416985]
-offset_left = -260.0
+offset_left = -256.0
 offset_top = -171.0
-offset_right = 253.0
+offset_right = 257.0
 offset_bottom = -126.0
 theme_override_fonts/font = ExtResource("3_wvnb4")
 theme_override_font_sizes/font_size = 20

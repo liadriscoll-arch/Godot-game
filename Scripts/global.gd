@@ -46,3 +46,23 @@ var time_taken = 0
 var coffee_week = 1
 var brewing = false
 var espresso_brewing = false
+var previous_scene_path = ""
+
+
+func esc_settings():
+	if Input.is_action_just_pressed("ui_cancel"):
+		# Save the current scene's file path to our global variable
+		Global.previous_scene_path = get_tree().current_scene.scene_file_path
+		
+		# Change to the settings scene
+		get_tree().change_scene_to_file("res://Scenes/settings.tscn")
+		
+func go_back_to_previous_scene():
+	if Global.previous_scene_path != "":
+		# Go back to the screen we came from
+		get_tree().change_scene_to_file(Global.previous_scene_path)
+	else:
+		# Fallback just in case the path is empty (e.g., if you launched settings directly)
+		get_tree().change_scene_to_file("res://Scenes/main_game.tscn")
+		
+		

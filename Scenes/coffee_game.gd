@@ -52,7 +52,9 @@ var empty_coffee = preload("res://Assets/Coffee assets/empty_coffee.webp")
 
 
 func _ready() -> void:
+	MainGameMusic.stop()
 	CoffeeShopMusic.play_coffee_music()
+	
 	randomize()
 	update_line()
 	update_order()
@@ -244,6 +246,7 @@ func update_order() -> void:
 
 #day function
 func _process(delta: float) -> void:
+	Global.esc_settings()
 	Global.day_time += 1
 #day ends after  2 min
 	if Global.day_time >= Global.day_length:

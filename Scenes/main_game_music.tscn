@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://wcg3bs5b3sce"]
+
+[ext_resource type="AudioStream" uid="uid://r0bsowayomof" path="res://Assets/sfx music/main_game_music.mp3" id="1_b4qe5"]
+[ext_resource type="Script" uid="uid://bjg4b7hqplwyl" path="res://Scenes/main_game_music.gd" id="2_50pwb"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" unique_id=694433770]
+stream = ExtResource("1_b4qe5")
+script = ExtResource("2_50pwb")

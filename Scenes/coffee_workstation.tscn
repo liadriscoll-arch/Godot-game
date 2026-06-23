@@ -52,6 +52,7 @@
 [ext_resource type="Script" uid="uid://co3u0mukrl327" path="res://Scenes/regular_selected.gd" id="49_88uj2"]
 [ext_resource type="Script" uid="uid://dwd61b13bwgki" path="res://Scenes/decaf_selected.gd" id="50_npouq"]
 [ext_resource type="Script" uid="uid://camorlcjgpq8j" path="res://Scenes/espresso_selected.gd" id="51_185hx"]
+[ext_resource type="Script" uid="uid://ma5wlf0425ol" path="res://Scenes/throw_out.gd" id="53_7u1qw"]
 
 [node name="coffee_workstation" type="Node2D" unique_id=1346480445]
 script = ExtResource("1_dnv6u")
@@ -366,6 +367,27 @@ script = ExtResource("51_185hx")
 wait_time = 2.0
 autostart = true
 
+[node name="back_button2" type="TextureButton" parent="." unique_id=1427367071]
+offset_left = 881.0
+offset_top = -571.0
+offset_right = 977.0
+offset_bottom = -517.0
+texture_normal = ExtResource("35_41dfl")
+texture_hover = ExtResource("36_8onr1")
+script = ExtResource("53_7u1qw")
+
+[node name="Label3" type="Label" parent="." unique_id=1623566859]
+offset_left = 891.0
+offset_top = -563.0
+offset_right = 967.0
+offset_bottom = -525.0
+theme_override_fonts/font = ExtResource("34_18fnt")
+theme_override_font_sizes/font_size = 16
+text = "throw
+out"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="pressed" from="decaf_beans2" to="decaf_beans2" method="_on_pressed"]
 [connection signal="pressed" from="decaf_beans" to="decaf_beans" method="_on_pressed"]
 [connection signal="pressed" from="regular_beans3" to="regular_beans3" method="_on_pressed"]
@@ -383,3 +405,4 @@ autostart = true
 [connection signal="pressed" from="espresso_selected" to="espresso_selected" method="_on_pressed"]
 [connection signal="timeout" from="Customer_timer" to="." method="_on_customer_timer_timeout"]
 [connection signal="timeout" from="Customer_timer" to="Customer_timer" method="_on_timeout"]
+[connection signal="pressed" from="back_button2" to="back_button2" method="_on_pressed"]

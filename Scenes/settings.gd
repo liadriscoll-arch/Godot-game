@@ -11,6 +11,7 @@ var volume = 50
 
 func _ready():
 	CoffeeShopMusic.stop()
+	MainGameMusic.play_main_music()
 	volume_slider.value = Global.volume
 	brightness_slider.value = Global.brightness
 	

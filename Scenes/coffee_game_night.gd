@@ -3,6 +3,7 @@ extends Node2D
 @onready var purchase_fx = preload("res://Assets/sfx music/cha-ching.mp3")
 
 func _ready() -> void:
+	MainGameMusic.stop()
 	CoffeeShopMusic.play_coffee_music()
 	
 	Global.customer_line.clear()
@@ -45,4 +46,7 @@ func _ready() -> void:
 func update_quota() -> void:
 	var r = Global.coffee_week - 1
 	Global.quota = int(500 * pow(1.38, r) + r * 175)
+
+func _process(delta: float) -> void:
+	Global.esc_settings()
 	

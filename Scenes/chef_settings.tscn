@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cha7sg6jpbsbd"]
 
 [ext_resource type="Texture2D" uid="uid://b4vvh6qo3lf6w" path="res://Assets/Chef assets/chef_background.png" id="1_11le8"]
+[ext_resource type="Script" uid="uid://db6bt4bnjmr8x" path="res://Scenes/chef_settings.gd" id="1_ovsgm"]
 [ext_resource type="FontFile" uid="uid://dl176n4kxwrv8" path="res://Assets/04b_30/04B_30__.TTF" id="2_fgxj3"]
 [ext_resource type="Script" uid="uid://cugwu8lsbde0p" path="res://Scenes/check_button.gd" id="3_fgxj3"]
 [ext_resource type="Script" uid="uid://dm8q5dcp55g55" path="res://Scenes/check_button_2.gd" id="4_l5m6n"]
@@ -9,6 +10,7 @@
 [ext_resource type="Script" uid="uid://dfi5d77jrrytq" path="res://Scenes/saveset.gd" id="7_pynyk"]
 
 [node name="ChefSettings" type="Node2D" unique_id=266360731]
+script = ExtResource("1_ovsgm")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=464074333]
 

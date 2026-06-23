@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 Global="*uid://ccme1tu4kusuo"
 Chefglobal="*uid://c4pqjpovyynx3"
 CoffeeShopMusic="*uid://miot438ffawt"
+MainGameMusic="*uid://wcg3bs5b3sce"
 
 [display]
 

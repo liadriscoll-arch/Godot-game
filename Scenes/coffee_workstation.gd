@@ -3,12 +3,14 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	MainGameMusic.stop()
 	CoffeeShopMusic.play_coffee_music()
 	Global.drink_selected = "none"
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	Global.esc_settings()
 	Global.day_time += 1
 #day ends after  2 min
 	if Global.day_time >= Global.day_length:

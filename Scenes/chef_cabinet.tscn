@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cyrl80ncpy6c6" path="res://Assets/Chef assets/chef_cabinet.png" id="2_rivrx"]
 [ext_resource type="Texture2D" uid="uid://b60gpfnukr0yu" path="res://Assets/Chef assets/chefsettingdonebutton.png" id="3_q4reo"]
 [ext_resource type="Texture2D" uid="uid://dild6d0ulr0bc" path="res://Assets/Chef assets/chefsettingdonebuttonhover.png" id="4_r6yrb"]
-[ext_resource type="Script" uid="uid://0qoa0ihp0duo" path="res://Scenes/exit.gd" id="5_b3p4d"]
+[ext_resource type="Script" path="res://Scenes/exit.gd" id="5_b3p4d"]
 [ext_resource type="FontFile" uid="uid://dl176n4kxwrv8" path="res://Assets/04b_30/04B_30__.TTF" id="6_ngaff"]
 [ext_resource type="Script" uid="uid://cejelr36xipyr" path="res://Scenes/cabinfo.gd" id="7_b3p4d"]
 [ext_resource type="Script" uid="uid://djqe0xpd6gc4r" path="res://Scenes/cabtut.gd" id="8_ngaff"]
@@ -57,7 +57,7 @@ offset_right = 955.0
 offset_bottom = -319.0
 theme_override_fonts/font = ExtResource("6_ngaff")
 theme_override_font_sizes/font_size = 57
-text = "placeholder"
+text = "hi haha lol"
 horizontal_alignment = 1
 script = ExtResource("7_b3p4d")
 

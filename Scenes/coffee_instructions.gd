@@ -2,6 +2,7 @@ extends Node2D
 
 
 func _ready():
+	MainGameMusic.stop()
 	CoffeeShopMusic.play_coffee_music()
 	Global.coffee_money = 100
 	Global.regular_coffee_beans = []
@@ -34,3 +35,6 @@ func _ready():
 	Global.espresso_purchase_day = 10
 	Global.event_chance = 0
 	Global.event_number = 0
+
+func _process(delta: float) -> void:
+	Global.esc_settings()

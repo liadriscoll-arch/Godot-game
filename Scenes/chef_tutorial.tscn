@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cxpmg12svgasf"]
 
+[ext_resource type="Script" uid="uid://deawtqxkjytmi" path="res://Scenes/chef_tutorial.gd" id="1_lw2ff"]
 [ext_resource type="Texture2D" uid="uid://b4vvh6qo3lf6w" path="res://Assets/Chef assets/chef_background.png" id="1_mdgak"]
 [ext_resource type="FontFile" uid="uid://dl176n4kxwrv8" path="res://Assets/04b_30/04B_30__.TTF" id="2_230hs"]
 [ext_resource type="Texture2D" uid="uid://b60gpfnukr0yu" path="res://Assets/Chef assets/chefsettingdonebutton.png" id="3_mewkk"]
@@ -7,6 +8,7 @@
 [ext_resource type="Script" uid="uid://7vowvghrhq8r" path="res://Scenes/starttut.gd" id="5_mewkk"]
 
 [node name="ChefTutorial" type="Node2D" unique_id=391596988]
+script = ExtResource("1_lw2ff")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1702036401]
 
