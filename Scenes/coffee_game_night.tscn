@@ -15,6 +15,7 @@
 [ext_resource type="Script" uid="uid://bouma76yxp2uy" path="res://Scenes/regular_price_under_slider.gd" id="11_mpvpx"]
 [ext_resource type="Script" uid="uid://dx0rrohcmqnss" path="res://Scenes/latte_price_under_slider.gd" id="12_tvqqg"]
 [ext_resource type="Script" uid="uid://caxefpt5ahkit" path="res://Scenes/decaf_price_under_slider.gd" id="13_qv12l"]
+[ext_resource type="Script" uid="uid://clekuhit3uxv6" path="res://Scenes/latte_price_label_2.gd" id="16_o3s7r"]
 [ext_resource type="Texture2D" uid="uid://dye22cfhsbsru" path="res://Assets/Coffee assets/coffee_button_hover.webp" id="16_s6aqk"]
 [ext_resource type="Texture2D" uid="uid://btl53kqnxqrep" path="res://Assets/Coffee assets/coffee_button.webp" id="17_ojnwy"]
 [ext_resource type="Script" uid="uid://dlif78afekd5m" path="res://Scenes/next_day_button.gd" id="18_0cqic"]
@@ -263,7 +264,7 @@ theme_override_fonts/font = ExtResource("4_rldrf")
 theme_override_font_sizes/font_size = 50
 text = "Latte"
 horizontal_alignment = 1
-script = ExtResource("12_tvqqg")
+script = ExtResource("16_o3s7r")
 
 [node name="regular_beans_label" type="Label" parent="." unique_id=366321080]
 offset_left = 508.0
@@ -308,10 +309,10 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="shop_item_instructions_label" type="Label" parent="." unique_id=1263318241]
-offset_left = -718.0
-offset_top = -530.0
-offset_right = 1202.0
-offset_bottom = -385.0
+offset_left = -717.0
+offset_top = -500.0
+offset_right = 1203.0
+offset_bottom = -355.0
 theme_override_fonts/font = ExtResource("4_rldrf")
 theme_override_font_sizes/font_size = 20
 text = "hover over an item for help"

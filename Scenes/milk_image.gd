@@ -10,7 +10,7 @@ func _ready() -> void:
 	$Area2D.mouse_exited.connect(_on_mouse_exited)
 
 func _on_mouse_entered() -> void:
-	shop_item_instructions_label.text = "Milk to make lattes"
+	shop_item_instructions_label.text = "added to espresso to make lattes" + "\r" + "makes 4 lattes"
 	
 
 func _on_mouse_exited() -> void:

@@ -6,6 +6,10 @@ func _ready() -> void:
 	MainGameMusic.stop()
 	CoffeeShopMusic.play_coffee_music()
 	
+	Global.type_made = "none"
+	Global.drink_made = "none"
+	Global.drink_selected = "none"
+	
 	Global.customer_line.clear()
 	if Global.coffee_money >= Global.quota and Global.coffee_day == 7 and !Global.endless:
 		Global.coffee_complete = true
@@ -13,7 +17,7 @@ func _ready() -> void:
 		get_tree().change_scene_to_file("res://Scenes/coffee_end_screen.tscn")
 	elif Global.coffee_money < Global.quota and Global.coffee_day == 7 and !Global.endless:
 		Global.coffee_complete = true
-		Global.coffee_false = true
+		Global.coffee_win = false
 		get_tree().change_scene_to_file("res://Scenes/coffee_end_screen.tscn")
 	elif Global.endless and Global.coffee_day % 7 == 0 and Global.coffee_money < Global.quota:
 		Global.coffee_complete = true

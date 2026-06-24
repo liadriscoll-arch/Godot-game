@@ -23,16 +23,31 @@
 [ext_resource type="Script" uid="uid://dvc42trs7m0mb" path="res://Scenes/sponsor_image.gd" id="19_bgk1g"]
 [ext_resource type="Texture2D" uid="uid://r53paoejlcea" path="res://Assets/Coffee assets/coffee_sponsor.webp" id="20_f8jj5"]
 [ext_resource type="Script" uid="uid://cnv3v4vcerf3k" path="res://Scenes/shop_ads_label.gd" id="21_bgk1g"]
+[ext_resource type="Script" uid="uid://bwltwxyiijbsh" path="res://Scenes/coffee_speed_purchase_button.gd" id="22_3nurt"]
 [ext_resource type="Script" uid="uid://c8lllj83nkwrq" path="res://Scenes/shop_sponsors_label.gd" id="22_f8jj5"]
 [ext_resource type="Script" uid="uid://cjk7njvaaekci" path="res://Scenes/sponsor_price.gd" id="22_im157"]
+[ext_resource type="Texture2D" uid="uid://drp3j1p52odlf" path="res://Assets/Coffee assets/coffee_speed_upgrade.png" id="22_uy2ld"]
+[ext_resource type="Script" uid="uid://b3g4a0ni3bdpm" path="res://Scenes/coffee_speed_image.gd" id="23_853bf"]
+[ext_resource type="Texture2D" uid="uid://oh2wurtbuuy1" path="res://Assets/Coffee assets/expresso_speed_upgrade.png" id="23_jt2vn"]
+[ext_resource type="Script" uid="uid://cetrh7fin3rit" path="res://Scenes/expresso_speed_image.gd" id="24_853bf"]
+[ext_resource type="Script" uid="uid://bpmc46xvme0ch" path="res://Scenes/expresso_speed_purchase_button.gd" id="24_a8p0l"]
+[ext_resource type="Script" uid="uid://dbkk6rl73cbsq" path="res://Scenes/coffee_speed_upgrade.gd" id="24_s5epx"]
+[ext_resource type="Script" uid="uid://b5eyhee2ra0p5" path="res://Scenes/expresso_speed_upgrade.gd" id="31_ixeop"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f8jj5"]
-size = Vector2(45.600006, 37.600006)
+size = Vector2(62.106266, 42.750008)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a8p0l"]
+size = Vector2(11.199993, 7.8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s5epx"]
+size = Vector2(41.39999, 42.600002)
 
 [node name="coffee_shop" type="Node2D" unique_id=1346237771]
 script = ExtResource("1_lfshl")
 
 [node name="Sprite2D3" type="Sprite2D" parent="." unique_id=717482824]
+position = Vector2(0.99999994, -7.9999995)
 scale = Vector2(10, 10)
 texture = ExtResource("1_oph8b")
 
@@ -209,20 +224,6 @@ text = "Hover over an item for help
 "
 horizontal_alignment = 1
 
-[node name="expresso_image" type="Sprite2D" parent="." unique_id=1749958889]
-position = Vector2(-380.99994, -58.999985)
-scale = Vector2(5, 5)
-texture = ExtResource("17_ibwl0")
-script = ExtResource("18_qc307")
-
-[node name="Area2D" type="Area2D" parent="expresso_image" unique_id=1050315725]
-position = Vector2(-1.22070305e-05, 0)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="expresso_image/Area2D" unique_id=932027955]
-position = Vector2(1.6, 3.199997)
-scale = Vector2(0.9999998, 0.9999998)
-shape = SubResource("RectangleShape2D_f8jj5")
-
 [node name="espresso_machine_price_label" type="Label" parent="." unique_id=168069771]
 offset_left = -426.0
 offset_top = 106.0
@@ -233,20 +234,6 @@ theme_override_font_sizes/font_size = 40
 text = "100"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="sponsor_image" type="Sprite2D" parent="." unique_id=1702024420]
-position = Vector2(366.49997, -58.5)
-scale = Vector2(5, 5)
-texture = ExtResource("20_f8jj5")
-script = ExtResource("19_bgk1g")
-
-[node name="Area2D" type="Area2D" parent="sponsor_image" unique_id=947421811]
-position = Vector2(-1.22070305e-05, 0)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="sponsor_image/Area2D" unique_id=1754855580]
-position = Vector2(0.1000061, 0.99999905)
-scale = Vector2(0.99999976, 0.99999976)
-shape = SubResource("RectangleShape2D_f8jj5")
 
 [node name="sponsor_price" type="Label" parent="." unique_id=1135017860]
 offset_left = 311.00003
@@ -331,6 +318,108 @@ text = "Espresso
 Machine"
 horizontal_alignment = 1
 
+[node name="coffee_speed_purchase_button" type="TextureButton" parent="." unique_id=1798588849]
+offset_left = -186.99997
+offset_top = 196.0
+offset_right = -90.99997
+offset_bottom = 250.0
+scale = Vector2(1.5, 1.5)
+texture_normal = ExtResource("13_2i3s5")
+texture_hover = ExtResource("14_vffnu")
+script = ExtResource("22_3nurt")
+
+[node name="coffee_speed_image" type="Sprite2D" parent="." unique_id=1715584442]
+position = Vector2(-124, 58)
+scale = Vector2(4, 4)
+texture = ExtResource("22_uy2ld")
+script = ExtResource("23_853bf")
+
+[node name="Area2D" type="Area2D" parent="coffee_speed_image" unique_id=101536358]
+position = Vector2(-1.1444092e-05, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coffee_speed_image/Area2D" unique_id=1179605866]
+position = Vector2(0.50001144, -0.125)
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_f8jj5")
+
+[node name="coffee_speed_upgrade" type="Label" parent="." unique_id=753840371]
+offset_left = -171.99994
+offset_top = 208.0
+offset_right = -57.99994
+offset_bottom = 265.0
+theme_override_fonts/font = ExtResource("3_wvnb4")
+theme_override_font_sizes/font_size = 40
+text = "25"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("24_s5epx")
+
+[node name="expresso_speed_purchase_button" type="TextureButton" parent="." unique_id=1284461082]
+offset_left = 58.0
+offset_top = 198.0
+offset_right = 154.0
+offset_bottom = 252.0
+scale = Vector2(1.5, 1.5)
+texture_normal = ExtResource("13_2i3s5")
+texture_hover = ExtResource("14_vffnu")
+script = ExtResource("24_a8p0l")
+
+[node name="expresso_speed_image" type="Sprite2D" parent="." unique_id=1183043357]
+position = Vector2(128.49998, 57.5)
+scale = Vector2(4, 4)
+texture = ExtResource("23_jt2vn")
+script = ExtResource("24_853bf")
+
+[node name="Area2D" type="Area2D" parent="expresso_speed_image" unique_id=1703391422]
+position = Vector2(-1.22070305e-05, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="expresso_speed_image/Area2D" unique_id=1323949077]
+position = Vector2(2.3750153, 0.875)
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_f8jj5")
+
+[node name="sponsors_image" type="Sprite2D" parent="." unique_id=234462625]
+position = Vector2(384, -62.999992)
+scale = Vector2(5, 5)
+texture = ExtResource("20_f8jj5")
+script = ExtResource("19_bgk1g")
+
+[node name="Area2D" type="Area2D" parent="sponsors_image" unique_id=1567331981]
+position = Vector2(-186.00008, -158)
+scale = Vector2(4, 4)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="sponsors_image/Area2D" unique_id=2100960662]
+position = Vector2(46.500008, 39.499996)
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_a8p0l")
+
+[node name="expresso_speed_upgrade" type="Label" parent="." unique_id=2072147489]
+offset_left = 73.00003
+offset_top = 210.0
+offset_right = 187.00003
+offset_bottom = 267.0
+theme_override_fonts/font = ExtResource("3_wvnb4")
+theme_override_font_sizes/font_size = 40
+text = "25"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("31_ixeop")
+
+[node name="expresso_image" type="Sprite2D" parent="." unique_id=1490002243]
+position = Vector2(-385.00003, -53.000004)
+scale = Vector2(5, 5)
+texture = ExtResource("17_ibwl0")
+script = ExtResource("18_qc307")
+
+[node name="Area2D" type="Area2D" parent="expresso_image" unique_id=253891312]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="expresso_image/Area2D" unique_id=1513673037]
+position = Vector2(2.4000046, 1.0000005)
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_s5epx")
+
 [connection signal="pressed" from="back" to="back" method="_on_pressed"]
 [connection signal="pressed" from="espresso_purchase_button2" to="espresso_purchase_button2" method="_on_pressed"]
 [connection signal="pressed" from="sponsor_purchase_button" to="sponsor_purchase_button" method="_on_pressed"]
+[connection signal="pressed" from="coffee_speed_purchase_button" to="coffee_speed_purchase_button" method="_on_pressed"]
+[connection signal="pressed" from="expresso_speed_purchase_button" to="expresso_speed_purchase_button" method="_on_pressed"]

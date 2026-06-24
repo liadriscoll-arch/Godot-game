@@ -1,0 +1,17 @@
+extends Sprite2D
+
+
+@onready var info_label: Label = $"../info_label"
+
+
+func _ready() -> void:
+	visible = Global.latte_discovered
+	$Area2D.mouse_entered.connect(_on_mouse_entered)
+	$Area2D.mouse_exited.connect(_on_mouse_exited)
+
+func _on_mouse_entered() -> void:
+	info_label.text = str("An upgrade to improve the speed" + "\r" + "of your expresso machine")
+	
+
+func _on_mouse_exited() -> void:
+	info_label.text = str("Hover over an item for help")

@@ -198,10 +198,10 @@ offset_bottom = -860.0
 script = ExtResource("30_8onr1")
 
 [node name="espresso_machine_start" type="TextureButton" parent="." unique_id=1922227844]
-offset_left = 196.0
-offset_top = -971.0
-offset_right = 232.0
-offset_bottom = -935.0
+offset_left = 189.0
+offset_top = -711.0
+offset_right = 225.0
+offset_bottom = -675.0
 script = ExtResource("31_u0tsq")
 
 [node name="coffee_machine_start" type="TextureButton" parent="." unique_id=220977882]

@@ -47,6 +47,8 @@ var coffee_week = 1
 var brewing = false
 var espresso_brewing = false
 var previous_scene_path = ""
+var expresso_speed_purchased = false
+var coffee_speed_purchased = false
 
 
 func esc_settings():
