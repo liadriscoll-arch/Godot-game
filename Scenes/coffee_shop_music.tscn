@@ -5,5 +5,4 @@
 
 [node name="CoffeeShopMusic" type="AudioStreamPlayer" unique_id=1122661017]
 stream = ExtResource("1_vrcrg")
-autoplay = true
 script = ExtResource("2_pb8h0")

@@ -17,12 +17,15 @@ func _on_pressed() -> void:
 
 	if beans_to_brew == "decaf":
 		if Global.decaf_coffee_pot > 0:
+			Global.brewing = false
 			return
 	else:
 		if Global.regular_coffee_pot > 0:
+			Global.brewing = false
 			return
 
 	if beans_to_brew != "regular" and beans_to_brew != "decaf":
+		Global.brewing = false
 		return
 
 	disabled = true

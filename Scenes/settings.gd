@@ -8,6 +8,10 @@ var volume = 50
 @onready var brightness_slider: HSlider = $brightness_slider
 
 
+func _get_volume_db(value: float) -> float:
+	var linear_volume = max(value / 50.0, 0.0001)
+	return linear_to_db(linear_volume)
+
 
 func _ready():
 	CoffeeShopMusic.stop()
@@ -18,14 +22,21 @@ func _ready():
 
 
 
+func _on_brightness_slider_changed() -> void:
+	_on_brightness_slider_value_changed(brightness_slider.value)
+
+
 func _on_brightness_slider_value_changed(new_value: float) -> void:
 	Global.brightness = new_value
 	$brightness_slider/Brightness_slider_label.text = str(int(new_value)) + "%"
 
 
+func _on_volume_slider_changed() -> void:
+	_on_volume_slider_value_changed(volume_slider.value)
+
+
 func _on_volume_slider_value_changed(new_value: float) -> void:
 	Global.volume = new_value
 	$volume_slider/Volume_slider_label.text = str(int(new_value)) + "%"
-	CoffeeShopMusic.volume_db = (new_value - 50) / 2.0
-	if new_value == 0:
-		CoffeeShopMusic.volume_db = 0
+	CoffeeShopMusic.volume_db = _get_volume_db(new_value)
+	MainGameMusic.volume_db = _get_volume_db(new_value)

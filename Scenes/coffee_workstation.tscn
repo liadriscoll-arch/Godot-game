@@ -369,7 +369,7 @@ offset_bottom = -601.0
 script = ExtResource("51_185hx")
 
 [node name="Customer_timer" type="Timer" parent="." unique_id=1329554215]
-wait_time = 2.0
+wait_time = 1.5
 autostart = true
 
 [node name="throw_out" type="TextureButton" parent="." unique_id=1427367071]
