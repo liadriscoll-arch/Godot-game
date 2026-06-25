@@ -26,8 +26,12 @@ func _physics_process(delta: float) -> void:
 
 	if xdirection == 0 && ydirection == 0:
 		fella_sprite.play("default")
-	else:
+	elif xdirection:
 		fella_sprite.play("walking")
+	elif ydirection == 1:
+		fella_sprite.play("walkingdown")
+	elif ydirection == -1:
+		fella_sprite.play("walkingup")
 		
 	if xdirection < 0:
 		fella_sprite.flip_h = false

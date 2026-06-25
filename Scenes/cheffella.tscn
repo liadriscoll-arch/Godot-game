@@ -1,22 +1,37 @@
 [gd_scene format=3 uid="uid://rnmdc64dl5bb"]
 
-[ext_resource type="Texture2D" uid="uid://bpq4no2262ewl" path="res://Assets/Sprites/Fella Sprites/pixil-frame-0.png" id="1_hv76g"]
-[ext_resource type="Texture2D" uid="uid://updxdme4uikp" path="res://Assets/Sprites/Fella Sprites/Godot Fella Idle 2.png" id="1_vnkcw"]
-[ext_resource type="Texture2D" uid="uid://cx3nd6cagq4m4" path="res://Assets/Sprites/Fella Sprites/pixil-frame-1.png" id="2_g7cdf"]
-[ext_resource type="Texture2D" uid="uid://dcpdpjlovo2tb" path="res://Assets/Sprites/Fella Sprites/GodotFella.png" id="2_i4ya8"]
-[ext_resource type="Texture2D" uid="uid://c5qqjvyhmktth" path="res://Assets/Sprites/Fella Sprites/pixil-frame-2.png" id="3_vnkcw"]
-[ext_resource type="Texture2D" uid="uid://cm5ck35r6fkjk" path="res://Assets/Sprites/Fella Sprites/pixil-frame-3.png" id="4_i4ya8"]
-[ext_resource type="Texture2D" uid="uid://88mqyeoemgh7" path="res://Assets/Sprites/Fella Sprites/pixil-frame-4.png" id="5_0jybb"]
-[ext_resource type="Texture2D" uid="uid://dycvlbdjqxkqx" path="res://Assets/Sprites/Fella Sprites/pixil-frame-5.png" id="6_7wqbt"]
+[ext_resource type="Texture2D" uid="uid://dkx8bryqojf7o" path="res://Assets/Chef assets/pixilart-frames (13)/pixil-frame-0.png" id="1_23axk"]
+[ext_resource type="Texture2D" uid="uid://cvo3xspgvumpu" path="res://Assets/Chef assets/pixilart-frames (13)/pixil-frame-1.png" id="2_172wo"]
+[ext_resource type="Texture2D" uid="uid://ej6m350p03w4" path="res://Assets/Chef assets/pixilart-frames (12)/pixil-frame-0.png" id="3_sry1o"]
+[ext_resource type="Texture2D" uid="uid://bkflm8boxtsej" path="res://Assets/Chef assets/pixilart-frames (12)/pixil-frame-1.png" id="4_uwm45"]
+[ext_resource type="Texture2D" uid="uid://dqtw80ciemujw" path="res://Assets/Chef assets/pixilart-frames (12)/pixil-frame-2.png" id="5_d6s4m"]
+[ext_resource type="Texture2D" uid="uid://chkjg75nl20r4" path="res://Assets/Chef assets/pixilart-frames (12)/pixil-frame-3.png" id="6_5gnkw"]
+[ext_resource type="Texture2D" uid="uid://dfa8tn8loc855" path="res://Assets/Chef assets/pixilart-frames (12)/pixil-frame-4.png" id="7_hw70t"]
+[ext_resource type="Texture2D" uid="uid://qwupxjnf1a0j" path="res://Assets/Chef assets/pixilart-frames (12)/pixil-frame-5.png" id="8_dh1ya"]
+[ext_resource type="Texture2D" uid="uid://dlilbj6006vim" path="res://Assets/Chef assets/pixilart-frames (14)/pixil-frame-0.png" id="9_k54iv"]
+[ext_resource type="Texture2D" uid="uid://xtx2rc76dj08" path="res://Assets/Chef assets/pixilart-frames (14)/pixil-frame-1.png" id="10_j2eiq"]
+[ext_resource type="Texture2D" uid="uid://c337yymu24kp7" path="res://Assets/Chef assets/pixilart-frames (14)/pixil-frame-2.png" id="11_d76um"]
+[ext_resource type="Texture2D" uid="uid://dksab6jr0h1jm" path="res://Assets/Chef assets/pixilart-frames (14)/pixil-frame-3.png" id="12_p5e4s"]
+[ext_resource type="Texture2D" uid="uid://bhlubuusrpne4" path="res://Assets/Chef assets/pixilart-frames (14)/pixil-frame-4.png" id="13_8befy"]
+[ext_resource type="Texture2D" uid="uid://crdrcnqmbpj8u" path="res://Assets/Chef assets/pixilart-frames (14)/pixil-frame-5.png" id="14_gxu5b"]
+[ext_resource type="Texture2D" uid="uid://dl2q7livauua8" path="res://Assets/Chef assets/pixilart-frames (14)/pixil-frame-6.png" id="15_foanl"]
+[ext_resource type="Texture2D" uid="uid://bh073sob3kd83" path="res://Assets/Chef assets/pixilart-frames (15)/pixil-frame-0.png" id="16_1mi4n"]
+[ext_resource type="Texture2D" uid="uid://bmvfjrv17f53g" path="res://Assets/Chef assets/pixilart-frames (15)/pixil-frame-1.png" id="17_0jwpe"]
+[ext_resource type="Texture2D" uid="uid://djner2f6w1kdd" path="res://Assets/Chef assets/pixilart-frames (15)/pixil-frame-2.png" id="18_d4dva"]
+[ext_resource type="Texture2D" uid="uid://1jkrgoh6iv4x" path="res://Assets/Chef assets/pixilart-frames (15)/pixil-frame-3.png" id="19_j5whf"]
+[ext_resource type="Texture2D" uid="uid://b4y2je4yhok7e" path="res://Assets/Chef assets/pixilart-frames (15)/pixil-frame-4.png" id="20_fueox"]
+[ext_resource type="Texture2D" uid="uid://ccxapmmr7su6k" path="res://Assets/Chef assets/pixilart-frames (15)/pixil-frame-5.png" id="21_2b50k"]
+[ext_resource type="Texture2D" uid="uid://bqgxkljex40oh" path="res://Assets/Chef assets/pixilart-frames (15)/pixil-frame-6.png" id="22_b3hhj"]
+[ext_resource type="Texture2D" uid="uid://cw7bgmy2it7vx" path="res://Assets/Chef assets/pixilart-frames (15)/pixil-frame-7.png" id="23_qlryi"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1mb8p"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_vnkcw")
+"texture": ExtResource("1_23axk")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_i4ya8")
+"texture": ExtResource("2_172wo")
 }],
 "loop": true,
 "name": &"default",
@@ -24,25 +39,80 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_hv76g")
+"texture": ExtResource("3_sry1o")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_g7cdf")
+"texture": ExtResource("4_uwm45")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_vnkcw")
+"texture": ExtResource("5_d6s4m")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_i4ya8")
+"texture": ExtResource("6_5gnkw")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_0jybb")
+"texture": ExtResource("7_hw70t")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_7wqbt")
+"texture": ExtResource("8_dh1ya")
 }],
 "loop": true,
 "name": &"walking",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_k54iv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_j2eiq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_d76um")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_p5e4s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_8befy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_gxu5b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_foanl")
+}],
+"loop": true,
+"name": &"walkingdown",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_1mi4n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_0jwpe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_d4dva")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_j5whf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_fueox")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_2b50k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_b3hhj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_qlryi")
+}],
+"loop": true,
+"name": &"walkingup",
 "speed": 5.0
 }]
 
@@ -54,6 +124,8 @@ height = 20.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=138228201]
 sprite_frames = SubResource("SpriteFrames_1mb8p")
+animation = &"walkingup"
+frame_progress = 0.5054134
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1832489224]
 position = Vector2(0, 6)

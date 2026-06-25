@@ -62,3 +62,4 @@ func _on_sbuns_mouse_entered() -> void:
 
 func _on_sbuns_mouse_exited() -> void:
 	set_text("")
+  
