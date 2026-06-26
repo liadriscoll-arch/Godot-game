@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cxpmg12svgasf"]
 
 [ext_resource type="Script" uid="uid://deawtqxkjytmi" path="res://Scenes/chef_tutorial.gd" id="1_lw2ff"]
-[ext_resource type="Texture2D" uid="uid://b4vvh6qo3lf6w" path="res://Assets/Chef assets/chef_background.png" id="1_mdgak"]
 [ext_resource type="FontFile" uid="uid://dl176n4kxwrv8" path="res://Assets/04b_30/04B_30__.TTF" id="2_230hs"]
+[ext_resource type="Texture2D" uid="uid://crs38oemip8a3" path="res://Assets/Chef assets/chefbackground.png" id="2_lw2ff"]
 [ext_resource type="Texture2D" uid="uid://b60gpfnukr0yu" path="res://Assets/Chef assets/chefsettingdonebutton.png" id="3_mewkk"]
 [ext_resource type="Texture2D" uid="uid://dild6d0ulr0bc" path="res://Assets/Chef assets/chefsettingdonebuttonhover.png" id="4_lw2ff"]
 [ext_resource type="Script" uid="uid://7vowvghrhq8r" path="res://Scenes/starttut.gd" id="5_mewkk"]
@@ -14,7 +14,7 @@ script = ExtResource("1_lw2ff")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=957507425]
 scale = Vector2(10, 10.000001)
-texture = ExtResource("1_mdgak")
+texture = ExtResource("2_lw2ff")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1310932557]
 offset_left = -959.0
@@ -314,31 +314,54 @@ theme_override_font_sizes/font_size = 57
 text = "start"
 
 [node name="Label33" type="Label" parent="." unique_id=1422431330]
-offset_left = -922.0
-offset_top = 309.0
-offset_right = -180.0
-offset_bottom = 422.0
+offset_left = -923.0
+offset_top = 296.0
+offset_right = -165.0
+offset_bottom = 525.0
 theme_override_fonts/font = ExtResource("2_230hs")
 theme_override_font_sizes/font_size = 25
-text = "-space to interact with highlighted
-objects
+text = "-space to interact with noncooking
+appliances
+-1, 2, 3, 4 to put food on cooking
+appliances
 -food burns after 10 seconds
 -people also want their food on time!
 -make sure to get orders correct for
 a high rating!"
 
 [node name="Label34" type="Label" parent="." unique_id=401684400]
-offset_left = 163.0
-offset_top = 301.0
-offset_right = 944.0
-offset_bottom = 472.0
+offset_left = 215.0
+offset_top = 296.0
+offset_right = 1010.0
+offset_bottom = 525.0
 theme_override_fonts/font = ExtResource("2_230hs")
 theme_override_font_sizes/font_size = 25
 text = "-after each day, you will be able to
 buy things based on your ratings
--workers can be bought to lessen 
-the load and prepare you for busy days
--upgrades are also bought using money
-at the end of the day"
+-higher ratings equal to a bigger
+payout afterwards
+-workers can be bought to prepare
+you for busy days
+-upgrades are also bought using
+money at the end of the day"
+
+[node name="Label35" type="Label" parent="." unique_id=1480162691]
+offset_left = -951.0
+offset_top = -212.0
+offset_right = -766.0
+offset_bottom = -150.0
+theme_override_fonts/font = ExtResource("2_230hs")
+theme_override_font_sizes/font_size = 45
+text = "trash"
+
+[node name="Label36" type="Label" parent="." unique_id=1477652265]
+offset_left = -943.0
+offset_top = -163.0
+offset_right = -696.0
+offset_bottom = -98.0
+theme_override_fonts/font = ExtResource("2_230hs")
+theme_override_font_sizes/font_size = 25
+text = "discard
+bad food"
 
 [connection signal="pressed" from="starttut" to="starttut" method="_on_pressed"]

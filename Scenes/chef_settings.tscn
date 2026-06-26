@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cha7sg6jpbsbd"]
 
-[ext_resource type="Texture2D" uid="uid://b4vvh6qo3lf6w" path="res://Assets/Chef assets/chef_background.png" id="1_11le8"]
 [ext_resource type="Script" uid="uid://db6bt4bnjmr8x" path="res://Scenes/chef_settings.gd" id="1_ovsgm"]
 [ext_resource type="FontFile" uid="uid://dl176n4kxwrv8" path="res://Assets/04b_30/04B_30__.TTF" id="2_fgxj3"]
+[ext_resource type="Texture2D" uid="uid://crs38oemip8a3" path="res://Assets/Chef assets/chefbackground.png" id="2_ovsgm"]
 [ext_resource type="Script" uid="uid://cugwu8lsbde0p" path="res://Scenes/check_button.gd" id="3_fgxj3"]
 [ext_resource type="Script" uid="uid://dm8q5dcp55g55" path="res://Scenes/check_button_2.gd" id="4_l5m6n"]
 [ext_resource type="Texture2D" uid="uid://b60gpfnukr0yu" path="res://Assets/Chef assets/chefsettingdonebutton.png" id="5_nfv2x"]
@@ -16,7 +16,7 @@ script = ExtResource("1_ovsgm")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1131693839]
 scale = Vector2(10, 10)
-texture = ExtResource("1_11le8")
+texture = ExtResource("2_ovsgm")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=848820426]
 offset_left = -959.0

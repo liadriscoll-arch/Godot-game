@@ -1,11 +1,7 @@
 [gd_scene format=3 uid="uid://xyvav37rvlh2"]
 
-[ext_resource type="Texture2D" uid="uid://b4vvh6qo3lf6w" path="res://Assets/Chef assets/chef_background.png" id="1_ei828"]
 [ext_resource type="Texture2D" uid="uid://27kii4txrudp" path="res://Assets/Chef assets/cheffrig.png" id="2_kd6g0"]
-[ext_resource type="Texture2D" uid="uid://b60gpfnukr0yu" path="res://Assets/Chef assets/chefsettingdonebutton.png" id="3_ugvcg"]
-[ext_resource type="Texture2D" uid="uid://dild6d0ulr0bc" path="res://Assets/Chef assets/chefsettingdonebuttonhover.png" id="4_d5gul"]
 [ext_resource type="Script" uid="uid://cxp3c28h2baoo" path="res://Scenes/refinfo.gd" id="4_ugvcg"]
-[ext_resource type="Script" uid="uid://0qoa0ihp0duo" path="res://Scenes/exit.gd" id="5_ac4r3"]
 [ext_resource type="FontFile" uid="uid://dl176n4kxwrv8" path="res://Assets/04b_30/04B_30__.TTF" id="6_kd6g0"]
 [ext_resource type="Script" uid="uid://dk5srglbmhsxc" path="res://Scenes/vburg.gd" id="8_ana60"]
 [ext_resource type="Script" uid="uid://dobn5ggtja8oa" path="res://Scenes/mburg.gd" id="9_xkgok"]
@@ -31,11 +27,6 @@
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2048993927]
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=356103719]
-z_index = -1
-scale = Vector2(10, 10.000001)
-texture = ExtResource("1_ei828")
-
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=2088636435]
 scale = Vector2(9.095, 9.095)
 texture = ExtResource("2_kd6g0")
@@ -51,27 +42,6 @@ theme_override_font_sizes/font_size = 67
 text = "hi"
 horizontal_alignment = 1
 script = ExtResource("4_ugvcg")
-
-[node name="exit" type="TextureButton" parent="." unique_id=1192448028]
-modulate = Color(0.65882355, 0.8862745, 0.8862745, 1)
-offset_left = 590.00006
-offset_top = 314.99994
-offset_right = 686.00006
-offset_bottom = 368.99994
-scale = Vector2(1.915, 1.915)
-texture_normal = ExtResource("3_ugvcg")
-texture_hover = ExtResource("4_d5gul")
-script = ExtResource("5_ac4r3")
-
-[node name="Label32" type="Label" parent="." unique_id=569165535]
-modulate = Color(1.174932, 1.174932, 1.174932, 1)
-offset_left = 602.0
-offset_top = 339.0
-offset_right = 837.0
-offset_bottom = 397.0
-theme_override_fonts/font = ExtResource("6_kd6g0")
-theme_override_font_sizes/font_size = 57
-text = "exit"
 
 [node name="vburg" type="Button" parent="." unique_id=2048453767]
 modulate = Color(1, 1, 1, 0)
@@ -230,7 +200,6 @@ the correct station to cook them!"
 horizontal_alignment = 1
 script = ExtResource("26_s1ab2")
 
-[connection signal="pressed" from="exit" to="exit" method="_on_pressed"]
 [connection signal="mouse_entered" from="vburg" to="refinfo" method="_on_vburg_mouse_entered"]
 [connection signal="mouse_exited" from="vburg" to="refinfo" method="_on_vburg_mouse_exited"]
 [connection signal="pressed" from="vburg" to="vburg" method="_on_pressed"]

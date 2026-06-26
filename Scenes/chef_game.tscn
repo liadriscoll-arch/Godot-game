@@ -1,16 +1,21 @@
 [gd_scene format=3 uid="uid://ds81pnrvk1d4j"]
 
 [ext_resource type="Script" uid="uid://dpxnh3ylht0r5" path="res://Scenes/chef_game.gd" id="1_sgqx4"]
-[ext_resource type="Texture2D" uid="uid://b4vvh6qo3lf6w" path="res://Assets/Chef assets/chef_background.png" id="2_ns07t"]
+[ext_resource type="Script" uid="uid://c7vy6csghh4wh" path="res://Scenes/chef_cabinet.gd" id="3_36th7"]
 [ext_resource type="PackedScene" uid="uid://rnmdc64dl5bb" path="res://Scenes/cheffella.tscn" id="3_lhr4j"]
 [ext_resource type="Script" uid="uid://di7yiickluxi6" path="res://Scenes/cheffella.gd" id="4_d5sjy"]
+[ext_resource type="Texture2D" uid="uid://b60gpfnukr0yu" path="res://Assets/Chef assets/chefsettingdonebutton.png" id="4_fkvee"]
+[ext_resource type="Texture2D" uid="uid://dild6d0ulr0bc" path="res://Assets/Chef assets/chefsettingdonebuttonhover.png" id="5_hi7a7"]
 [ext_resource type="Script" uid="uid://ovbj7hdr6i7e" path="res://Scenes/cabinetarea.gd" id="5_rjejb"]
 [ext_resource type="Script" uid="uid://be6ea8o68reoy" path="res://Scenes/cabinetbox.gd" id="6_ns07t"]
 [ext_resource type="FontFile" uid="uid://dl176n4kxwrv8" path="res://Assets/04b_30/04B_30__.TTF" id="7_d5sjy"]
+[ext_resource type="PackedScene" uid="uid://xyvav37rvlh2" path="res://Scenes/chef_refrigerator.tscn" id="7_hi7a7"]
 [ext_resource type="Script" uid="uid://iqm7sl1kbl3m" path="res://Scenes/inventorytext.gd" id="7_i0pns"]
 [ext_resource type="Script" uid="uid://codgjioplnmm7" path="res://Scenes/alertbox.gd" id="8_jtjpp"]
+[ext_resource type="Script" uid="uid://mf8rfseapw4e" path="res://Scenes/chef_refrigerator.gd" id="8_oyw88"]
 [ext_resource type="Script" uid="uid://csjtrbjgyykr4" path="res://Scenes/tuttext.gd" id="8_rjejb"]
 [ext_resource type="Script" uid="uid://yh24ds6lxmwf" path="res://Scenes/pansarea.gd" id="9_3oq2i"]
+[ext_resource type="Texture2D" uid="uid://crs38oemip8a3" path="res://Assets/Chef assets/chefbackground.png" id="9_aoin3"]
 [ext_resource type="Script" uid="uid://vinfs7xycovv" path="res://Scenes/pansbox.gd" id="10_lbrew"]
 [ext_resource type="Texture2D" uid="uid://ctpo62hcsmcc" path="res://Assets/Chef assets/cpat.png" id="11_kw6j8"]
 [ext_resource type="Script" uid="uid://blvhbxry6iobq" path="res://Scenes/fryerarea.gd" id="11_lup6s"]
@@ -35,10 +40,15 @@
 [ext_resource type="Script" uid="uid://wpgec8ec03w6" path="res://Scenes/fryboxbox.gd" id="24_orc43"]
 [ext_resource type="Script" uid="uid://b6r7tjcnfvv6l" path="res://Scenes/pizboxarea.gd" id="25_jvc0u"]
 [ext_resource type="Script" uid="uid://cu56sr05h31de" path="res://Scenes/pizboxbox.gd" id="26_fgjqp"]
+[ext_resource type="Texture2D" uid="uid://bas0a3t7tjduy" path="res://Assets/Chef assets/ucfry.png" id="26_oxamj"]
+[ext_resource type="Texture2D" uid="uid://c7owcqhrbfuag" path="res://Assets/Chef assets/cfry.png" id="27_glv7d"]
 [ext_resource type="Script" uid="uid://c2unag4wgy68m" path="res://Scenes/noodboxarea.gd" id="27_hb5c8"]
+[ext_resource type="Texture2D" uid="uid://dylh1m3brdaot" path="res://Assets/Chef assets/ocfry.png" id="28_aoin3"]
 [ext_resource type="Script" uid="uid://m2e7q2wkfsx4" path="res://Scenes/noodboxbox.gd" id="28_grtg1"]
 [ext_resource type="Script" uid="uid://bfa67f3jag6bl" path="res://Scenes/ovenarea.gd" id="29_6hoiv"]
+[ext_resource type="Script" uid="uid://ci5gc5p6oyav" path="res://Scenes/fry_1.gd" id="29_aoin3"]
 [ext_resource type="Script" uid="uid://bu84tgtl73264" path="res://Scenes/ovenbox.gd" id="30_2cbih"]
+[ext_resource type="Script" uid="uid://ct3jgy87ednr6" path="res://Scenes/fry_2.gd" id="30_lxt0n"]
 [ext_resource type="Script" uid="uid://fgku7lhu26ht" path="res://Scenes/potsarea.gd" id="31_gcae5"]
 [ext_resource type="Script" uid="uid://dir7qftfjmsps" path="res://Scenes/potsbox.gd" id="32_4ygwj"]
 [ext_resource type="Script" uid="uid://bup1kbcxrnty7" path="res://Scenes/regarea.gd" id="33_mm3hm"]
@@ -48,7 +58,10 @@
 [ext_resource type="Script" uid="uid://dwxqcsxmrq3ac" path="res://Scenes/bookarea.gd" id="37_np0p6"]
 [ext_resource type="Script" uid="uid://vflxrc4xoeg3" path="res://Scenes/bookbox.gd" id="38_vfh5y"]
 [ext_resource type="Script" uid="uid://c3go5tyrbk2q7" path="res://Scenes/orderarea.gd" id="39_7vqhc"]
+[ext_resource type="Script" uid="uid://cnssl65xxpjid" path="res://Scenes/trash_2_area.gd" id="39_fac7f"]
+[ext_resource type="Script" uid="uid://7h2h2ugl3fo0" path="res://Scenes/trashbox_2.gd" id="39_lxt0n"]
 [ext_resource type="Script" uid="uid://spjx4ba137st" path="res://Scenes/orderbox.gd" id="40_i0pns"]
+[ext_resource type="PackedScene" uid="uid://b7x2ojjt4ncvy" path="res://Scenes/chef_cabinet.tscn" id="50_44oy7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1qq7p"]
 size = Vector2(1904, 20)
@@ -70,6 +83,9 @@ size = Vector2(275.5, 61)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6qpsl"]
 size = Vector2(1410, 43)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lxt0n"]
+size = Vector2(158.5, 101)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lup6s"]
 size = Vector2(145.5, 44.5)
@@ -94,6 +110,23 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3oq2i"]
 size = Vector2(201, 20)
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_lxt0n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_oxamj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_glv7d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_aoin3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8rk4b"]
 size = Vector2(230, 25.5)
 
@@ -105,6 +138,9 @@ size = Vector2(208, 21)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s1bym"]
 size = Vector2(109, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aoin3"]
+size = Vector2(182, 122.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y2t6b"]
 size = Vector2(125, 43)
@@ -142,15 +178,63 @@ size = Vector2(363.5, 20)
 [node name="ChefGame" type="Node2D" unique_id=511923564]
 script = ExtResource("1_sgqx4")
 
+[node name="ChefCabinet" parent="." unique_id=1557161920 instance=ExtResource("50_44oy7")]
+visible = false
+z_index = 3
+script = ExtResource("3_36th7")
+
+[node name="exit" type="TextureButton" parent="ChefCabinet" unique_id=56806824]
+offset_left = -92.99999
+offset_top = 422.0
+offset_right = 3.0000076
+offset_bottom = 476.0
+scale = Vector2(1.915, 1.915)
+texture_normal = ExtResource("4_fkvee")
+texture_hover = ExtResource("5_hi7a7")
+
+[node name="Label33" type="Label" parent="ChefCabinet" unique_id=543168914]
+offset_left = -81.0
+offset_top = 443.0
+offset_right = 154.0
+offset_bottom = 501.0
+theme_override_fonts/font = ExtResource("7_d5sjy")
+theme_override_font_sizes/font_size = 57
+text = "exit"
+
+[node name="ChefRefrigerator" parent="." unique_id=1378765479 instance=ExtResource("7_hi7a7")]
+visible = false
+z_index = 3
+script = ExtResource("8_oyw88")
+
+[node name="exit" type="TextureButton" parent="ChefRefrigerator" unique_id=1859110248]
+modulate = Color(0.65882355, 0.8862745, 0.8862745, 1)
+offset_left = 590.00006
+offset_top = 314.99994
+offset_right = 686.00006
+offset_bottom = 368.99994
+scale = Vector2(1.915, 1.915)
+texture_normal = ExtResource("4_fkvee")
+texture_hover = ExtResource("5_hi7a7")
+
+[node name="Label32" type="Label" parent="ChefRefrigerator" unique_id=676442991]
+modulate = Color(1.174932, 1.174932, 1.174932, 1)
+offset_left = 602.0
+offset_top = 339.0
+offset_right = 837.0
+offset_bottom = 397.0
+theme_override_fonts/font = ExtResource("7_d5sjy")
+theme_override_font_sizes/font_size = 57
+text = "exit"
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=503240910]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=695404142]
 scale = Vector2(10, 10.000001)
-texture = ExtResource("2_ns07t")
+texture = ExtResource("9_aoin3")
 
 [node name="Cheffella" parent="." unique_id=1389223012 instance=ExtResource("3_lhr4j")]
 z_index = 2
-position = Vector2(-850.99994, -229)
+position = Vector2(-898, -324.00003)
 scale = Vector2(5.735, 5.735)
 script = ExtResource("4_d5sjy")
 
@@ -192,59 +276,51 @@ text = "Alerts:
 horizontal_alignment = 1
 script = ExtResource("8_jtjpp")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1254276869]
+[node name="boundaries" type="StaticBody2D" parent="." unique_id=1254276869]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2046264950]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="boundaries" unique_id=2046264950]
 position = Vector2(-2, 73)
 shape = SubResource("RectangleShape2D_1qq7p")
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1186430056]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=947732729]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="boundaries" unique_id=947732729]
 position = Vector2(-952.5, -238.75)
 shape = SubResource("RectangleShape2D_ugurg")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1095722804]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="boundaries" unique_id=1095722804]
 position = Vector2(949, -235)
 shape = SubResource("RectangleShape2D_ugurg")
 
-[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=668073097]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=872708875]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="boundaries" unique_id=872708875]
 position = Vector2(-501.75, -210.25)
 shape = SubResource("RectangleShape2D_2hrc8")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D3" unique_id=1382220212]
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="boundaries" unique_id=1098016221]
 position = Vector2(20, -210)
 shape = SubResource("RectangleShape2D_2hrc8")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D3" unique_id=759863039]
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="boundaries" unique_id=906240622]
 position = Vector2(540, -212)
 shape = SubResource("RectangleShape2D_2hrc8")
 
-[node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=142601056]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=2025928274]
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="boundaries" unique_id=1125302683]
 position = Vector2(-63.5, -93)
 shape = SubResource("RectangleShape2D_tpuvb")
 
-[node name="StaticBody2D5" type="StaticBody2D" parent="." unique_id=829503074]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5" unique_id=769445697]
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="boundaries" unique_id=287709131]
 position = Vector2(-849.25, -468.75)
 shape = SubResource("RectangleShape2D_uh7vw")
 
-[node name="StaticBody2D6" type="StaticBody2D" parent="." unique_id=1041887716]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D6" unique_id=258543166]
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="boundaries" unique_id=1712366302]
 position = Vector2(-615.75, -480.5)
 shape = SubResource("RectangleShape2D_8hv8a")
 
-[node name="StaticBody2D7" type="StaticBody2D" parent="." unique_id=330259122]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D7" unique_id=1117518969]
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="boundaries" unique_id=1237935844]
 position = Vector2(232, -490.5)
 shape = SubResource("RectangleShape2D_6qpsl")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="boundaries" unique_id=1782050996]
+position = Vector2(-860.25, -149)
+shape = SubResource("RectangleShape2D_lxt0n")
 
 [node name="pansarea" type="Area2D" parent="." unique_id=88683159]
 script = ExtResource("9_3oq2i")
@@ -305,6 +381,20 @@ offset_right = 130.5
 offset_bottom = 11.0
 color = Color(1, 1, 1, 0.3529412)
 script = ExtResource("12_j8ub6")
+
+[node name="fry1" type="AnimatedSprite2D" parent="fryerarea" unique_id=662699615]
+visible = false
+position = Vector2(-680, -469.75)
+scale = Vector2(9.999999, 9.8750105)
+sprite_frames = SubResource("SpriteFrames_lxt0n")
+script = ExtResource("29_aoin3")
+
+[node name="fry2" type="AnimatedSprite2D" parent="fryerarea" unique_id=946963829]
+visible = false
+position = Vector2(-560, -469.99997)
+scale = Vector2(9.999999, 9.8750105)
+sprite_frames = SubResource("SpriteFrames_lxt0n")
+script = ExtResource("30_lxt0n")
 
 [node name="cabinetarea" type="Area2D" parent="." unique_id=1375791554]
 script = ExtResource("5_rjejb")
@@ -369,6 +459,22 @@ offset_right = 72.5
 offset_bottom = 8.0
 color = Color(1, 1, 1, 0.3529412)
 script = ExtResource("18_nuu6k")
+
+[node name="trash2area" type="Area2D" parent="." unique_id=169400294]
+script = ExtResource("39_fac7f")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="trash2area" unique_id=331963644]
+position = Vector2(-843, -164.75)
+shape = SubResource("RectangleShape2D_aoin3")
+
+[node name="trashbox2" type="ColorRect" parent="trash2area/CollisionShape2D2" unique_id=807716606]
+visible = false
+offset_left = -88.0
+offset_top = -25.25
+offset_right = 54.0
+offset_bottom = 33.75
+color = Color(1, 1, 1, 0.3529412)
+script = ExtResource("39_lxt0n")
 
 [node name="fridgearea" type="Area2D" parent="." unique_id=858166694]
 script = ExtResource("19_td1iv")
@@ -547,6 +653,10 @@ color = Color(1, 1, 1, 0.3529412)
 script = ExtResource("40_i0pns")
 
 [connection signal="openedmenu" from="." to="Cheffella" method="_on_chef_game_openedmenu"]
+[connection signal="pressed" from="ChefCabinet/exit" to="ChefCabinet" method="_on_exit_pressed"]
+[connection signal="pressed" from="ChefCabinet/exit" to="ChefCabinet/exit" method="_on_pressed"]
+[connection signal="pressed" from="ChefRefrigerator/exit" to="ChefRefrigerator" method="_on_exit_pressed"]
+[connection signal="pressed" from="ChefRefrigerator/exit" to="ChefRefrigerator/exit" method="_on_pressed"]
 [connection signal="body_entered" from="pansarea" to="pansarea" method="_on_body_entered"]
 [connection signal="body_exited" from="pansarea" to="pansarea" method="_on_body_exited"]
 [connection signal="firstinteract" from="pansarea" to="pansarea/pat1" method="_on_pansarea_firstinteract"]
@@ -556,8 +666,11 @@ script = ExtResource("40_i0pns")
 [connection signal="triggercolor" from="pansarea" to="pansarea/CollisionShape2D/pansbox" method="_on_pansarea_triggercolor"]
 [connection signal="body_entered" from="fryerarea" to="fryerarea" method="_on_body_entered"]
 [connection signal="body_exited" from="fryerarea" to="fryerarea" method="_on_body_exited"]
+[connection signal="firstinteract" from="fryerarea" to="fryerarea/fry1" method="_on_fryerarea_firstinteract"]
+[connection signal="secondinteract" from="fryerarea" to="fryerarea/fry2" method="_on_fryerarea_secondinteract"]
 [connection signal="triggercolor" from="fryerarea" to="fryerarea/CollisionShape2D/fryerbox" method="_on_fryerarea_triggercolor"]
 [connection signal="action" from="cabinetarea" to="." method="_on_cabinetarea_action"]
+[connection signal="action" from="cabinetarea" to="ChefCabinet" method="_on_cabinetarea_action"]
 [connection signal="body_entered" from="cabinetarea" to="cabinetarea" method="_on_body_entered"]
 [connection signal="body_exited" from="cabinetarea" to="cabinetarea" method="_on_body_exited"]
 [connection signal="invfull" from="cabinetarea" to="alertbox" method="_on_cabinetarea_invfull"]
@@ -573,7 +686,14 @@ script = ExtResource("40_i0pns")
 [connection signal="body_entered" from="trasharea" to="trasharea" method="_on_body_entered"]
 [connection signal="body_exited" from="trasharea" to="trasharea" method="_on_body_exited"]
 [connection signal="triggercolor" from="trasharea" to="trasharea/CollisionShape2D/trashbox" method="_on_trasharea_triggercolor"]
+[connection signal="action" from="trash2area" to="inventorytext" method="_on_trash_2_area_action"]
+[connection signal="action" from="trash2area" to="alertbox" method="_on_trash_2_area_action"]
+[connection signal="body_entered" from="trash2area" to="trash2area" method="_on_body_entered"]
+[connection signal="body_exited" from="trash2area" to="trash2area" method="_on_body_exited"]
+[connection signal="triggercolor" from="trash2area" to="trash2area/CollisionShape2D2/trashbox2" method="_on_trash_2_area_triggercolor"]
+[connection signal="focus_exited" from="trash2area/CollisionShape2D2/trashbox2" to="trash2area/CollisionShape2D2/trashbox2" method="_on_focus_exited"]
 [connection signal="action" from="fridgearea" to="." method="_on_fridgearea_action"]
+[connection signal="action" from="fridgearea" to="ChefRefrigerator" method="_on_fridgearea_action"]
 [connection signal="body_entered" from="fridgearea" to="fridgearea" method="_on_body_entered"]
 [connection signal="body_exited" from="fridgearea" to="fridgearea" method="_on_body_exited"]
 [connection signal="invfull" from="fridgearea" to="alertbox" method="_on_fridgearea_invfull"]

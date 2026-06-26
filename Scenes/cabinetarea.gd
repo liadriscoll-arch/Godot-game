@@ -11,7 +11,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if player_inside and Input.is_action_just_pressed("ui_accept") and Chefglobal.inventory == "":
 		open_menu()
-	elif Input.is_action_just_pressed("ui_accept") and Chefglobal.inventory != "":
+	elif player_inside and Input.is_action_just_pressed("ui_accept") and Chefglobal.inventory != "":
 		invfull.emit()
 
 func _on_body_entered(body: Node2D) -> void:
@@ -25,4 +25,5 @@ func _on_body_exited(body: Node2D) -> void:
 		triggercolor.emit()
 
 func open_menu() -> void:
+	Chefglobal.canmove = false
 	action.emit()

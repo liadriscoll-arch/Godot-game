@@ -13,9 +13,7 @@ func _process(delta: float) -> void:
 
 func _on_cabinetarea_action() -> void:
 	openedmenu.emit()
-	get_tree().change_scene_to_file("res://Scenes/chef_cabinet.tscn")
 
 
 func _on_fridgearea_action() -> void:
 	openedmenu.emit()
-	get_tree().change_scene_to_file("res://Scenes/chef_refrigerator.tscn")

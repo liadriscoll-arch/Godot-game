@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://dpwnap2xjqen0"]
 
-[ext_resource type="Texture2D" uid="uid://b4vvh6qo3lf6w" path="res://Assets/Chef assets/chef_background.png" id="1_h71ub"]
 [ext_resource type="Script" uid="uid://bggg4x3uw5xda" path="res://Scenes/chef_instructions.gd" id="1_hmatf"]
 [ext_resource type="FontFile" uid="uid://dl176n4kxwrv8" path="res://Assets/04b_30/04B_30__.TTF" id="2_w4hly"]
+[ext_resource type="Texture2D" uid="uid://crs38oemip8a3" path="res://Assets/Chef assets/chefbackground.png" id="2_yseqc"]
 [ext_resource type="Script" uid="uid://c5mqhwhobjkjk" path="res://Scenes/button.gd" id="4_i7chl"]
 [ext_resource type="Script" uid="uid://2e1exnp2766y" path="res://Scenes/button_2.gd" id="5_b2ggq"]
 [ext_resource type="Script" uid="uid://uxasvuhqdnuc" path="res://Scenes/button_3.gd" id="6_yseqc"]
@@ -14,7 +14,7 @@ script = ExtResource("1_hmatf")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=670680227]
 scale = Vector2(10, 10.000001)
-texture = ExtResource("1_h71ub")
+texture = ExtResource("2_yseqc")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1670540017]
 offset_left = -959.0

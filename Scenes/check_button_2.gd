@@ -1,7 +1,7 @@
 extends CheckButton
 
 func _ready():
-	button_pressed = Chefglobal.hard
+	pass
 
 func _on_toggled(toggled_on: bool) -> void:
 	if toggled_on:
