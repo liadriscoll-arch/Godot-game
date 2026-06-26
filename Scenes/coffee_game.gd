@@ -164,11 +164,15 @@ func serve_customer() -> void:
 #customers leave the line without paying if they get the wrong drink
 # customers leave the line without paying if they get the wrong drink
 func customer_leaves() -> void:
+	
+	Global.customer_line.remove_at(0)
+	Global.customer_orders.remove_at(0)
+	
 	if Global.customer_line.size() == 0:
 		return
 
-	Global.customer_line.remove_at(0)
-	Global.customer_orders.remove_at(0)
+	
+	
 	
 	if Global.selected_cup == "latte":
 		latte_cup.texture = empty_latte

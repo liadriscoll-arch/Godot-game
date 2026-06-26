@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://ce6f8uc4ks2uk"]
+
+[ext_resource type="Script" uid="uid://b3k3ik6kvvcbe" path="res://Scenes/chef_game_music.gd" id="1_4nbev"]
+
+[node name="ChefGameMusic" type="AudioStreamPlayer" unique_id=1956286079]
+script = ExtResource("1_4nbev")

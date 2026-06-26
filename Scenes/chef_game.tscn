@@ -1216,10 +1216,6 @@ scale = Vector2(3, 3)
 position = Vector2(400.00003, 305)
 scale = Vector2(3, 3)
 
-[node name="Customer5" type="Sprite2D" parent="." unique_id=1022304461]
-position = Vector2(288, 303)
-scale = Vector2(3, 3)
-
 [connection signal="openedmenu" from="." to="Cheffella" method="_on_chef_game_openedmenu"]
 [connection signal="pressed" from="ChefCabinet/exit" to="ChefCabinet" method="_on_exit_pressed"]
 [connection signal="pressed" from="ChefCabinet/exit" to="ChefCabinet/exit" method="_on_pressed"]

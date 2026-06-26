@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://c5mqhwhobjkjk" path="res://Scenes/button.gd" id="4_i7chl"]
 [ext_resource type="Script" uid="uid://2e1exnp2766y" path="res://Scenes/button_2.gd" id="5_b2ggq"]
 [ext_resource type="Script" uid="uid://uxasvuhqdnuc" path="res://Scenes/button_3.gd" id="6_yseqc"]
+[ext_resource type="PackedScene" uid="uid://ce6f8uc4ks2uk" path="res://Scenes/chef_game_music.tscn" id="7_xqimv"]
 
 [node name="ChefInstructions" type="Node2D" unique_id=559427166]
 script = ExtResource("1_hmatf")
@@ -119,6 +120,8 @@ theme_override_fonts/font = ExtResource("2_w4hly")
 theme_override_font_sizes/font_size = 75
 text = "Play"
 script = ExtResource("6_yseqc")
+
+[node name="ChefGameMusic" parent="." unique_id=1956286079 instance=ExtResource("7_xqimv")]
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
 [connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
