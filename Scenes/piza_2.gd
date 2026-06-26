@@ -44,9 +44,10 @@ func _on_assemblyarea_secondpizza() -> void:
 		toppings = ", ".join(Chefglobal.asempiztop2) 
 		Chefglobal.inventory= type + " Dough with\n" + toppings
 		if Chefglobal.asempiztop2 == []:
-			Chefglobal.inventory = "Ready Dough"
+			Chefglobal.inventory = type +" Ready Dough"
 		Chefglobal.asempiztop2.clear()
 		toppings = ""
 		isready = false
+		Chefglobal.assemblytable2 = ""
 	else:
 		nope.emit()

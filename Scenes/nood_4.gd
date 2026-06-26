@@ -36,5 +36,6 @@ func _on_assemblyarea_fourthnood() -> void:
 		Chefglobal.inventory= sauce + "\n" + type 
 		isready = false
 		sauce = ""
+		Chefglobal.assemblytable4 = ""
 	else:
 		nope.emit()

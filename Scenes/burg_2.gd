@@ -43,5 +43,6 @@ func _on_assemblyarea_secondburg() -> void:
 		Chefglobal.asemburgtop2.clear()
 		toppings = ""
 		isready = false
+		Chefglobal.assemblytable2 = ""
 	else:
 		nope.emit()

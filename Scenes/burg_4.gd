@@ -43,5 +43,6 @@ func _on_assemblyarea_fourthburg() -> void:
 		Chefglobal.asemburgtop4.clear()
 		toppings = ""
 		isready = false
+		Chefglobal.assemblytable4 = ""
 	else:
 		nope.emit()
