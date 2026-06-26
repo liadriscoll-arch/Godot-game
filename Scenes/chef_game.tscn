@@ -16,7 +16,9 @@
 [ext_resource type="Script" uid="uid://csjtrbjgyykr4" path="res://Scenes/tuttext.gd" id="8_rjejb"]
 [ext_resource type="Script" uid="uid://yh24ds6lxmwf" path="res://Scenes/pansarea.gd" id="9_3oq2i"]
 [ext_resource type="Texture2D" uid="uid://rlstm7mlg2d1" path="res://Assets/Chef assets/truechefbackground.png" id="9_b10uq"]
+[ext_resource type="PackedScene" uid="uid://dstw5vt7mypd7" path="res://Scenes/orderbook.tscn" id="9_t26tf"]
 [ext_resource type="Script" uid="uid://vinfs7xycovv" path="res://Scenes/pansbox.gd" id="10_lbrew"]
+[ext_resource type="Script" uid="uid://cova1unv8a0u5" path="res://Scenes/orderbook.gd" id="10_ywwtq"]
 [ext_resource type="Texture2D" uid="uid://ctpo62hcsmcc" path="res://Assets/Chef assets/cpat.png" id="11_kw6j8"]
 [ext_resource type="Script" uid="uid://blvhbxry6iobq" path="res://Scenes/fryerarea.gd" id="11_lup6s"]
 [ext_resource type="Script" uid="uid://bycgo4i6usqmc" path="res://Scenes/fryerbox.gd" id="12_j8ub6"]
@@ -378,6 +380,29 @@ offset_left = 602.0
 offset_top = 339.0
 offset_right = 837.0
 offset_bottom = 397.0
+theme_override_fonts/font = ExtResource("7_d5sjy")
+theme_override_font_sizes/font_size = 57
+text = "exit"
+
+[node name="Orderbook" parent="." unique_id=752753336 instance=ExtResource("9_t26tf")]
+visible = false
+z_index = 5
+script = ExtResource("10_ywwtq")
+
+[node name="exit" type="TextureButton" parent="Orderbook" unique_id=1946099927]
+offset_left = -128.0
+offset_top = 372.0
+offset_right = -32.0
+offset_bottom = 426.0
+scale = Vector2(1.915, 1.915)
+texture_normal = ExtResource("4_fkvee")
+texture_hover = ExtResource("5_hi7a7")
+
+[node name="Label33" type="Label" parent="Orderbook" unique_id=830986364]
+offset_left = -119.0
+offset_top = 391.0
+offset_right = 49.0
+offset_bottom = 449.0
 theme_override_fonts/font = ExtResource("7_d5sjy")
 theme_override_font_sizes/font_size = 57
 text = "exit"
@@ -1200,6 +1225,7 @@ scale = Vector2(3, 3)
 [connection signal="pressed" from="ChefCabinet/exit" to="ChefCabinet/exit" method="_on_pressed"]
 [connection signal="pressed" from="ChefRefrigerator/exit" to="ChefRefrigerator" method="_on_exit_pressed"]
 [connection signal="pressed" from="ChefRefrigerator/exit" to="ChefRefrigerator/exit" method="_on_pressed"]
+[connection signal="pressed" from="Orderbook/exit" to="Orderbook" method="_on_exit_pressed"]
 [connection signal="body_entered" from="pansarea" to="pansarea" method="_on_body_entered"]
 [connection signal="body_exited" from="pansarea" to="pansarea" method="_on_body_exited"]
 [connection signal="firstinteract" from="pansarea" to="pansarea/pat1" method="_on_pansarea_firstinteract"]
@@ -1309,6 +1335,7 @@ scale = Vector2(3, 3)
 [connection signal="body_entered" from="servearea" to="servearea" method="_on_body_entered"]
 [connection signal="body_exited" from="servearea" to="servearea" method="_on_body_exited"]
 [connection signal="triggercolor" from="servearea" to="servearea/CollisionShape2D/servebox" method="_on_servearea_triggercolor"]
+[connection signal="action" from="bookarea" to="Orderbook" method="_on_bookarea_action"]
 [connection signal="body_entered" from="bookarea" to="bookarea" method="_on_body_entered"]
 [connection signal="body_exited" from="bookarea" to="bookarea" method="_on_body_exited"]
 [connection signal="triggercolor" from="bookarea" to="bookarea/CollisionShape2D/bookbox" method="_on_bookarea_triggercolor"]

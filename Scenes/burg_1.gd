@@ -37,7 +37,7 @@ func _on_assemblyarea_firstburg() -> void:
 	elif isready and Chefglobal.inventory == "":
 		visible = false
 		toppings = ", ".join(Chefglobal.asemburgtop1) 
-		Chefglobal.inventory= buntype + " " + burgtype + "\nwith " + toppings
+		Chefglobal.inventory= buntype + " " + burgtype + " with\n" + toppings
 		if Chefglobal.asemburgtop1 == []:
 			Chefglobal.inventory = buntype + " " + burgtype
 		Chefglobal.asemburgtop1.clear()
