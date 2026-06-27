@@ -27,6 +27,7 @@ var possible_customers: Array[Texture2D] = [
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	MainGameMusic.stop()
 	add_random_customer()
 	update_line()
 

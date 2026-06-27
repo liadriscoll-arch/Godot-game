@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://d0n8poetljbdm"]
+
+[ext_resource type="Script" uid="uid://bpyt1foqc467x" path="res://Scenes/chef_end.gd" id="1_03n03"]
+[ext_resource type="Texture2D" uid="uid://rlstm7mlg2d1" path="res://Assets/Chef assets/truechefbackground.png" id="1_rqw4d"]
+
+[node name="chef_end" type="Node2D" unique_id=712414692]
+script = ExtResource("1_03n03")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=274353592]
+scale = Vector2(10, 10)
+texture = ExtResource("1_rqw4d")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1311137609]

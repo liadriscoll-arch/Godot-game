@@ -46,6 +46,11 @@ func _ready() -> void:
 	
 	Global.regular_espresso_pot = 0
 	
+	if Global.coffee_money <= 0 and Global.decaf_coffee_beans.size() == 0 and Global.regular_coffee_beans.size() == 0:
+		Global.coffee_win = false
+		get_tree().change_scene_to_file("res://Scenes/coffee_end_screen.tscn")
+		
+	
 	
 func update_quota() -> void:
 	var r = Global.coffee_week - 1

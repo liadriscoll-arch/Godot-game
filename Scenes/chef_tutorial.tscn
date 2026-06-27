@@ -2,9 +2,14 @@
 
 [ext_resource type="Script" uid="uid://deawtqxkjytmi" path="res://Scenes/chef_tutorial.gd" id="1_lw2ff"]
 [ext_resource type="FontFile" uid="uid://dl176n4kxwrv8" path="res://Assets/04b_30/04B_30__.TTF" id="2_230hs"]
+[ext_resource type="Texture2D" uid="uid://rlstm7mlg2d1" path="res://Assets/Chef assets/truechefbackground.png" id="2_bud3s"]
 
 [node name="ChefTutorial" type="Node2D" unique_id=391596988]
 script = ExtResource("1_lw2ff")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=595069617]
+scale = Vector2(10, 10)
+texture = ExtResource("2_bud3s")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1702036401]
 

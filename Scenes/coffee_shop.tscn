@@ -376,7 +376,7 @@ script = ExtResource("24_853bf")
 position = Vector2(-1.22070305e-05, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="expresso_speed_image/Area2D" unique_id=1323949077]
-position = Vector2(2.3750153, 0.875)
+position = Vector2(2.6250153, -0.375)
 scale = Vector2(0.99999976, 0.99999976)
 shape = SubResource("RectangleShape2D_f8jj5")
 

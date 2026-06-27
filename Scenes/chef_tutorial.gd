@@ -2,6 +2,7 @@ extends Node2D
 
 
 func _ready() -> void:
+	MainGameMusic.stop()
 	if Chefglobal.mode == 0:
 		Chefglobal.canmove = false
 		visible = true

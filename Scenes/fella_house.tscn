@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://doosqokssycug"]
 
+[ext_resource type="Script" uid="uid://be25pcac7r4q" path="res://Scenes/fella_house.gd" id="1_hd2y2"]
 [ext_resource type="Texture2D" uid="uid://c3lss1u8qbo5t" path="res://Assets/Sprites/New Piskel-1.png (3).png" id="1_tfxl8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hd2y2"]
@@ -7,11 +8,12 @@ size = Vector2(24, 21)
 
 [node name="fella_house" type="Node2D" unique_id=1170412456]
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1982033341]
+[node name="Area2D" type="Area2D" parent="." unique_id=471425776]
+script = ExtResource("1_hd2y2")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=1982033341]
 texture = ExtResource("1_tfxl8")
 
-[node name="Area2D" type="Area2D" parent="Sprite2D" unique_id=471425776]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D" unique_id=1858090485]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1858090485]
 position = Vector2(0, 21.5)
 shape = SubResource("RectangleShape2D_hd2y2")

@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://bqohvtqttsbyq"]
 
-[ext_resource type="Texture2D" uid="uid://bh4831ogra87t" path="res://Assets/Chef assets/chef_house.png" id="1_mmjy3"]
 [ext_resource type="Script" uid="uid://bdk1bwvm31x7a" path="res://Scenes/area_2d.gd" id="1_owmhm"]
+[ext_resource type="Texture2D" uid="uid://snrjxwvpvixt" path="res://Assets/Chef assets/chef_house-1.png (1).png" id="2_owmhm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_owmhm"]
-size = Vector2(32, 30.5)
+size = Vector2(32, 59.25)
 
 [node name="ChefBuilding" type="Node2D" unique_id=810557184]
 
@@ -13,10 +13,10 @@ script = ExtResource("1_owmhm")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=573784921]
 scale = Vector2(2, 2)
-texture = ExtResource("1_mmjy3")
+texture = ExtResource("2_owmhm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2096992744]
-position = Vector2(0, 48.75)
+position = Vector2(34, 27.625)
 shape = SubResource("RectangleShape2D_owmhm")
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
