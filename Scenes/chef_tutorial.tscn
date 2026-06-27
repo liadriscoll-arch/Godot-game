@@ -2,19 +2,11 @@
 
 [ext_resource type="Script" uid="uid://deawtqxkjytmi" path="res://Scenes/chef_tutorial.gd" id="1_lw2ff"]
 [ext_resource type="FontFile" uid="uid://dl176n4kxwrv8" path="res://Assets/04b_30/04B_30__.TTF" id="2_230hs"]
-[ext_resource type="Texture2D" uid="uid://rlstm7mlg2d1" path="res://Assets/Chef assets/truechefbackground.png" id="2_lw2ff"]
-[ext_resource type="Texture2D" uid="uid://b60gpfnukr0yu" path="res://Assets/Chef assets/chefsettingdonebutton.png" id="3_mewkk"]
-[ext_resource type="Texture2D" uid="uid://dild6d0ulr0bc" path="res://Assets/Chef assets/chefsettingdonebuttonhover.png" id="4_lw2ff"]
-[ext_resource type="Script" uid="uid://7vowvghrhq8r" path="res://Scenes/starttut.gd" id="5_mewkk"]
 
 [node name="ChefTutorial" type="Node2D" unique_id=391596988]
 script = ExtResource("1_lw2ff")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1702036401]
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=957507425]
-scale = Vector2(10, 10.000001)
-texture = ExtResource("2_lw2ff")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1310932557]
 offset_left = -959.0
@@ -124,10 +116,10 @@ theme_override_font_sizes/font_size = 45
 text = "take orders"
 
 [node name="Label15" type="Label" parent="." unique_id=1780370020]
-offset_left = 286.0
-offset_top = 64.0
-offset_right = 471.0
-offset_bottom = 159.0
+offset_left = 293.0
+offset_top = 60.0
+offset_right = 478.0
+offset_bottom = 155.0
 theme_override_fonts/font = ExtResource("2_230hs")
 theme_override_font_sizes/font_size = 45
 text = "order
@@ -159,18 +151,22 @@ offset_bottom = -359.0
 theme_override_fonts/font = ExtResource("2_230hs")
 theme_override_font_sizes/font_size = 25
 text = "cook up to
-4 burgers"
+4 burgers
+1, 2, 3, 4
+to interact"
 
 [node name="Label19" type="Label" parent="." unique_id=1075091370]
-offset_left = -733.0
+offset_left = -709.0
 offset_top = -445.0
-offset_right = -482.0
-offset_bottom = -361.0
+offset_right = -458.0
+offset_bottom = -303.0
 theme_override_fonts/font = ExtResource("2_230hs")
 theme_override_font_sizes/font_size = 25
 text = "cook up to
 2 batches of
-fries"
+fries
+1, 2
+to interact"
 
 [node name="Label20" type="Label" parent="." unique_id=1653338875]
 offset_left = -607.0
@@ -181,7 +177,9 @@ theme_override_fonts/font = ExtResource("2_230hs")
 theme_override_font_sizes/font_size = 25
 text = "cook up to
 4 batches
-of noodles"
+of noodles
+1, 2, 3, 4
+to interact"
 
 [node name="Label21" type="Label" parent="." unique_id=425462023]
 offset_left = -432.0
@@ -191,7 +189,9 @@ offset_bottom = -394.0
 theme_override_fonts/font = ExtResource("2_230hs")
 theme_override_font_sizes/font_size = 25
 text = "get food
-stuffs"
+ingredients
+space to
+interact"
 
 [node name="Label22" type="Label" parent="." unique_id=1974815212]
 offset_left = -19.0
@@ -201,7 +201,9 @@ offset_bottom = -389.0
 theme_override_fonts/font = ExtResource("2_230hs")
 theme_override_font_sizes/font_size = 25
 text = "assemble your
-foods here"
+foods here
+1, 2, 3, 4
+to interact"
 
 [node name="Label23" type="Label" parent="." unique_id=901052078]
 offset_left = -85.0
@@ -211,7 +213,9 @@ offset_bottom = -177.0
 theme_override_fonts/font = ExtResource("2_230hs")
 theme_override_font_sizes/font_size = 25
 text = "cook up to
-4 pizzas"
+4 pizzas
+1, 2, 3, 4
+to interact"
 
 [node name="Label24" type="Label" parent="." unique_id=1829437006]
 offset_left = 428.0
@@ -222,7 +226,9 @@ theme_override_fonts/font = ExtResource("2_230hs")
 theme_override_font_sizes/font_size = 25
 text = "box up the
 food for
-delivery"
+delivery
+space to
+interact"
 
 [node name="Label25" type="Label" parent="." unique_id=1491785390]
 offset_left = 327.0
@@ -232,7 +238,9 @@ offset_bottom = -377.0
 theme_override_fonts/font = ExtResource("2_230hs")
 theme_override_font_sizes/font_size = 25
 text = "clean dishes
-for noodles"
+for noodles
+space to
+interact"
 
 [node name="Label26" type="Label" parent="." unique_id=366302592]
 offset_left = 582.0
@@ -242,7 +250,9 @@ offset_bottom = -397.0
 theme_override_fonts/font = ExtResource("2_230hs")
 theme_override_font_sizes/font_size = 25
 text = "discard
-bad food"
+bad food
+space to
+interact"
 
 [node name="Label27" type="Label" parent="." unique_id=1737489866]
 offset_left = 776.0
@@ -252,7 +262,9 @@ offset_bottom = -354.0
 theme_override_fonts/font = ExtResource("2_230hs")
 theme_override_font_sizes/font_size = 25
 text = "get food
-stuffs"
+stuffs
+space to
+interact"
 
 [node name="Label28" type="Label" parent="." unique_id=1084208103]
 offset_left = 12.0
@@ -262,7 +274,9 @@ offset_bottom = 184.0
 theme_override_fonts/font = ExtResource("2_230hs")
 theme_override_font_sizes/font_size = 25
 text = "serve your 
-customers"
+customers
+space to
+interact"
 
 [node name="Label29" type="Label" parent="." unique_id=223244470]
 offset_left = -699.0
@@ -272,18 +286,19 @@ offset_bottom = 204.0
 theme_override_fonts/font = ExtResource("2_230hs")
 theme_override_font_sizes/font_size = 25
 text = "get that money for
-your sales"
+your sales
+space to interact"
 
 [node name="Label30" type="Label" parent="." unique_id=1493181712]
-offset_left = 311.0
-offset_top = 165.0
-offset_right = 558.0
-offset_bottom = 249.0
+offset_left = 297.0
+offset_top = 160.0
+offset_right = 544.0
+offset_bottom = 302.0
 theme_override_fonts/font = ExtResource("2_230hs")
 theme_override_font_sizes/font_size = 25
 text = "view
-current
-orders"
+orders
+q to open"
 
 [node name="Label31" type="Label" parent="." unique_id=656456123]
 offset_left = 511.0
@@ -292,26 +307,8 @@ offset_right = 900.0
 offset_bottom = 193.0
 theme_override_fonts/font = ExtResource("2_230hs")
 theme_override_font_sizes/font_size = 25
-text = "take peoples orders"
-
-[node name="starttut" type="TextureButton" parent="." unique_id=582942041]
-offset_left = -142.0
-offset_top = 305.0
-offset_right = -46.0
-offset_bottom = 359.0
-scale = Vector2(2.985, 2.985)
-texture_normal = ExtResource("3_mewkk")
-texture_hover = ExtResource("4_lw2ff")
-script = ExtResource("5_mewkk")
-
-[node name="Label32" type="Label" parent="." unique_id=1246281128]
-offset_left = -114.0
-offset_top = 354.0
-offset_right = 121.0
-offset_bottom = 412.0
-theme_override_fonts/font = ExtResource("2_230hs")
-theme_override_font_sizes/font_size = 57
-text = "start"
+text = "take peoples orders
+space to interact"
 
 [node name="Label33" type="Label" parent="." unique_id=1422431330]
 offset_left = -923.0
@@ -324,7 +321,7 @@ text = "-space to interact with noncooking
 appliances
 -1, 2, 3, 4 to put food on cooking
 appliances and assembly station
--food burns after 10 seconds
+-food burns after 20 seconds
 -people also want their food on time!
 -make sure to get orders correct for
 a high rating!"
@@ -362,6 +359,20 @@ offset_bottom = -98.0
 theme_override_fonts/font = ExtResource("2_230hs")
 theme_override_font_sizes/font_size = 25
 text = "discard
-bad food"
+bad food
+space to
+interact"
 
-[connection signal="pressed" from="starttut" to="starttut" method="_on_pressed"]
+[node name="Label32" type="Label" parent="." unique_id=264478197]
+offset_left = -169.0
+offset_top = 254.0
+offset_right = 166.0
+offset_bottom = 535.0
+theme_override_colors/font_color = Color(1, 0.3162766, 0.25169733, 1)
+theme_override_fonts/font = ExtResource("2_230hs")
+theme_override_font_sizes/font_size = 67
+text = "\"I\" to
+open/
+close
+info"
+horizontal_alignment = 1

@@ -29,6 +29,9 @@ func open_menu() -> void:
 	if Chefglobal.orders.size() == 0:
 		noorders.emit()
 		return
+	if Chefglobal.inventory == "":
+		wrong.emit()
+		return
 	for i in Chefglobal.orders.size():
 		if Chefglobal.inventory == Chefglobal.orders.get(i).item1:
 			Chefglobal.orders.get(i).item1 = ""
@@ -46,6 +49,7 @@ func open_menu() -> void:
 		if (Chefglobal.orders.get(j).item1 == "" and 
 		Chefglobal.orders.get(j).item2 == "" and Chefglobal.orders.get(j).item3 == ""):
 			Chefglobal.totalmoney += Chefglobal.orders.get(j).money
+			Chefglobal.servdcust += 1
 			remove = j
 	if remove != -1:
 		Chefglobal.orders.remove_at(remove)

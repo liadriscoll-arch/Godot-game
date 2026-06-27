@@ -1,11 +1,16 @@
 extends Node2D
 
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	if Chefglobal.mode == 0:
+		Chefglobal.canmove = false
+		visible = true
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	Global.esc_settings()
+	if Input.is_action_just_pressed("tutorialopen"):
+		if visible == true:
+			Chefglobal.canmove = true
+			visible = false
+		else:
+			Chefglobal.canmove = false
+			visible = true

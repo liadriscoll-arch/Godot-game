@@ -15,6 +15,7 @@
 [ext_resource type="Script" uid="uid://mf8rfseapw4e" path="res://Scenes/chef_refrigerator.gd" id="8_oyw88"]
 [ext_resource type="Script" uid="uid://csjtrbjgyykr4" path="res://Scenes/tuttext.gd" id="8_rjejb"]
 [ext_resource type="Script" uid="uid://yh24ds6lxmwf" path="res://Scenes/pansarea.gd" id="9_3oq2i"]
+[ext_resource type="PackedScene" uid="uid://cxpmg12svgasf" path="res://Scenes/chef_tutorial.tscn" id="9_8o0j8"]
 [ext_resource type="Texture2D" uid="uid://rlstm7mlg2d1" path="res://Assets/Chef assets/truechefbackground.png" id="9_b10uq"]
 [ext_resource type="PackedScene" uid="uid://dstw5vt7mypd7" path="res://Scenes/orderbook.tscn" id="9_t26tf"]
 [ext_resource type="Script" uid="uid://vinfs7xycovv" path="res://Scenes/pansbox.gd" id="10_lbrew"]
@@ -141,6 +142,7 @@
 [ext_resource type="Script" uid="uid://cpcen2icpgdj0" path="res://Scenes/pot_2.gd" id="124_q3ysh"]
 [ext_resource type="Script" uid="uid://uhjacflpdui" path="res://Scenes/pot_3.gd" id="125_arv3c"]
 [ext_resource type="Script" uid="uid://b4lagprlylqj3" path="res://Scenes/pot_4.gd" id="126_m68ah"]
+[ext_resource type="Script" uid="uid://cb11ry6x3db8v" path="res://Scenes/gametime.gd" id="142_ywwtq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1qq7p"]
 size = Vector2(1904, 20)
@@ -384,6 +386,10 @@ theme_override_fonts/font = ExtResource("7_d5sjy")
 theme_override_font_sizes/font_size = 57
 text = "exit"
 
+[node name="ChefTutorial" parent="." unique_id=391596988 instance=ExtResource("9_8o0j8")]
+visible = false
+z_index = 5
+
 [node name="Orderbook" parent="." unique_id=752753336 instance=ExtResource("9_t26tf")]
 visible = false
 z_index = 5
@@ -402,11 +408,10 @@ scale = Vector2(5.735, 5.735)
 script = ExtResource("4_d5sjy")
 
 [node name="tuttext" type="Label" parent="." unique_id=235479214]
-visible = false
-offset_left = -1051.0
-offset_top = 75.0
-offset_right = 1121.0
-offset_bottom = 368.0
+offset_left = -1082.0
+offset_top = 77.0
+offset_right = 1090.0
+offset_bottom = 370.0
 theme_override_fonts/font = ExtResource("7_d5sjy")
 theme_override_font_sizes/font_size = 42
 text = "walk over to objects and press space
@@ -1199,8 +1204,38 @@ scale = Vector2(3, 3)
 position = Vector2(400.00003, 305)
 scale = Vector2(3, 3)
 
+[node name="Customer5" type="Sprite2D" parent="." unique_id=391192233]
+position = Vector2(-826.07, 260.69)
+scale = Vector2(3, 3)
+
+[node name="Customer6" type="Sprite2D" parent="." unique_id=794795562]
+position = Vector2(-555.055, 260.69)
+scale = Vector2(3, 3)
+
+[node name="Customer7" type="Sprite2D" parent="." unique_id=1182257037]
+position = Vector2(-286.09, 260.69)
+scale = Vector2(3, 3)
+
 [node name="GameTime" type="Timer" parent="." unique_id=968243356]
 wait_time = 600.0
+autostart = true
+
+[node name="gametime" type="Label" parent="." unique_id=624979591]
+offset_left = 685.0
+offset_top = 432.0
+offset_right = 934.0
+offset_bottom = 503.0
+theme_override_fonts/font = ExtResource("7_d5sjy")
+theme_override_font_sizes/font_size = 34
+text = "time"
+horizontal_alignment = 1
+script = ExtResource("142_ywwtq")
+
+[node name="Hours" type="Timer" parent="." unique_id=129956973]
+wait_time = 60.0
+autostart = true
+
+[node name="Minutes" type="Timer" parent="." unique_id=1536892125]
 autostart = true
 
 [connection signal="openedmenu" from="." to="Orderbook" method="_on_chef_game_openedmenu"]
@@ -1312,8 +1347,10 @@ autostart = true
 [connection signal="secondinteract" from="potsarea" to="potsarea/pot2" method="_on_potsarea_secondinteract"]
 [connection signal="thirdinteract" from="potsarea" to="potsarea/pot3" method="_on_potsarea_thirdinteract"]
 [connection signal="triggercolor" from="potsarea" to="potsarea/CollisionShape2D/potsbox" method="_on_potsarea_triggercolor"]
+[connection signal="action" from="regarea" to="alertbox" method="_on_regarea_action"]
 [connection signal="body_entered" from="regarea" to="regarea" method="_on_body_entered"]
 [connection signal="body_exited" from="regarea" to="regarea" method="_on_body_exited"]
+[connection signal="none" from="regarea" to="alertbox" method="_on_regarea_none"]
 [connection signal="triggercolor" from="regarea" to="regarea/CollisionShape2D/regbox" method="_on_regarea_triggercolor"]
 [connection signal="action" from="servearea" to="alertbox" method="_on_servearea_action"]
 [connection signal="body_entered" from="servearea" to="servearea" method="_on_body_entered"]
@@ -1333,3 +1370,6 @@ autostart = true
 [connection signal="tomany" from="orderarea" to="alertbox" method="_on_orderarea_tomany"]
 [connection signal="triggercolor" from="orderarea" to="orderarea/CollisionShape2D/orderbox" method="_on_orderarea_triggercolor"]
 [connection signal="timeout" from="customer_timer" to="." method="_on_customer_timer_timeout"]
+[connection signal="timeout" from="GameTime" to="." method="_on_game_time_timeout"]
+[connection signal="timeout" from="Hours" to="gametime" method="_on_hours_timeout"]
+[connection signal="timeout" from="Minutes" to="gametime" method="_on_minutes_timeout"]

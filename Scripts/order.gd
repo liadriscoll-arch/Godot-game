@@ -75,6 +75,9 @@ var toppings2 = []
 var toppings3 = []
 var toppingtext: String
 var boxed: bool
+var randbtop = randi_range(0, burgtoppings.size()-1)
+var randptop = randi_range(0, pizzatoppings.size()-1)
+var bannedtop = []
 
 func _init():
 	boxed = false
@@ -90,35 +93,47 @@ func _init():
 	item2 = orders.get(rand2)
 	item3 = orders.get(rand3)
 	if rand1 > 10 and rand1 < 15:
-		toppings1.append(burgtoppings.get(randi_range(0, burgtoppings.size()-1)))
-		toppings1.append(burgtoppings.get(randi_range(0, burgtoppings.size()-1)))
-		toppings1.append(burgtoppings.get(randi_range(0, burgtoppings.size()-1)))
-		toppings1.append(burgtoppings.get(randi_range(0, burgtoppings.size()-1)))
+		for i in 4:
+			toppings1.append(burgtoppings.get(randbtop))
+			bannedtop.append(randbtop)
+			while bannedtop.has(randbtop):
+				randbtop = randi_range(0, burgtoppings.size()-1)
+		bannedtop.clear()
 	if rand2 > 10 and rand2 < 15:
-		toppings2.append(burgtoppings.get(randi_range(0, burgtoppings.size()-1)))
-		toppings2.append(burgtoppings.get(randi_range(0, burgtoppings.size()-1)))
-		toppings2.append(burgtoppings.get(randi_range(0, burgtoppings.size()-1)))
-		toppings2.append(burgtoppings.get(randi_range(0, burgtoppings.size()-1)))
+		for i in 4:
+			toppings2.append(burgtoppings.get(randbtop))
+			bannedtop.append(randbtop)
+			while bannedtop.has(randbtop):
+				randbtop = randi_range(0, burgtoppings.size()-1)
+		bannedtop.clear()
 	if rand3 > 10 and rand3 < 15:
-		toppings3.append(burgtoppings.get(randi_range(0, burgtoppings.size()-1)))
-		toppings3.append(burgtoppings.get(randi_range(0, burgtoppings.size()-1)))
-		toppings3.append(burgtoppings.get(randi_range(0, burgtoppings.size()-1)))
-		toppings3.append(burgtoppings.get(randi_range(0, burgtoppings.size()-1)))
+		for i in 4:
+			toppings3.append(burgtoppings.get(randbtop))
+			bannedtop.append(randbtop)
+			while bannedtop.has(randbtop):
+				randbtop = randi_range(0, burgtoppings.size()-1)
+		bannedtop.clear()
 	if rand1 == 17 or rand1 == 18:
-		toppings1.append(pizzatoppings.get(randi_range(0, pizzatoppings.size()-1)))
-		toppings1.append(pizzatoppings.get(randi_range(0, pizzatoppings.size()-1)))
-		toppings1.append(pizzatoppings.get(randi_range(0, pizzatoppings.size()-1)))
-		toppings1.append(pizzatoppings.get(randi_range(0, pizzatoppings.size()-1)))
+		for i in 4:
+			toppings1.append(pizzatoppings.get(randptop))
+			bannedtop.append(randptop)
+			while bannedtop.has(randptop):
+				randptop = randi_range(0, pizzatoppings.size()-1)
+		bannedtop.clear()
 	if rand2 == 17 or rand2 == 18:
-		toppings2.append(pizzatoppings.get(randi_range(0, pizzatoppings.size()-1)))
-		toppings2.append(pizzatoppings.get(randi_range(0, pizzatoppings.size()-1)))
-		toppings2.append(pizzatoppings.get(randi_range(0, pizzatoppings.size()-1)))
-		toppings2.append(pizzatoppings.get(randi_range(0, pizzatoppings.size()-1)))
+		for i in 4:
+			toppings2.append(pizzatoppings.get(randptop))
+			bannedtop.append(randptop)
+			while bannedtop.has(randptop):
+				randptop = randi_range(0, pizzatoppings.size()-1)
+		bannedtop.clear()
 	if rand3 == 17 or rand3 == 18:
-		toppings3.append(pizzatoppings.get(randi_range(0, pizzatoppings.size()-1)))
-		toppings3.append(pizzatoppings.get(randi_range(0, pizzatoppings.size()-1)))
-		toppings3.append(pizzatoppings.get(randi_range(0, pizzatoppings.size()-1)))
-		toppings3.append(pizzatoppings.get(randi_range(0, pizzatoppings.size()-1)))
+		for i in 4:
+			toppings3.append(pizzatoppings.get(randptop))
+			bannedtop.append(randptop)
+			while bannedtop.has(randptop):
+				randptop = randi_range(0, pizzatoppings.size()-1)
+		bannedtop.clear()
 	toppings1 = toppings1.filter(func(item): return item.length() > 0)
 	toppings2 = toppings2.filter(func(item): return item.length() > 0)
 	toppings3 = toppings3.filter(func(item): return item.length() > 0)

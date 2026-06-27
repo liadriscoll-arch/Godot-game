@@ -1,5 +1,11 @@
 extends Label
 
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("tutorialopen"):
+		if visible == true:
+			visible = false
+		else:
+			visible = true
 
 func _on_cabinetarea_invfull() -> void:
 	set_text("Alerts:\n inventory full!")
@@ -187,4 +193,18 @@ func _on_orderbook_ordupd() -> void:
 	set_text("Alerts:\nPress q to open!")
 	await get_tree().create_timer(1.0).timeout
 	if get_text() == "Alerts:\nPress q to open!":
+		set_text("Alerts:\n")
+
+
+func _on_regarea_action() -> void:
+	set_text("Alerts:\nMoney registered!")
+	await get_tree().create_timer(1.0).timeout
+	if get_text() == "Alerts:\nMoney registered!":
+		set_text("Alerts:\n")
+
+
+func _on_regarea_none() -> void:
+	set_text("Alerts:\nNo one to serve!")
+	await get_tree().create_timer(1.0).timeout
+	if get_text() == "Alerts:\nNo one to serve!":
 		set_text("Alerts:\n")

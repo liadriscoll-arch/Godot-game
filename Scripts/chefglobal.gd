@@ -20,4 +20,6 @@ var plate = false
 var canmove = true
 var totalmoney = 0
 var customer_line: Array[Texture2D] = []
+var cashier_line: Array[Texture2D] = []
+var servdcust = 0
 var orders: Array[order] = []
