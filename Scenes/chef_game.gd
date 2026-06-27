@@ -2,7 +2,6 @@ extends Node2D
 
 signal openedmenu
 
-
 @onready var spot1: Sprite2D = $Customer1
 @onready var spot2: Sprite2D = $Customer2
 @onready var spot3: Sprite2D = $Customer3
@@ -26,20 +25,14 @@ var possible_customers: Array[Texture2D] = [
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	
+	add_random_customer()
 	update_line()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	Global.esc_settings()
-
-
-func _on_cabinetarea_action() -> void:
-	openedmenu.emit()
-
-
-func _on_fridgearea_action() -> void:
-	openedmenu.emit()
+	if Input.is_action_just_pressed("orderbook"):
+		openedmenu.emit()
 	
 
 
@@ -47,12 +40,10 @@ func _on_customer_timer_timeout() -> void:
 	try_add_customer()
 
 func try_add_customer() -> void:
-	
 	if Chefglobal.customer_line.size() >= 4:
 		return
 	#gets chance based on user inputs
 	var chance = 70
-	print(chance)
 
 	if randi_range(1, 100) <= chance:
 		add_random_customer()

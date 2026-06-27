@@ -389,24 +389,6 @@ visible = false
 z_index = 5
 script = ExtResource("10_ywwtq")
 
-[node name="exit" type="TextureButton" parent="Orderbook" unique_id=1946099927]
-offset_left = -128.0
-offset_top = 372.0
-offset_right = -32.0
-offset_bottom = 426.0
-scale = Vector2(1.915, 1.915)
-texture_normal = ExtResource("4_fkvee")
-texture_hover = ExtResource("5_hi7a7")
-
-[node name="Label33" type="Label" parent="Orderbook" unique_id=830986364]
-offset_left = -119.0
-offset_top = 391.0
-offset_right = 49.0
-offset_bottom = 449.0
-theme_override_fonts/font = ExtResource("7_d5sjy")
-theme_override_font_sizes/font_size = 57
-text = "exit"
-
 [node name="Camera2D" type="Camera2D" parent="." unique_id=503240910]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=695404142]
@@ -1198,7 +1180,7 @@ color = Color(1, 1, 1, 0.3529412)
 script = ExtResource("40_i0pns")
 
 [node name="customer_timer" type="Timer" parent="." unique_id=1546965706]
-wait_time = 5.0
+wait_time = 20.0
 autostart = true
 
 [node name="Customer1" type="Sprite2D" parent="." unique_id=1208336779]
@@ -1217,12 +1199,12 @@ scale = Vector2(3, 3)
 position = Vector2(400.00003, 305)
 scale = Vector2(3, 3)
 
-[connection signal="openedmenu" from="." to="Cheffella" method="_on_chef_game_openedmenu"]
+[connection signal="openedmenu" from="." to="Orderbook" method="_on_chef_game_openedmenu"]
 [connection signal="pressed" from="ChefCabinet/exit" to="ChefCabinet" method="_on_exit_pressed"]
 [connection signal="pressed" from="ChefCabinet/exit" to="ChefCabinet/exit" method="_on_pressed"]
 [connection signal="pressed" from="ChefRefrigerator/exit" to="ChefRefrigerator" method="_on_exit_pressed"]
 [connection signal="pressed" from="ChefRefrigerator/exit" to="ChefRefrigerator/exit" method="_on_pressed"]
-[connection signal="pressed" from="Orderbook/exit" to="Orderbook" method="_on_exit_pressed"]
+[connection signal="ordupd" from="Orderbook" to="alertbox" method="_on_orderbook_ordupd"]
 [connection signal="body_entered" from="pansarea" to="pansarea" method="_on_body_entered"]
 [connection signal="body_exited" from="pansarea" to="pansarea" method="_on_body_exited"]
 [connection signal="firstinteract" from="pansarea" to="pansarea/pat1" method="_on_pansarea_firstinteract"]
@@ -1329,9 +1311,12 @@ scale = Vector2(3, 3)
 [connection signal="body_entered" from="regarea" to="regarea" method="_on_body_entered"]
 [connection signal="body_exited" from="regarea" to="regarea" method="_on_body_exited"]
 [connection signal="triggercolor" from="regarea" to="regarea/CollisionShape2D/regbox" method="_on_regarea_triggercolor"]
+[connection signal="action" from="servearea" to="alertbox" method="_on_servearea_action"]
 [connection signal="body_entered" from="servearea" to="servearea" method="_on_body_entered"]
 [connection signal="body_exited" from="servearea" to="servearea" method="_on_body_exited"]
+[connection signal="noorders" from="servearea" to="alertbox" method="_on_servearea_noorders"]
 [connection signal="triggercolor" from="servearea" to="servearea/CollisionShape2D/servebox" method="_on_servearea_triggercolor"]
+[connection signal="wrong" from="servearea" to="alertbox" method="_on_servearea_wrong"]
 [connection signal="action" from="bookarea" to="Orderbook" method="_on_bookarea_action"]
 [connection signal="body_entered" from="bookarea" to="bookarea" method="_on_body_entered"]
 [connection signal="body_exited" from="bookarea" to="bookarea" method="_on_body_exited"]

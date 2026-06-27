@@ -2,8 +2,6 @@ extends Node
 
 var endless = false
 var mode = 0
-var playerx = -905.0
-var playery = -332.0
 var day = 1
 var inventory = ""
 var assemblytable1 = ""
@@ -20,5 +18,6 @@ var asempiztop4 = []
 var asemburgtop4 = []
 var plate = false
 var canmove = true
+var totalmoney = 0
 var customer_line: Array[Texture2D] = []
 var orders: Array[order] = []

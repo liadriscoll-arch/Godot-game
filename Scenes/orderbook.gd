@@ -1,10 +1,13 @@
 extends Node2D
 
+signal ordupd
 
 func _on_bookarea_action() -> void:
-	visible = true
+	ordupd.emit()
 
 
-func _on_exit_pressed() -> void:
-	Chefglobal.canmove = true
-	visible = false
+func _on_chef_game_openedmenu() -> void:
+	if visible:
+		visible = false
+	else:
+		visible = true

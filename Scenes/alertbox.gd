@@ -160,3 +160,31 @@ func _on_orderarea_noone() -> void:
 	await get_tree().create_timer(1.0).timeout
 	if get_text() == "Alerts:\nNo one to take order":
 		set_text("Alerts:\n")
+
+
+func _on_servearea_action() -> void:
+	set_text("Alerts:\nServed food!")
+	await get_tree().create_timer(1.0).timeout
+	if get_text() == "Alerts:\nServed food!":
+		set_text("Alerts:\n")
+
+
+func _on_servearea_wrong() -> void:
+	set_text("Alerts:\nNot an order!")
+	await get_tree().create_timer(1.0).timeout
+	if get_text() == "Alerts:\nNot an order!":
+		set_text("Alerts:\n")
+
+
+func _on_servearea_noorders() -> void:
+	set_text("Alerts:\nNo orders!")
+	await get_tree().create_timer(1.0).timeout
+	if get_text() == "Alerts:\nNo orders!":
+		set_text("Alerts:\n")
+
+
+func _on_orderbook_ordupd() -> void:
+	set_text("Alerts:\nPress q to open!")
+	await get_tree().create_timer(1.0).timeout
+	if get_text() == "Alerts:\nPress q to open!":
+		set_text("Alerts:\n")

@@ -22,5 +22,4 @@ func _on_body_exited(body: Node2D) -> void:
 		triggercolor.emit()
 
 func open_menu() -> void:
-	Chefglobal.canmove = false
 	action.emit()

@@ -5,8 +5,6 @@ func _ready():
 	MainGameMusic.stop()
 	Chefglobal.endless = false
 	Chefglobal.mode = 0
-	Chefglobal.playerx = -905.0
-	Chefglobal.playery = -332.0
 	Chefglobal.day = 1
 	Chefglobal.inventory = ""
 	Chefglobal.assemblytable1 = ""
