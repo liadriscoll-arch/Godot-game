@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://dr0la2hjoegj6"]
+
+[ext_resource type="Texture2D" uid="uid://cjgu7kon7swx0" path="res://Assets/Sprites/BirdSprite.png" id="1_i8bdw"]
+[ext_resource type="Script" uid="uid://cg4j520x5vg73" path="res://Scenes/bird.gd" id="1_mcegt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mcegt"]
+atlas = ExtResource("1_i8bdw")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dnvpi"]
+atlas = ExtResource("1_i8bdw")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vl8r2"]
+atlas = ExtResource("1_i8bdw")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rr33m"]
+atlas = ExtResource("1_i8bdw")
+region = Rect2(48, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xf4a6"]
+atlas = ExtResource("1_i8bdw")
+region = Rect2(64, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pfwoh"]
+atlas = ExtResource("1_i8bdw")
+region = Rect2(80, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_om1ab"]
+atlas = ExtResource("1_i8bdw")
+region = Rect2(96, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oc6qe"]
+atlas = ExtResource("1_i8bdw")
+region = Rect2(112, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2gbwe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mcegt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dnvpi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vl8r2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rr33m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xf4a6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pfwoh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_om1ab")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oc6qe")
+}],
+"loop": true,
+"name": &"Fly",
+"speed": 6.0
+}]
+
+[node name="Bird" type="AnimatableBody2D" unique_id=409515300]
+position = Vector2(-2, 0)
+script = ExtResource("1_mcegt")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=369832287]
+sprite_frames = SubResource("SpriteFrames_2gbwe")
+animation = &"Fly"
+frame_progress = 0.066304736

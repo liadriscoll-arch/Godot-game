@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://d23xa27bej62b" path="res://Scripts/main_game.gd" id="1_pu3va"]
 [ext_resource type="Texture2D" uid="uid://cr051quin6qai" path="res://Assets/Sprites/Four Seasons Platformer Tileset [16x16][FREE] - RottingPixels/Four Seasons Platformer Tileset [16x16][FREE] - RottingPixels/four-seasons-tileset.png" id="2_0e3vx"]
 [ext_resource type="PackedScene" uid="uid://blue7tffji4dv" path="res://Scenes/fella.tscn" id="3_0e3vx"]
+[ext_resource type="PackedScene" uid="uid://dr0la2hjoegj6" path="res://Scenes/bird.tscn" id="3_73nn6"]
 [ext_resource type="PackedScene" uid="uid://5gc8i76wdp7c" path="res://Scenes/coffee_building.tscn" id="4_6j5ir"]
 [ext_resource type="PackedScene" uid="uid://doosqokssycug" path="res://Scenes/fella_house.tscn" id="5_18r40"]
 [ext_resource type="Script" uid="uid://b180cvnoaqywr" path="res://Scenes/kill_zone.gd" id="5_bb2iq"]
@@ -191,6 +192,44 @@ sources/0 = SubResource("TileSetAtlasSource_6j5ir")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_18r40"]
 
+[sub_resource type="Animation" id="Animation_c78sm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1541, -163)]
+}
+
+[sub_resource type="Animation" id="Animation_i47ox"]
+resource_name = "move"
+length = 15.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1740, -163), Vector2(-2321, -163)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sftma"]
+_data = {
+&"RESET": SubResource("Animation_c78sm"),
+&"move": SubResource("Animation_i47ox")
+}
+
 [node name="Main game" type="Node2D" unique_id=1078649410]
 script = ExtResource("1_pu3va")
 
@@ -245,6 +284,18 @@ limit_top = -9999997
 limit_right = 10000088
 limit_bottom = 303
 
+[node name="Bird" parent="." unique_id=591375559 instance=ExtResource("3_73nn6")]
+position = Vector2(1541, -163)
+
+[node name="BAnimationPlayer" type="AnimationPlayer" parent="Bird" unique_id=411880124]
+libraries/ = SubResource("AnimationLibrary_sftma")
+autoplay = &"move"
+
+[node name="bird_timer" type="Timer" parent="." unique_id=2059060503]
+wait_time = 7.0
+autostart = true
+
 [connection signal="body_entered" from="kill_zone" to="kill_zone" method="_on_body_entered"]
 [connection signal="timeout" from="kill_zone/death_timer" to="kill_zone" method="_on_timer_timeout"]
 [connection signal="timeout" from="kill_zone/death_timer" to="kill_zone" method="_on_death_timer_timeout"]
+[connection signal="timeout" from="bird_timer" to="." method="_on_bird_timer_timeout"]
