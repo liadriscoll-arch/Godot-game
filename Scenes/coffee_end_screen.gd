@@ -8,9 +8,9 @@ func _ready() -> void:
 	MainGameMusic.stop()
 	CoffeeShopMusic.stop()
 	if Global.coffee_win:
-		CoffeeShopMusic.play_fx(win_sfx)
+		CoffeeShopMusic.play_sfx(win_sfx)
 	else:
-		CoffeeShopMusic.play_fx(lose_sfx)
+		CoffeeShopMusic.play_sfx(lose_sfx)
 		
 
 

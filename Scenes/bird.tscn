@@ -62,9 +62,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_oc6qe")
 }],
-"loop": true,
+"loop": 1,
 "name": &"Fly",
-"speed": 6.0
+"speed": 8.0
 }]
 
 [node name="Bird" type="AnimatableBody2D" unique_id=409515300]
@@ -74,4 +74,5 @@ script = ExtResource("1_mcegt")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=369832287]
 sprite_frames = SubResource("SpriteFrames_2gbwe")
 animation = &"Fly"
+autoplay = "Fly"
 frame_progress = 0.066304736

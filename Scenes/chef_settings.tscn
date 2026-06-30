@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://db6bt4bnjmr8x" path="res://Scenes/chef_settings.gd" id="1_ovsgm"]
 [ext_resource type="FontFile" uid="uid://dl176n4kxwrv8" path="res://Assets/04b_30/04B_30__.TTF" id="2_fgxj3"]
 [ext_resource type="Texture2D" uid="uid://rlstm7mlg2d1" path="res://Assets/Chef assets/truechefbackground.png" id="2_ovsgm"]
-[ext_resource type="Script" uid="uid://cugwu8lsbde0p" path="res://Scenes/check_button.gd" id="3_fgxj3"]
 [ext_resource type="Script" uid="uid://dm8q5dcp55g55" path="res://Scenes/check_button_2.gd" id="4_l5m6n"]
 [ext_resource type="Texture2D" uid="uid://b60gpfnukr0yu" path="res://Assets/Chef assets/chefsettingdonebutton.png" id="5_nfv2x"]
 [ext_resource type="Texture2D" uid="uid://dild6d0ulr0bc" path="res://Assets/Chef assets/chefsettingdonebuttonhover.png" id="6_citwk"]
@@ -35,59 +34,31 @@ theme_override_font_sizes/font_size = 100
 text = "Settings"
 horizontal_alignment = 1
 
-[node name="Label2" type="Label" parent="." unique_id=14469999]
-offset_left = -957.0
-offset_top = -122.0
-offset_right = 1.0
-offset_bottom = -4.0
-theme_override_fonts/font = ExtResource("2_fgxj3")
-theme_override_font_sizes/font_size = 70
-text = "Mode"
-horizontal_alignment = 1
-
 [node name="Label3" type="Label" parent="." unique_id=1819388049]
-offset_left = -58.0
-offset_top = -107.0
-offset_right = 900.0
-offset_bottom = 11.0
+offset_left = -506.0
+offset_top = -109.0
+offset_right = 452.0
+offset_bottom = 9.0
 theme_override_fonts/font = ExtResource("2_fgxj3")
 theme_override_font_sizes/font_size = 70
 text = "Difficulty"
 horizontal_alignment = 1
 
-[node name="Label4" type="Label" parent="." unique_id=1864777241]
-offset_left = -835.0
-offset_top = 31.0
-offset_right = -618.0
-offset_bottom = 93.0
-theme_override_fonts/font = ExtResource("2_fgxj3")
-theme_override_font_sizes/font_size = 45
-text = "1 week"
-
-[node name="Label5" type="Label" parent="." unique_id=324524761]
-offset_left = -359.0
-offset_top = 32.0
-offset_right = -97.0
-offset_bottom = 94.0
-theme_override_fonts/font = ExtResource("2_fgxj3")
-theme_override_font_sizes/font_size = 45
-text = "Endless"
-
 [node name="Label7" type="Label" parent="." unique_id=954442541]
-offset_left = 24.0
-offset_top = 35.0
-offset_right = 358.0
-offset_bottom = 97.0
+offset_left = -424.0
+offset_top = 33.0
+offset_right = -90.0
+offset_bottom = 95.0
 theme_override_fonts/font = ExtResource("2_fgxj3")
 theme_override_font_sizes/font_size = 45
 text = "normal"
 horizontal_alignment = 1
 
 [node name="Label6" type="Label" parent="." unique_id=465788733]
-offset_left = 600.0
-offset_top = 35.0
-offset_right = 754.0
-offset_bottom = 97.0
+offset_left = 152.0
+offset_top = 33.0
+offset_right = 306.0
+offset_bottom = 95.0
 theme_override_fonts/font = ExtResource("2_fgxj3")
 theme_override_font_sizes/font_size = 45
 text = "Hard"
@@ -98,21 +69,12 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="CheckButton" type="CheckButton" parent="Control" unique_id=288598038]
-layout_mode = 0
-offset_left = -570.00006
-offset_top = 9.000002
-offset_right = -526.00006
-offset_bottom = 34.311203
-scale = Vector2(3.81, 3.81)
-script = ExtResource("3_fgxj3")
-
 [node name="CheckButton2" type="CheckButton" parent="Control" unique_id=10413978]
 layout_mode = 0
-offset_left = 360.0
-offset_top = 11.0
-offset_right = 404.0
-offset_bottom = 36.311203
+offset_left = -88.0
+offset_top = 9.0
+offset_right = -44.0
+offset_bottom = 34.311203
 scale = Vector2(3.81, 3.81)
 script = ExtResource("4_l5m6n")
 
@@ -135,8 +97,6 @@ theme_override_fonts/font = ExtResource("2_fgxj3")
 theme_override_font_sizes/font_size = 57
 text = "SAVE"
 
-[connection signal="pressed" from="Control/CheckButton" to="Control/CheckButton" method="_on_pressed"]
-[connection signal="toggled" from="Control/CheckButton" to="Control/CheckButton" method="_on_toggled"]
 [connection signal="pressed" from="Control/CheckButton2" to="Control/CheckButton2" method="_on_pressed"]
 [connection signal="toggled" from="Control/CheckButton2" to="Control/CheckButton2" method="_on_toggled"]
 [connection signal="pressed" from="saveset" to="saveset" method="_on_pressed"]

@@ -17,18 +17,18 @@ color = Color(0, 0, 0, 0.3882353)
 metadata/_edit_use_anchors_ = true
 
 [node name="Label4" type="Label" parent="." unique_id=1900796915]
-offset_left = -925.0
-offset_top = -479.0
-offset_right = -777.0
-offset_bottom = -417.0
+offset_left = -914.0
+offset_top = -483.0
+offset_right = -766.0
+offset_bottom = -421.0
 theme_override_fonts/font = ExtResource("2_230hs")
 theme_override_font_sizes/font_size = 45
 text = "pans"
 
 [node name="Label5" type="Label" parent="." unique_id=997424618]
-offset_left = -711.0
+offset_left = -687.0
 offset_top = -491.0
-offset_right = -526.0
+offset_right = -502.0
 offset_bottom = -429.0
 theme_override_fonts/font = ExtResource("2_230hs")
 theme_override_font_sizes/font_size = 45
@@ -44,10 +44,10 @@ theme_override_font_sizes/font_size = 45
 text = "pots"
 
 [node name="Label7" type="Label" parent="." unique_id=948411065]
-offset_left = 338.0
-offset_top = -500.0
-offset_right = 563.0
-offset_bottom = -438.0
+offset_left = 339.0
+offset_top = -491.0
+offset_right = 564.0
+offset_bottom = -429.0
 theme_override_fonts/font = ExtResource("2_230hs")
 theme_override_font_sizes/font_size = 45
 text = "washer"
@@ -144,21 +144,22 @@ theme_override_font_sizes/font_size = 45
 text = "assembly"
 
 [node name="Label18" type="Label" parent="." unique_id=1681577611]
-offset_left = -950.0
-offset_top = -424.0
-offset_right = -703.0
-offset_bottom = -359.0
+offset_left = -966.0
+offset_top = -430.0
+offset_right = -719.0
+offset_bottom = -317.0
 theme_override_fonts/font = ExtResource("2_230hs")
 theme_override_font_sizes/font_size = 25
 text = "cook up to
 4 burgers
 1, 2, 3, 4
 to interact"
+horizontal_alignment = 1
 
 [node name="Label19" type="Label" parent="." unique_id=1075091370]
-offset_left = -709.0
+offset_left = -731.0
 offset_top = -445.0
-offset_right = -458.0
+offset_right = -480.0
 offset_bottom = -303.0
 theme_override_fonts/font = ExtResource("2_230hs")
 theme_override_font_sizes/font_size = 25
@@ -167,12 +168,13 @@ text = "cook up to
 fries
 1, 2
 to interact"
+horizontal_alignment = 1
 
 [node name="Label20" type="Label" parent="." unique_id=1653338875]
-offset_left = -607.0
-offset_top = -254.0
-offset_right = -360.0
-offset_bottom = -189.0
+offset_left = -633.0
+offset_top = -255.0
+offset_right = -386.0
+offset_bottom = -113.0
 theme_override_fonts/font = ExtResource("2_230hs")
 theme_override_font_sizes/font_size = 25
 text = "cook up to
@@ -180,18 +182,20 @@ text = "cook up to
 of noodles
 1, 2, 3, 4
 to interact"
+horizontal_alignment = 1
 
 [node name="Label21" type="Label" parent="." unique_id=425462023]
-offset_left = -432.0
-offset_top = -459.0
-offset_right = -185.0
-offset_bottom = -394.0
+offset_left = -458.0
+offset_top = -463.0
+offset_right = -211.0
+offset_bottom = -350.0
 theme_override_fonts/font = ExtResource("2_230hs")
 theme_override_font_sizes/font_size = 25
 text = "get food
 ingredients
 space to
 interact"
+horizontal_alignment = 1
 
 [node name="Label22" type="Label" parent="." unique_id=1974815212]
 offset_left = -19.0
@@ -204,18 +208,20 @@ text = "assemble your
 foods here
 1, 2, 3, 4
 to interact"
+horizontal_alignment = 1
 
 [node name="Label23" type="Label" parent="." unique_id=901052078]
-offset_left = -85.0
+offset_left = -103.0
 offset_top = -242.0
-offset_right = 162.0
-offset_bottom = -177.0
+offset_right = 144.0
+offset_bottom = -129.0
 theme_override_fonts/font = ExtResource("2_230hs")
 theme_override_font_sizes/font_size = 25
 text = "cook up to
 4 pizzas
 1, 2, 3, 4
 to interact"
+horizontal_alignment = 1
 
 [node name="Label24" type="Label" parent="." unique_id=1829437006]
 offset_left = 428.0
@@ -229,6 +235,7 @@ food for
 delivery
 space to
 interact"
+horizontal_alignment = 1
 
 [node name="Label25" type="Label" parent="." unique_id=1491785390]
 offset_left = 327.0
@@ -241,64 +248,70 @@ text = "clean dishes
 for noodles
 space to
 interact"
+horizontal_alignment = 1
 
 [node name="Label26" type="Label" parent="." unique_id=366302592]
-offset_left = 582.0
-offset_top = -462.0
-offset_right = 829.0
-offset_bottom = -397.0
+offset_left = 565.0
+offset_top = -463.0
+offset_right = 757.0
+offset_bottom = -350.0
 theme_override_fonts/font = ExtResource("2_230hs")
 theme_override_font_sizes/font_size = 25
 text = "discard
 bad food
 space to
 interact"
+horizontal_alignment = 1
 
 [node name="Label27" type="Label" parent="." unique_id=1737489866]
-offset_left = 776.0
-offset_top = -419.0
-offset_right = 1023.0
-offset_bottom = -354.0
+offset_left = 753.0
+offset_top = -429.0
+offset_right = 950.0
+offset_bottom = -316.0
 theme_override_fonts/font = ExtResource("2_230hs")
 theme_override_font_sizes/font_size = 25
 text = "get food
 stuffs
 space to
 interact"
+horizontal_alignment = 1
 
 [node name="Label28" type="Label" parent="." unique_id=1084208103]
-offset_left = 12.0
-offset_top = 119.0
-offset_right = 259.0
-offset_bottom = 184.0
+offset_left = -4.0
+offset_top = 117.0
+offset_right = 243.0
+offset_bottom = 230.0
 theme_override_fonts/font = ExtResource("2_230hs")
 theme_override_font_sizes/font_size = 25
 text = "serve your 
 customers
 space to
 interact"
+horizontal_alignment = 1
 
 [node name="Label29" type="Label" parent="." unique_id=223244470]
-offset_left = -699.0
-offset_top = 139.0
-offset_right = -327.0
-offset_bottom = 204.0
+offset_left = -742.0
+offset_top = 141.0
+offset_right = -370.0
+offset_bottom = 225.0
 theme_override_fonts/font = ExtResource("2_230hs")
 theme_override_font_sizes/font_size = 25
 text = "get that money for
 your sales
 space to interact"
+horizontal_alignment = 1
 
 [node name="Label30" type="Label" parent="." unique_id=1493181712]
-offset_left = 297.0
-offset_top = 160.0
-offset_right = 544.0
-offset_bottom = 302.0
+offset_left = 279.0
+offset_top = 162.0
+offset_right = 465.0
+offset_bottom = 256.0
 theme_override_fonts/font = ExtResource("2_230hs")
 theme_override_font_sizes/font_size = 25
 text = "view
 orders
 q to open"
+horizontal_alignment = 1
 
 [node name="Label31" type="Label" parent="." unique_id=656456123]
 offset_left = 511.0
@@ -309,38 +322,39 @@ theme_override_fonts/font = ExtResource("2_230hs")
 theme_override_font_sizes/font_size = 25
 text = "take peoples orders
 space to interact"
+horizontal_alignment = 1
 
 [node name="Label33" type="Label" parent="." unique_id=1422431330]
-offset_left = -923.0
-offset_top = 296.0
-offset_right = -165.0
-offset_bottom = 525.0
+offset_left = -962.0
+offset_top = 289.0
+offset_right = -204.0
+offset_bottom = 518.0
 theme_override_fonts/font = ExtResource("2_230hs")
 theme_override_font_sizes/font_size = 25
-text = "-space to interact with noncooking
-appliances
--1, 2, 3, 4 to put food on cooking
-appliances and assembly station
--food burns after 20 seconds
--people also want their food on time!
--make sure to get orders correct for
-a high rating!"
+text = "-if making pizza, dough on assembly
+then sauce, cheese, toppings
+-if making burgers, buns on assembly
+then patty and then toppings
+-if making noodles, plate on assembly
+then noodles and then sauce
+-if making fries no assembly needed"
+horizontal_alignment = 1
 
 [node name="Label34" type="Label" parent="." unique_id=401684400]
-offset_left = 215.0
-offset_top = 296.0
-offset_right = 1010.0
-offset_bottom = 525.0
+offset_left = 147.0
+offset_top = 293.0
+offset_right = 942.0
+offset_bottom = 522.0
 theme_override_fonts/font = ExtResource("2_230hs")
 theme_override_font_sizes/font_size = 25
-text = "-after each day, you will be able to
-buy things based on your ratings
--higher ratings equal to a bigger
-payout afterwards
--workers can be bought to prepare
-you for busy days
--upgrades are also bought using
-money at the end of the day"
+text = "-food burns after 20 seconds
+(10 seconds in hard mode)
+-people also want their food on time!
+(75 sec easy mode, 60 sec hard mode)
+-make sure to get orders correct for
+a high rating!
+-you win once you get a rating of 5.0"
+horizontal_alignment = 1
 
 [node name="Label35" type="Label" parent="." unique_id=1480162691]
 offset_left = -951.0
@@ -352,16 +366,17 @@ theme_override_font_sizes/font_size = 45
 text = "trash"
 
 [node name="Label36" type="Label" parent="." unique_id=1477652265]
-offset_left = -943.0
+offset_left = -983.0
 offset_top = -163.0
-offset_right = -696.0
-offset_bottom = -98.0
+offset_right = -736.0
+offset_bottom = -50.0
 theme_override_fonts/font = ExtResource("2_230hs")
 theme_override_font_sizes/font_size = 25
 text = "discard
 bad food
 space to
 interact"
+horizontal_alignment = 1
 
 [node name="Label32" type="Label" parent="." unique_id=264478197]
 offset_left = -169.0

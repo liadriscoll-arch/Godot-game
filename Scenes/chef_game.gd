@@ -110,4 +110,25 @@ func _on_orderarea_action() -> void:
 
 
 func _on_game_time_timeout() -> void:
-	pass # Replace with function body.
+	Chefglobal.customer_line.clear()
+	Chefglobal.inventory = ""
+	Chefglobal.assemblytable1 = ""
+	Chefglobal.asempiztop1 = []
+	Chefglobal.asemburgtop1 = []
+	Chefglobal.assemblytable2 = ""
+	Chefglobal.asempiztop2 = []
+	Chefglobal.asemburgtop2 = []
+	Chefglobal.assemblytable3 = ""
+	Chefglobal.asempiztop3 = []
+	Chefglobal.asemburgtop3 = []
+	Chefglobal.assemblytable4 = ""
+	Chefglobal.asempiztop4 = []
+	Chefglobal.asemburgtop4 = []
+	Chefglobal.plate = false
+	Chefglobal.canmove = true
+	Chefglobal.cashier_line.clear()
+	Chefglobal.servdcust = 0
+	Chefglobal.day += 1
+	Chefglobal.totalmoney.clear()
+	Chefglobal.orders.clear()
+	get_tree().reload_current_scene()

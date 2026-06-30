@@ -208,3 +208,10 @@ func _on_regarea_none() -> void:
 	await get_tree().create_timer(1.0).timeout
 	if get_text() == "Alerts:\nNo one to serve!":
 		set_text("Alerts:\n")
+
+
+func _on_game_time_timeout() -> void:
+	set_text("Alerts:\nNew day!\nDay " + Chefglobal.day)
+	await get_tree().create_timer(1.0).timeout
+	if get_text() == "Alerts:\nNew day!\nDay " + Chefglobal.day:
+		set_text("Alerts:\n")

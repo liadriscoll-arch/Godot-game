@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cbnf4ee5c8gga"]
 
 [ext_resource type="Texture2D" uid="uid://cr051quin6qai" path="res://Assets/Sprites/Four Seasons Platformer Tileset [16x16][FREE] - RottingPixels/Four Seasons Platformer Tileset [16x16][FREE] - RottingPixels/four-seasons-tileset.png" id="1_ejwpf"]
+[ext_resource type="Script" uid="uid://m8nw56vs7rx7" path="res://Scenes/controls.gd" id="1_m0n3a"]
 [ext_resource type="FontFile" uid="uid://dl176n4kxwrv8" path="res://Assets/04b_30/04B_30__.TTF" id="2_m0n3a"]
 [ext_resource type="Script" uid="uid://862p2cha6ffm" path="res://Scenes/start_button.gd" id="3_q6vtx"]
 
@@ -152,6 +153,7 @@ texture = ExtResource("1_ejwpf")
 sources/0 = SubResource("TileSetAtlasSource_k4nhr")
 
 [node name="Controls" type="Node2D" unique_id=337864128]
+script = ExtResource("1_m0n3a")
 
 [node name="TileMap2" type="TileMap" parent="." unique_id=3793947]
 tile_set = SubResource("TileSet_21kh3")

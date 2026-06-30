@@ -43,7 +43,7 @@ var coffee_win = false
 var event_chance
 var event_number
 var time_taken = 0
-var coffee_week = 1
+var coffee_week = 0
 var brewing = false
 var espresso_brewing = false
 var previous_scene_path = ""
@@ -51,6 +51,8 @@ var expresso_speed_purchased = false
 var coffee_speed_purchased = false
 var _brightness_scene: Node
 var _last_brightness = -1.0
+var fellax = 40
+var fellay = 32
 
 
 func _process(_delta):

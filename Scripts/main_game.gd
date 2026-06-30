@@ -11,6 +11,8 @@ extends Node2D
 func _ready():
 	CoffeeShopMusic.stop()
 	MainGameMusic.play_main_music()
+
+	
 	
 
 

@@ -7,6 +7,14 @@ const JUMP_VELOCITY = -300.0
 
 
 @onready var fella_sprite: AnimatedSprite2D = $AnimatedSprite2D
+
+func _ready():
+	set_position(Vector2(Global.fellax, Global.fellay))
+	
+func _process(delta: float) -> void:
+	Global.fellax = position.x
+	Global.fellay = position.y
+
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():

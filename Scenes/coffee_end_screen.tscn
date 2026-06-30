@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://2i76x80r6xtn" path="res://Assets/Coffee assets/coffee_button_hover_long.png" id="8_2xgmh"]
 [ext_resource type="Script" uid="uid://cl1sm68pxm7xs" path="res://quit_button.gd" id="9_lqnr8"]
 [ext_resource type="Script" uid="uid://byo4tbetjnw3t" path="res://play_again_button.gd" id="10_77b22"]
+[ext_resource type="Script" uid="uid://d4mbaombhbho7" path="res://Scenes/happy_sad_sprite.gd" id="12_gllfs"]
 
 [node name="coffee_end_screen" type="Node2D" unique_id=2144521820]
 script = ExtResource("1_rwkyo")
@@ -88,7 +89,6 @@ theme_override_font_sizes/font_size = 30
 text = "Play Again!"
 horizontal_alignment = 1
 vertical_alignment = 1
-script = ExtResource("5_h3r25")
 
 [node name="Quit" type="Label" parent="." unique_id=882615379]
 offset_left = 36.0
@@ -100,7 +100,11 @@ theme_override_font_sizes/font_size = 30
 text = "Quit"
 horizontal_alignment = 1
 vertical_alignment = 1
-script = ExtResource("5_h3r25")
+
+[node name="happy_sad_sprite" type="Sprite2D" parent="." unique_id=1091385748]
+position = Vector2(0, 90.000015)
+scale = Vector2(5, 5)
+script = ExtResource("12_gllfs")
 
 [connection signal="pressed" from="Quit_button" to="Quit_button" method="_on_pressed"]
 [connection signal="pressed" from="play_again_button" to="play_again_button" method="_on_pressed"]
